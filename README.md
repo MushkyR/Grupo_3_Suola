@@ -1,4 +1,3 @@
-[Bocetos Suola.pdf](https://github.com/MushkyR/Grupo_3_Suola/files/9228007/Bocetos.Suola.pdf)
 # Grupo_3_Suola
 Proyecto Integrador DH
 
