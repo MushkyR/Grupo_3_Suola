@@ -16,3 +16,7 @@ Proyecto Integrador DH
 * GUESS - https://www.guess.com, por las funcionalidades implementadas.
 * 6 PM - https://www.6pm.com, por las funcionalidades implementadas.
 * RENE CAOVILLA - https://www.renecaovilla.com, por el público al que apunta y las funcionalidades implementadas.
+
+**Link a tablero de trabajo TRELLO**
+https://trello.com/invite/b/vD6IaDbx/67baeac6ac573a425b819a6277621b71/suola
+
