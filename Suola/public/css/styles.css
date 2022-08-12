@@ -1,4 +1,6 @@
 
+/*cart*/
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
@@ -129,12 +131,117 @@ align-items: center;
     width: 15%;
     text-align: right;
 }
+ 
+/*register*/
+
+.registrarse{
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: none;
+    font-family: "poppins"
+}
+
+.todo-registro{
+    margin-left: 40px;
+    margin-top: 10px;
+    float:left
+    
+}
+
+.foto{
+    padding-left: 150px;
+    padding-top: 50px
+}
 
 
+.control{
+    border-radius: 5px;
+    width: 20vw;
+    font-family: "poppins";
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f3f3f3;
+   
+}
 
+    
+.titulo-reg{
+    font-family: "poppins";
+    font-size: 14px;
+}
 
+.nombre-reg{
+    
+    font-family: "poppins";
+    font-size: 14px;
+}
 
+.apellido-reg{
+   font-family:"poppins";
+   font-size: 14px
+}
 
+.nacimiento-reg{
+font-family: "poppins";
+font-size: 14px
+}
 
+.localidad-reg{
+    font-family:"poppins";
+    font-size: 14px
+
+}
+
+.nacimiento-reg{
+    font-family:"poppins";
+    font-size: 14px
+
+}
+
+.email-reg{
+
+font-family: "poppins";
+font-size: 14px
+}
+
+.password-reg{
+ font-family: "poppins";
+ font-size: 14px
+}
+
+.confpass-reg{
+
+font-family: "poppins";
+font-size: 14px
+}
+
+.telefono-reg{
+font-family: "poppins";
+font-size: 14px
+}
+
+.submit-reg{
+ font-family: "poppins";
+ font-size: 14px
+}
+
+.boton{
+    background-color: black;
+    color:white;
+    font-family: "poppins";
+    width: 30vw;
+    border-radius: 5px;
+    margin-top: 40px
+}
 
 
