@@ -1,117 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;40
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;40
 0&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
     <title>Registrarse</title>
-    <link rel='stylesheet' href="/css/styles.css" >
-   
+    <link rel='stylesheet' href="/css/styles.css">
+
 </head>
- 
-<body> <h2> Registrarse</h2>
+
+<body>
+    <h1 class="registrarse"><strong> Registrarse</strong></h1>
+
     <body class="body-reg">
         <form action="/" method="GET">
-    
-            
-     <div class="control-formulario"> 
-         <label>
-            <div class="titulo-reg" >
-                
-                    <label>
-                        Titulo </label><br>
-                        <select name="titulo">
-                        <option value="Sr">Sr</option>
-                        <option value="Sra">Sra</option>
-                        </select> 
-                </div>
-     
-       <br>
 
-            <div class="nombre-reg"><label>Nombre </label><br>
-            <input type= "text" name="usuario" placeholder="Por favor ingrese su nombre"  class="control">
-        </div><br>
-
-        <div class="apellido-reg"><label>Apellido </label><br>
-            <input type= "text" name="usuario" placeholder="Por favor ingrese su apellido"  class="control">
-        </div><br>
-    
-        <label><div class= "nacimiento-reg"><strong> Fecha de Nacimiento</strong><br>
-            <input type="date" placeholder= "fecha de nacimiento" name="fecha de nacimiento" class="control">
-        </div><br>
-    
-        <label><div class= "localidad-reg"><strong> Provincia</strong><br>
-            <select id="provincia">
-                <option value="1">BUENOS AIRES</option>
-                <option value="2">CATAMARCA</option>
-                <option value="5">CHACO</option>
-                <option value="6">CHUBUT</option>
-                <option value="50">CIUDAD AUTONOMA DE Bs As</option>
-                <option value="3">CORDOBA</option>
-                <option value="4">CORRIENTES</option>
-                <option value="7">ENTRE RIOS</option>
-                <option value="8">FORMOSA</option>
-                <option value="9">JUJUY</option>
-                <option value="10">LA PAMPA</option>
-                <option value="11">LA RIOJA</option>
-                <option value="12">MENDOZA</option>
-                <option value="13">MISIONES</option>
-                <option value="14">NEUQUEN</option>
-                <option value="15">RIO NEGRO</option>
-                <option value="16">SALTA</option>
-                <option value="17">SAN LUIS</option>
-                <option value="19">SANTA CRUZ</option>
-                <option value="20">SANTA FE</option>
-                <option value="21">SANTIAGO DEL ESTERO</option>
-                <option value="22">TIERRA DEL FUEGO</option>
-                <option disabled="true" selected="true" value="">Seleccionar una Provincia</option>
-            </select><br>
-    
-        <label><div class="email-reg"> E-mail</label><br>
-    
-            <input type="email" name="Email" placeholder="Por favor ingrese su e-mail"class="control">
-    
-         </div><br> 
-    
-    
-    <label>  
-        <div class="password-reg">Contraseña</label><br>
-        <input type="password" placeholder="Por favor ingrese su Contraseña" name="clave" class="control">
-        </div><br>
-    
-    
-    <label>
-        <div class="confpass-reg">Confirmar contraseña</label><br>
-        <input type="password" placeholder= "Por favor confirme su Contraseña"name="clave" class="control">
-    </div><br>
-
-    <label>  
-        <div class="telefono-reg">Teléfono</label><br>
-        <input type="telefono" placeholder="Por favor ingrese su número de teléfono" name="clave" class="control">
-    </div><br>
-    
-    
-         
-      
           
-    <div class="submit-reg">
-    <button type="submit" class="boton"> Registrarse </button>
-    <form action="/form" method="GET">
-    </form></div>
-    
-     </div>
-    </form>
-   
-</body>
+                <img width=500px
+                    src="https://media.jimmychoo.com/image/upload/w_auto,c_scale,q_auto:best,f_auto/USPROD_CONTENT/2022/collection-launch-update/registration/ss22/Registration-GBROW_US-summer.jpg" class="foto">
+          
+
+            <div class="todo-registro">
+                <div class="control-formulario">
+                    <label>
+                        <div class="titulo-reg">
+
+                            <label>
+                                <strong> Titulo </strong></label><br>
+                        </div>
+                        <select name="titulo" placeholder="Seleccione" class="control">
+                            <option disabled="true" selected="true" value="">Seleccionar</option>
+                            <option value="Sr">Sr</option>
+                            <option value="Sra">Sra</option>
+                        </select>
+
+
+                        <br>
+
+                        <div class="nombre-reg"><label> <strong>Nombre </strong></label><br>
+                            <input type="text" name="usuario" placeholder="Por favor ingrese su nombre" class="control">
+                        </div><br>
+
+                        <div class="apellido-reg"><label><strong>Apellido</strong> </label><br>
+                            <input type="text" name="usuario" placeholder="Por favor ingrese su apellido"
+                                class="control">
+                        </div><br>
+
+                        <label>
+                            <div class="nacimiento-reg"><strong> Fecha de Nacimiento</strong><br>
+                                <input type="date" placeholder="fecha de nacimiento" name="fecha de nacimiento"
+                                    class="control">
+                            </div><br>
+
+                            <label>
+                                <div class="localidad-reg"><strong> Provincia</strong><br>
+                                    <select id="provincia" class="control">
+                                        <option value="1">BUENOS AIRES</option>
+                                        <option value="2">CATAMARCA</option>
+                                        <option value="5">CHACO</option>
+                                        <option value="6">CHUBUT</option>
+                                        <option value="50">CIUDAD AUTONOMA DE Bs As</option>
+                                        <option value="3">CORDOBA</option>
+                                        <option value="4">CORRIENTES</option>
+                                        <option value="7">ENTRE RIOS</option>
+                                        <option value="8">FORMOSA</option>
+                                        <option value="9">JUJUY</option>
+                                        <option value="10">LA PAMPA</option>
+                                        <option value="11">LA RIOJA</option>
+                                        <option value="12">MENDOZA</option>
+                                        <option value="13">MISIONES</option>
+                                        <option value="14">NEUQUEN</option>
+                                        <option value="15">RIO NEGRO</option>
+                                        <option value="16">SALTA</option>
+                                        <option value="17">SAN LUIS</option>
+                                        <option value="19">SANTA CRUZ</option>
+                                        <option value="20">SANTA FE</option>
+                                        <option value="21">SANTIAGO DEL ESTERO</option>
+                                        <option value="22">TIERRA DEL FUEGO</option>
+                                        <option disabled="true" selected="true" value="">Seleccionar una Provincia
+                                        </option>
+                                    </select><br>
+
+                                    <label>
+                                        <div class="email-reg"> <strong>E-mail </strong>
+                                    </label><br>
+
+                                    <input type="email" name="Email" placeholder="Por favor ingrese su e-mail"
+                                        class="control">
+
+                                </div><br>
+
+
+                                <label>
+                                    <div class="password-reg"><strong>Contraseña</strong>
+                                </label><br>
+                                <input type="password" placeholder="Por favor ingrese su Contraseña" name="clave"
+                                    class="control">
+                </div><br>
+
+
+                <label>
+                    <div class="confpass-reg"><strong>Confirmar contraseña</strong>
+                </label><br>
+                <input type="password" placeholder="Por favor confirme su Contraseña" name="clave" class="control">
+            </div><br>
+
+            <label>
+                <div class="telefono-reg"><strong>Teléfono</strong>
+            </label><br>
+            <input type="telefono" placeholder="Por favor ingrese su número de teléfono" name="clave" class="control">
+            </div><br>
+
+
+
+
+
+            <div class="submit-reg">
+                <button type="submit" class="boton" color=white background-color=black> Registrarse </button>
+                <form action="/form" method="GET">
+                </form>
+            </div>
+
+            </div>
+            </div>
+        </form>
+
+    </body>
+
 </html>
-
-
-
-
