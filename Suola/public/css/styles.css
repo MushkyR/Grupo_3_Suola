@@ -141,6 +141,20 @@ align-items: center;
     font-family: "poppins"
 }
 
+.link-alogin{
+    font-family: "poppins";
+    font-size: 12px;
+    margin-bottom: none
+}
+
+.link-ahome{
+    font-family: "poppins";
+    font-size: 12px;
+    margin-bottom: none
+}
+
+
+ @media(min-width:769px){
 .todo-registro{
     margin-left: 40px;
     margin-top: 10px;
@@ -152,6 +166,7 @@ align-items: center;
     padding-left: 150px;
     padding-top: 50px
 }
+ }
 
 
 .control{
@@ -239,9 +254,29 @@ font-size: 14px
     background-color: black;
     color:white;
     font-family: "poppins";
-    width: 30vw;
+    width: 20vw;
     border-radius: 5px;
-    margin-top: 40px
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
+/*login*/
+
+.login{
+    font-family: "poppins";
+}
+
+.email-login{
+    font-family: "poppins"
+}
+
+.password-login{
+    font-family: "poppins"
+}
+
+.login-body{
+    text-align: center
+}
+
+.submit-log {}
 
