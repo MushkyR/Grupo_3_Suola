@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <section class="cabezal-cart">
+            <h1 class="titulo-cart">Tu carrito</h1>
+                <div class="barra-cart">
+                    <div >       
+                        <button class="boton-continuar-cart" type="submit"><a href="/home">CONTINUAR SHOPPING</a></button>
+                    </div>
+                    
+                    <div class="secciones-u-cart">
+                    <p class="secciones-cart">Carrito  <i class="fa-solid fa-bag-shopping"></i></p>
+                    <p class="secciones-cart">Favoritos  <i class="fa-regular fa-heart"></i></p>
+                    </div>
+
+                    <div >
+                        <button class="boton-comprar-cart" type="submit"><a href="/payment">COMPRAR</a></button>
+                    </div>
+                </div>
+        </section>
+
+        <section class="carrito-cart">
+            <div class="titulares-cart">
+                <div class="titulo-producto-cart">Productos</div>
+                <div class="info-precio-cart">Precio</div>
+                <div class="info-cantidad-cart">Cantidad</div>
+                <div class="info-subtotal-cart">Subtotal</div>
+            </div>
+
+            <div class="info-cart">
+                <div class="producto-cart"><div class="info-numerador-cart">nº</div>
+                <img src="#" alt="imagen producto">
+                <div class="info-producto-cart">
+                    <div id="nombre-producto-cart">NOMBRE DEL PRODUCTO</div>
+                    <div id="color-cart"><i class="fa-solid fa-circle"></i>color</div>
+                    <div>Talle nº</div>
+                </div></div>
+                <div class="info-precio-cart">$Precio</div>
+                <div class="info-cantidad-cart">
+                    <select id="selector-cart" name="cantidad-art" id="cantidad-art">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                <div ><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
+            </div>
+                <div class="info-subtotal-cart">$Subtotal</div>
+        </section>
+
+
+    </main>
+
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+}
+
+.cabezal-cart {
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.titulo-cart {
+    text-align: center;
+    margin: 30px;
+}    
+
+.barra-cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secciones-cart {
+    font-size: 17px;
+    padding: 30px;
+}
+
+.secciones-u-cart {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boton-continuar-cart, .boton-comprar-cart {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 400px;
+}
+
+.boton-continuar-cart a {
+    text-decoration: none;
+    color: black;
+}
+
+.boton-continuar-cart {
+    background-color: white;
+}
+
+.boton-comprar-cart a {
+    text-decoration: none;
+    color: white;
+}
+
+.boton-comprar-cart {
+    background-color: black;
+}
+
+.titulares-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px;
+    color: #6B6E7A;
+    border-bottom: solid #6B6E7A 1px;
+    font-size: 15px;
+}
+
+.info-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.info-numerador-cart {
+    color: #6B6E7A;
+}
+
+img {
+    margin: 30px;
+    width: 30%;
+}
+.titulo-producto-cart {
+    width: 45%;
+}
+.info-producto-cart {
+    width: 28%;
+}
+
+.producto-cart {
+width: 45%;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+}
+
+#nombre-producto-cart {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#color-cart {
+    margin-bottom: 10px;
+}
+
+.info-precio-cart {
+    width: 15%;
+}
+
+.info-cantidad-cart {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+#info-botoncancelar-cart {
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+}
+
+#selector-cart {
+    border: none;
+    text-align: center;
+}
+
+.info-subtotal-cart {
+    width: 15%;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
