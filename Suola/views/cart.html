@@ -17,9 +17,8 @@
         <section class="cabezal-cart">
             <h1 class="titulo-cart">Tu carrito</h1>
                 <div class="barra-cart">
-                    <div >       
-                        <button class="boton-continuar-cart" type="submit"><a href="/home">CONTINUAR SHOPPING</a></button>
-                    </div>
+
+                    <a class="boton-continuar-cart" href="/">continuar shopping</a>
                     
                     <div class="secciones-u-cart">
                     <p class="secciones-cart">Carrito  <i class="fa-solid fa-bag-shopping"></i></p>
@@ -27,7 +26,7 @@
                     </div>
 
                     <div >
-                        <button class="boton-comprar-cart" type="submit"><a href="/payment">COMPRAR</a></button>
+                        <a class="boton-comprar-cart" href="/checkout">comprar</a>
                     </div>
                 </div>
         </section>
@@ -42,7 +41,7 @@
 
             <div class="info-cart">
                 <div class="producto-cart"><div class="info-numerador-cart">nº</div>
-                <img src="#" alt="imagen producto">
+                <img class="img-cart" src="#" alt="imagen producto">
                 <div class="info-producto-cart">
                     <div id="nombre-producto-cart">NOMBRE DEL PRODUCTO</div>
                     <div id="color-cart"><i class="fa-solid fa-circle"></i>color</div>
@@ -57,9 +56,46 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                <div ><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
+                <div><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
             </div>
                 <div class="info-subtotal-cart">$Subtotal</div>
+        </section>
+
+        <section class="abajo-cart">
+            <div class="infos-general-cart">
+                <div class="info-general-cart">
+                    <h4>pago seguro</h4>
+                    <p>Certificamos el cuidado de tus datos, y así evitamos de este modo que seamos víctimas de fraudes.</p>
+                </div>
+
+                <div class="info-general-cart">
+                    <h4>envíos</h4>
+                    <p>Las entregas se realizan mediante el correo ANDREANI de lunes a viernes, en un rango horario de 9 a 18hs.</p>
+                </div>
+            </div>
+
+            <div class="tabla-total-cart">
+                <div class="datos-abajo-cart">
+                    <div class="total-abajo-cart">
+                        <p>Subtotal</p>
+                        <p>$Subtotal</p>
+                    </div>
+
+                    <div class="total-abajo-cart">
+                        <p>Envío (tipo de envío)</p>
+                        <p>$precio</p>
+                    </div>
+
+                    <div class="total-abajo-cart">
+                        <p class="total-cart">Total</p>
+                        <p class="total-cart">$total</p>
+                    </div>
+                </div>
+                    
+                <a href="/checkout">comprar</a>
+                
+            </div>
+
         </section>
 
 

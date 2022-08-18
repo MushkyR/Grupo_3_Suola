@@ -33,37 +33,36 @@ body {
 }
 
 .boton-continuar-cart, .boton-comprar-cart {
-    padding: 20px;
     text-decoration: none;
     font-size: 20px;
-    width: 400px;
-}
-
-.boton-continuar-cart a {
-    text-decoration: none;
-    color: black;
+    text-transform: uppercase;
 }
 
 .boton-continuar-cart {
+    padding: 10px 20px;
     background-color: white;
-}
-
-.boton-comprar-cart a {
-    text-decoration: none;
-    color: white;
+    color: black;
+    border: solid 3px black;
 }
 
 .boton-comprar-cart {
+    padding: 16px 85px;
     background-color: black;
+    color: white;
+
+}
+
+.carrito-cart {
+    border-bottom: solid 1px #c7c5cd;
+    margin: 10px 20px
 }
 
 .titulares-cart {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 15px;
     color: #6B6E7A;
-    border-bottom: solid #6B6E7A 1px;
+    border-bottom: solid #c7c5cd 1px;
     font-size: 15px;
 }
 
@@ -78,7 +77,7 @@ body {
     color: #6B6E7A;
 }
 
-img {
+.img-cart {
     margin: 30px;
     width: 30%;
 }
@@ -131,6 +130,54 @@ align-items: center;
     width: 15%;
     text-align: right;
 }
+
+.abajo-cart {
+    display: flex;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.infos-general-cart {
+    display: flex;
+}
+
+.info-general-cart {
+    padding: 20px;
+    width: 30%;
+}
+
+.info-general-cart h4 {
+    text-transform: uppercase;
+}
+
+.tabla-total-cart {
+    width: 60%;
+}
+
+.tabla-total-cart a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background: black;
+    padding: 10px 45%;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.total-abajo-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-cart {
+    font-weight: bold;
+}
+
+.datos-abajo-cart {
+    margin-bottom: 30px;
+}
+
+
  
 /*register*/
 
@@ -152,23 +199,6 @@ align-items: center;
     font-size: 12px;
     margin-bottom: none
 }
-
-
- @media(min-width:769px){
-.todo-registro{
-    margin-left: 40px;
-    margin-top: 10px;
-    float:left
-    
-}
-
-.foto{
-    padding-left: 150px;
-    padding-top: 50px
-}
- }
-
-
 .control{
     border-radius: 5px;
     width: 20vw;
@@ -280,3 +310,26 @@ font-size: 14px
 
 .submit-log {}
 
+
+
+
+ @media(min-width:769px){
+/*cart*/
+
+
+
+
+
+/*register*/
+.todo-registro{
+    margin-left: 40px;
+    margin-top: 10px;
+    float:left
+    
+}
+
+.foto{
+    padding-left: 150px;
+    padding-top: 50px
+}
+ }
