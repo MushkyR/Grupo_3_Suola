@@ -186,6 +186,19 @@ align-items: center;
  
 /*register*/
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300&family=Poppins:wght@200&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px
+}
+
+.body-reg{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row
+}
 .registrarse{
     font-weight: 500;
     letter-spacing: .1em;
@@ -204,9 +217,31 @@ align-items: center;
     font-size: 12px;
     margin-bottom: none
 }
+
+
+
+ @media(min-width:361px){
+.todo-registro{
+    margin-left: 40px;
+    margin-top: 20px
+  
+    
+    
+}
+
+.foto{
+    padding-left: 150px;
+    padding-top: 50px;
+    width: 50%;
+   
+    
+}
+ 
+
+
 .control{
     border-radius: 5px;
-    width: 20vw;
+    width: 100%;
     font-family: "poppins";
     text-align: center;
     margin-top: 10px;
@@ -221,9 +256,15 @@ align-items: center;
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: #f3f3f3;
+    
    
 }
 
+.control-formulario{
+    display: flex;
+    width: 100%;
+    
+}
     
 .titulo-reg{
     font-family: "poppins";
@@ -290,15 +331,23 @@ font-size: 14px
     color:white;
     font-family: "poppins";
     width: 20vw;
-    border-radius: 5px;
+    height: 2vw;
+
     margin-top: 30px;
     margin-bottom: 10px;
 }
+ }
 
-/*login*/
 
 .login{
-    font-family: "poppins";
+    
+font-family: 'Poppins';
+font-weight: 500;
+letter-spacing: .1em;
+text-transform: none;
+font-family: "poppins";
+
+    flex-wrap: wrap;
 }
 
 .email-login{
@@ -306,14 +355,50 @@ font-size: 14px
 }
 
 .password-login{
-    font-family: "poppins"
+   
+font-family: 'Poppins', sans-serif;
+
 }
 
 .login-body{
-    text-align: center
+  
+    margin-left: 80px;
+    margin-top: 10px;
+    float: left
 }
 
-.submit-log {}
+.reg-enlogin{
+    float:right;
+    margin-right:400px
+}
+
+.boton-registrarse{
+    margin-top:200px;
+    background-color: black;
+    color:white;
+    font-family: "poppins";
+    width: 20vw;
+    height: 2vw;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 769px){
+    .reg-enlogin{
+        flex-direction: row;
+        margin-top: 30px;
+        margin-left: 30px
+    }
+
+    .login-todo{
+        margin-top: 20px;
+        margin-left: 30px
+    }
+    }
+
+ 
+
+
 
 
 
