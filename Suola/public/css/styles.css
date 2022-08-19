@@ -4,13 +4,173 @@
     margin:0px;
 }
 
+body{
+        font-family: 'Poppins', sans-serif;
+}
+
+.footer-columna1 ul {
+    list-style: none;
+    padding: 0;
+    
+    
+  }
+  
+  .footer-columna1 a {
+    text-decoration: #222222;
+    padding: 5px 0;
+    font-size: 17px;
+   
+  }
+
+  .iconos-footer{
+      text-align: center;
+      justify-content: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 30px;
+      margin-top: 10vw
+  }
+  
+  .fa-whatsapp{
+      font-size: 80px;
+      color: greenyellow;
+      margin-left: 80vw;
+     
+  }
+
+  @media (min-width: 769px){
+  
+
+    .footer-columna1{
+        
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 10px 0 10px
+    }
+
+  .derecha-footer{
+     
+      margin-left: 10vw;
+      margin-top: 50px;
+      margin-right: 20vw;
+      word-wrap: break-word;
+      letter-spacing: .3px;
+    font-size: 10px;
+    
+    font-family: 'Poppins', sans-serif;
+    color: black
+  
+    
+  }
+
+  .izquierda-footer{
+     
+    margin-left: 10vw;
+    margin-top: 50px;
+    margin-right: 20vw;
+    word-wrap: break-word;
+    letter-spacing: .3px;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: black
+      
+  }
+
+   .email-footer{
+   
+    font-size: 14px
+   }
+
+   .control-footer{
+    border-radius: 5px;
+    margin-left: 0;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f3f3f3;
+    font-family: 'Poppins', sans-serif;
+    
+   
+   }
+
+
+  .suscribite-footer{
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+}
+
+@media (min-width: 1200px){
+
+
+.derecha-footer{
+    
+    margin-right: 40vw;
+    margin-top: 5vw;
+    margin-left: 0;
+    
+}
+
+.izquierda-footer{
+  
+    margin-left: 20vw;
+    margin-top: 5vw;
+    
+}
+.footer-columna1{
+        
+    text-align: center;
+    width: 100%;
+    display:flex;
+    padding: 30px 0 10px
+}
+
+
+.control-footer{
+    border-radius: 5px;
+    margin-left: 0;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f3f3f3;
+    font-family: 'Poppins', sans-serif;
+    
+   
+   }
+}
+
+
+
 /*cart*/
 
-body {
+
+body{
     font-family: 'Poppins', sans-serif;
     margin: 0px;
 }
-
 .cabezal-cart {
     margin: 15px;
     margin-bottom: 40px;
@@ -186,7 +346,6 @@ align-items: center;
  
 /*register*/
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300&family=Poppins:wght@200&family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
@@ -220,7 +379,7 @@ align-items: center;
 
 
 
- @media(min-width:361px){
+ @media(min-width:769px){
 .todo-registro{
     margin-left: 40px;
     margin-top: 20px
@@ -232,7 +391,7 @@ align-items: center;
 .foto{
     padding-left: 150px;
     padding-top: 50px;
-    width: 50%;
+    width: 70%;
    
     
 }
@@ -261,8 +420,8 @@ align-items: center;
 }
 
 .control-formulario{
-    display: flex;
-    width: 100%;
+   margin-left: 100px;
+    width: 50vw;
     
 }
     
@@ -330,33 +489,84 @@ font-size: 14px
     background-color: black;
     color:white;
     font-family: "poppins";
-    width: 20vw;
-    height: 2vw;
+    width: 30vw;
+    height: 4vw;
 
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
+.registrarse{
+    margin-bottom: 30px;
+    margin-top: 30px
+}
  }
 
+@media (min-width: 1200px){
 
+    .todo-registro{
+        display:flex
+    }
+    .foto{
+        margin-right: 100px
+    }
+    .boton{
+        background-color: black;
+        color:white;
+        font-family: "poppins";
+        width: 30vw;
+        height: 2vw;
+    
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+ 
+@media (min-width: 769px) {
+     body{
+        font-family: 'Poppins', sans-serif;
+     }
+
+     .texto-crearCuenta{
+         margin-top: 10px;
+         text-align:center
+     }
+
+    .login-cuerpo{
+        flex-direction: row;
+        margin-top: 30px;
+        margin-left: 30px;
+        text-align: center
+    }
 .login{
     
-font-family: 'Poppins';
+
 font-weight: 500;
 letter-spacing: .1em;
 text-transform: none;
-font-family: "poppins";
+margin-bottom: 30px;
+margin-top: 30px;
+
 
     flex-wrap: wrap;
 }
 
 .email-login{
-    font-family: "poppins"
+   
+    width: 80%
 }
 
 .password-login{
    
-font-family: 'Poppins', sans-serif;
+
+width: 80%
 
 }
 
@@ -364,40 +574,162 @@ font-family: 'Poppins', sans-serif;
   
     margin-left: 80px;
     margin-top: 10px;
-    float: left
+    
 }
 
 .reg-enlogin{
-    float:right;
-    margin-right:400px
+    
+    margin-left: 20vw;
+    text-align: center;
+    margin-top: 60px;
+    margin-right: 30vw
 }
 
+.control-login{
+border-radius: 5px;
+width: 80%;
+
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+border: 1px solid #f3f3f3;
+color: #212121;
+border: 1px solid #f3f3f3;
+padding: 10px 14px;
+line-height: normal;
+letter-spacing: inherit;
+border-radius: 0;
+-webkit-box-shadow: none;
+box-shadow: none;
+background-color: #f3f3f3;
+
+}
 .boton-registrarse{
-    margin-top:200px;
+    margin-top:100px;
     background-color: black;
     color:white;
-    font-family: "poppins";
-    width: 20vw;
-    height: 2vw;
+    
     margin-bottom: 10px;
+    width: 30vw;
+    height: 4vw;
+    margin-left: 30vw;
+ 
+}
+
+.boton-login{
+    margin-top:100px;
+    background-color: black;
+    color:white;
+  
+    margin-bottom: 10px;
+    width: 30vw;
+    height: 4vw;
+    margin-left: 30vw;
 }
 
 
-@media (min-width: 769px){
+.entrar-login{
+    margin-left: 20vw;
+    text-align: center;
+    margin-top: 60px;
+    margin-right: 30vw
+}
+}
+
+@media (min-width: 1200px){
+
+  .texto-crearCuenta{
+      margin-top: 11vw
+  }
+
+    .registrado-login{
+        text-align: center
+    }
     .reg-enlogin{
         flex-direction: row;
         margin-top: 30px;
-        margin-left: 30px
+        margin-left: 30px;
+        text-align: center;
+        margin-bottom: 30px
     }
 
     .login-todo{
         margin-top: 20px;
-        margin-left: 30px
-    }
+        margin-left: 30px;
+        flex-wrap: wrap;
+        display: flex
     }
 
+    .login{
+    
+        
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: none;
+       
+        
+        display: flex;
+        flex-wrap: nowrap
+        }
+
+       
+        
+   
+
+        .control-login{
+            border-radius: 5px;
+            width: 40vw;
+        
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #f3f3f3;
+            color: #212121;
+            border: 1px solid #f3f3f3;
+            padding: 10px 14px;
+            line-height: normal;
+            letter-spacing: inherit;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background-color: #f3f3f3;
+            
+            }
+
+            .boton-login{
+                margin-top: 100px;
+                background-color: black;
+                color: white;
+            
+                margin-bottom: 10px;
+                width: 20vw;
+                height: 3vw;
+                margin-left: 2vw
+                
+            }
+            
+
+            .boton-registrarse{
+                margin-top:100px;
+                background-color: black;
+                color:white;
+                margin-bottom: 10px;
+                width: 20vw;
+                height: 3vw;
+                margin-left: 23vw;
+                margin-right: 12vw
+            }
+
+            .cliente-nuevo{
+                float: right
+            }
+           
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300&family=Poppins:wght@200&family=Roboto&display=swap');
+
+   
  
-
 
 
 
@@ -622,3 +954,4 @@ a.boton_envio_pd{
     padding-top: 50px
 }
 }
+
