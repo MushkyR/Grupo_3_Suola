@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
-    <link href='/css/styles.css' rel ='stylesheet'>
+    <link href='/css/styles-pd.css' rel ='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />   
 </head>
@@ -26,6 +26,7 @@
             </ul>
 
         <div class="secciones_verticales_pd">
+        
             <div class="imagenes_pd">
 
             <ul class="contenedor_galeria_pd">
@@ -40,19 +41,37 @@
             </section>
             </div>
 
-            <section class="contenedor_detalles_pd">
-                <h1 class="nombre_producto_pd">BOTINETAS GIORNO</h1>
+            <section class="detalles_pd">
+
+            <div class="contenedor_detalles_pd">
+                <h1 class="nombre_producto_pd">SANDALIAS GIORNO</h1>
                 <h6 class="art_pd">Art. 12345</h6>
 
                 <h3 class="precio_pd">$15.000</h3>
 
                 <label class="seleccion_color_pd">Color<br>
-                    <input type="radio" name='color' value='blanco' class="color_blanco_pd">
-                    <input type="radio" name='color' value='negro' class="color_negro_pd">
-                    <input type="radio" name='color' value='gris' class="color_gris_pd"> 
+                    <div class="colores_pd">
+                        <p class="seleccion_color1_pd"></p>
+                        <p class="seleccion_color2_pd"></p>
+                        <p class="seleccion_color3_pd"></p>
+                    </div>
                 </label><br>
 
                 <label class="seleccion_talle_pd">Talle<br>
+                    <div class="talles_pd">
+                        <div class="contenedor_talle_pd"><p class="talle35_pd">35</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle36_pd">36</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle37_pd">37</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle38_pd">38</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle39_pd">39</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle40_pd">40</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle41_pd">41</p></div>
+                        <div class="contenedor_talle_pd"><p class="talle42_pd">42</p></div>
+
+                     
+                    </div>
+
+                    <!--
                     <input type="radio" name='talle' value=35 class="talle_35_pd">
                     <input type="radio" name='talle' value=36 class="talle_36_pd">
                     <input type="radio" name='talle' value=37 class="talle_37_pd">
@@ -61,41 +80,45 @@
                     <input type="radio" name='talle' value=40 class="talle_40_pd">
                     <input type="radio" name='talle' value=41 class="talle_41_pd">
                     <input type="radio" name='talle' value=42 class="talle_42_pd">
+                    -->
                 </label><br>
 
-                <div class="botones_pd">
-                    <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
+            </div>
 
-                    <button type="submit" class="boton_comprar_pd"><a href='/'>COMPRAR</a></button><br>
-                </div>
+            
+            <div class="botones_pd">
+                <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
 
+                <button type="submit" class="boton_comprar_pd"><a href='/'>COMPRAR</a></button><br>
+            </div>
+
+            <div class="contenedor_detalles2_pd">
                 <div class="iconos">
                     <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-share-nodes"></i>
-            
-
+                    <i class="fa-solid fa-share-nodes"></i>
                 </div>
                 
                 <div class="acordeon_pd">
                 <!--guia para hacer el acordeon: https://www.youtube.com/watch?v=XGyTnLoGOX0&ab_channel=EduardoFierro-->
                     <div class="bloque_pd">
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
-                        <p class="contenido">Soy el contenido del bloque 1</p>
+                        <p class="contenido_pd">Soy el contenido del bloque 1</p>
                     </div>
 
                     <div class="bloque_pd">
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
-                        <p class="contenido">Soy el contenido del bloque 2</p>
+                        <p class="contenido_pd">Soy el contenido del bloque 2</p>
                     </div>
 
                     <div class="bloque_pd">
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
-                        <p class="contenido">Soy el contenido del bloque 3</p>
+                        <p class="contenido_pd">Soy el contenido del bloque 3</p>
                     </div>
             
                 </div>
                     
 
+            </div>
             </section>
         </div> 
     </main>
