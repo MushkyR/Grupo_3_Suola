@@ -9,11 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
     <link rel='stylesheet' href="/css/styles.css">
+    <link rel='stylesheet' href="/css/styles-login.css">
     <title>Login</title>
 </head>
 <body>
 
-    <a href class="link-ahome">HOME |</a>
+    <a href="/" class="link-ahome">HOME |</a>
     <a href class="link-alogin"> LOGIN</a>
 <h1 class="login"><strong>Login</strong></h1>
 
@@ -29,7 +30,7 @@
         <div class="email-login"> <strong>E-mail </strong>
     </label><br> 
     
-    <input type="email" name="Email" placeholder="Por favor ingrese su e-mail"
+    <input type="email" name="Email" placeholder="Por favor ingrese su e-mail" required
         class="control-login">
     
     </div><br>
@@ -38,7 +39,7 @@
     <label>
     <div class="password-login"><strong>Contraseña</strong>
     </label><br>
-    <input type="password" placeholder="Por favor ingrese su Contraseña" name="clave"
+    <input type="password" placeholder="Por favor ingrese su Contraseña" required name="clave"
     class="control-login">
     </div><br>
     <a href class="olvido-contrasena">¿Olvidaste la contraseña?<br> </a> </p> </div>
@@ -53,9 +54,10 @@
 <p class="reg-enlogin"> <strong>CLIENTE NUEVO </strong><br></p>
   <div class="texto-crearCuenta">  Si todavía no tenés una cuenta de usuario con nosotros, <br>
     te recomendamos crearla. Esto facilitará el proceso<br> de compra en nuestra web.<br> </div>
-       
+    
+    <form action="/register" method="'GET">
         <button type="submit" class="boton-registrarse" color=white background-color=black> Registrarse </button>
-        <form action="/form" method="GET">
+        
         </form>
 
     </div> </div>
@@ -69,7 +71,12 @@
         <div class="suscribite-footer">
            <label> Suscribite a nuestro Newsletter</label><br>
            <input type="email" name="Email" placeholder="Por favor ingrese su e-mail"
-        class="control-footer"></div>
+        class="control-footer">
+        <div class="submit-reg-suscribite">
+            <button type="submit" class="boton-suscribite" color=white background-color=black> Suscribite </button>
+            <form action="/form" method="GET">
+            </form></div>
+        </div>
 
 </div><br>
 <i class="fa-brands fa-whatsapp"></i>
@@ -82,7 +89,7 @@
             </ul>
 
             <ul class="derecha-footer">
-                <li> <a href="#"> Guía de talles</a></li>
+                <li> <a href="/images/talles.jpg"> Guía de talles</a></li>
                 <li><a href="#">Guía de cuidados</li>
                 <li><a href="#"> Contacto</a></li>
 

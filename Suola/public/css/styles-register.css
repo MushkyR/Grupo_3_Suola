@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px
+}
+
+.body-reg{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row
+}
+.registrarse{
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: none;
+    font-family: "poppins"
+}
+
+.link-alogin{
+    font-family: "poppins";
+    font-size: 12px;
+    margin-bottom: none
+}
+
+.link-ahome{
+    font-family: "poppins";
+    font-size: 12px;
+    margin-bottom: none
+}
+
+.todo-registro{
+    margin-left: 40px;
+    margin-top: 20px
+  
+    
+    
+}
+
+.foto{
+    padding-left: 150px;
+    padding-top: 50px;
+    width: 70%;
+   
+    
+}
+
+.control{
+    border-radius: 5px;
+    width: 100%;
+    font-family: "poppins";
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f3f3f3;
+    
+   
+}
+
+.control-formulario{
+   margin-left: 100px;
+    width: 50vw;
+    
+}
+    
+.titulo-reg{
+    font-family: "poppins";
+    font-size: 14px;
+}
+
+.nombre-reg{
+    
+    font-family: "poppins";
+    font-size: 14px;
+}
+
+.apellido-reg{
+   font-family:"poppins";
+   font-size: 14px
+}
+
+.nacimiento-reg{
+font-family: "poppins";
+font-size: 14px
+}
+
+.localidad-reg{
+    font-family:"poppins";
+    font-size: 14px
+
+}
+
+.nacimiento-reg{
+    font-family:"poppins";
+    font-size: 14px
+
+}
+
+.email-reg{
+
+font-family: "poppins";
+font-size: 14px
+}
+
+.password-reg{
+ font-family: "poppins";
+ font-size: 14px
+}
+
+.confpass-reg{
+
+font-family: "poppins";
+font-size: 14px
+}
+
+.telefono-reg{
+font-family: "poppins";
+font-size: 14px
+}
+
+.submit-reg{
+ font-family: "poppins";
+ font-size: 14px;
+ margin-left: 10vw
+}
+
+.boton{
+    background-color: black;
+    color:white;
+    font-family: "poppins";
+    width: 30vw;
+    height: 4vw;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.registrarse{
+    margin-bottom: 30px;
+    margin-top: 30px
+}
+
+
+@media (min-width: 769px){
+.todo-registro{
+    margin-left: 40px;
+    margin-top: 10px;
+    float:left;
+    
+    
+}
+
+.foto{
+    padding-left: 150px;
+    padding-top: 50px
+}
+}
+
+
+@media (min-width: 1200px){
+    .todo-registro{
+        display:flex; 
+        width: 50%
+        
+    }
+    .foto{
+        margin-right: 100px;
+        width: 100%
+        
+    }
+    .boton{
+        background-color: black;
+        color:white;
+        font-family: "poppins";
+        width: 30vw;
+        height: 2vw;
+    
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .texto-crearCuenta{
+        margin-top: 11vw; 
+        margin-left: 15vw
+    }
+}
+ 
