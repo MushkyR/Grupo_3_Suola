@@ -6,29 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"/>
 </head>
 
 <body>
-    <header></header>
+    <header>
+
+        <p class="anuncio">anuncio</p>
+
+        <div class="principal-header">
+            <div class="arriba-header">
+
+                <div class="menu-hamburguesa">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <div class="espacio-logo-header">
+                    <a href="/"><img class="logo" src="images/logo.png" alt="logo suola"></a>
+                </div>    
+                
+                    <nav class="nav-header">
+                        <ul class="der-nav-header">
+                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                            <li><a href="/favorits"><i class="fa-solid fa-heart"></i></a></li>
+                            <li><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                        </ul>
+                    </nav>
+                
+            </div>
+
+            <nav>
+                <ul class="abajo-nav-header">
+                    <li><a href="#">zapatos</a></li>
+                    <li><a href="#">mocasines</a></li>
+                    <li><a href="#">botas</a></li>
+                    <li><a href="#">sandalias</a></li>
+                    <li><a href="#">zapatillas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
 
     <main>
         <section class="cabezal-cart">
-            <h1 class="titulo-cart">Tu carrito</h1>
-                <div class="barra-cart">
+            <p class="titulo-cart">Tu carrito</p>
+            <div class="barra-cart">
 
-                    <a class="boton-continuar-cart" href="/">continuar shopping</a>
+                <a class="boton-continuar-cart" href="/">continuar shopping</a>
                     
-                    <div class="secciones-u-cart">
-                    <p class="secciones-cart">Carrito  <i class="fa-solid fa-bag-shopping"></i></p>
-                    <p class="secciones-cart">Favoritos  <i class="fa-regular fa-heart"></i></p>
-                    </div>
-
-                    <div >
-                        <a class="boton-comprar-cart" href="/checkout">comprar</a>
-                    </div>
+                <div class="secciones-u-cart">
+                    <a href="/cart"><p class="secciones-cart">Carrito  <i class="fa-solid fa-bag-shopping"></i></p></a>
+                    <a href="/favorits"><p class="secciones-cart">Favoritos  <i class="fa-solid fa-heart"></i></p></a>
                 </div>
+
+                <div >
+                    <a class="boton-comprar-cart" href="/checkout">comprar</a>
+                </div>
+            </div>
         </section>
 
         <section class="carrito-cart">
@@ -40,25 +78,52 @@
             </div>
 
             <div class="info-cart">
-                <div class="producto-cart"><div class="info-numerador-cart">nº</div>
-                <img class="img-cart" src="#" alt="imagen producto">
-                <div class="info-producto-cart">
-                    <div id="nombre-producto-cart">NOMBRE DEL PRODUCTO</div>
-                    <div id="color-cart"><i class="fa-solid fa-circle"></i>color</div>
-                    <div>Talle nº</div>
-                </div></div>
-                <div class="info-precio-cart">$Precio</div>
-                <div class="info-cantidad-cart">
-                    <select id="selector-cart" name="cantidad-art" id="cantidad-art">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                <div><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
+                <div class="producto-cart">
+                    <div class="info-numerador-cart">nº</div>
+                    <img class="img-cart" src="/images/zapato1.1.webp" alt="imagen producto">
+
+                    
+                        <div class="info-producto-cart">
+                            <div id="nombre-producto-cart">NOMBRE DEL PRODUCTO</div>
+                            <div id="color-cart"><i class="fa-solid fa-circle"></i>color</div>
+                            <div id="talle">Talle nº</div>
+                                <div class="segunda-seccion-desktop-cart">   
+                                    <div class="info-precio-cart">$Precio</div>
+            
+                                        <div class="info-cantidad-cart">
+                                            <select id="selector-cart" name="cantidad-art" id="cantidad-art">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+            
+                                    <div class="info-subtotal-cart">$Subtotal</div>
+
+                                    <div><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
+                                </div>   
+                        </div>
+                     <div class="segunda-seccion-cart">   
+                        <div class="info-precio-cart">$Precio</div>
+
+                            <div class="info-cantidad-cart">
+                                <select id="selector-cart" name="cantidad-art" id="cantidad-art">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                        <div><button id="info-botoncancelar-cart" type="reset">Cancelar</button></div>
+                        
+                        <div class="info-subtotal-cart">$Subtotal</div>
+                      </div>   
+                </div>
             </div>
-                <div class="info-subtotal-cart">$Subtotal</div>
         </section>
 
         <section class="abajo-cart">
@@ -77,13 +142,13 @@
             <div class="tabla-total-cart">
                 <div class="datos-abajo-cart">
                     <div class="total-abajo-cart">
-                        <p>Subtotal</p>
-                        <p>$Subtotal</p>
+                        <p class="info-desktop-cart">Subtotal</p>
+                        <p class="info-desktop-cart">$Subtotal</p>
                     </div>
 
                     <div class="total-abajo-cart">
-                        <p>Envío (tipo de envío)</p>
-                        <p>$precio</p>
+                        <p class="info-desktop-cart">Envío (tipo de envío)</p>
+                        <p class="info-desktop-cart">$precio</p>
                     </div>
 
                     <div class="total-abajo-cart">
