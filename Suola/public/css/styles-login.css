@@ -2,6 +2,10 @@ body{
     font-family: 'Poppins', sans-serif;
  }
 
+
+  .link-ahome{
+      margin-left:30px
+  }
  .texto-crearCuenta{
      margin-top: 20px;
      text-align:center;
@@ -10,7 +14,6 @@ body{
 
 .login-cuerpo{
     flex-direction: row;
-    margin-top: 30px;
     margin-left: 30px;
     text-align: center
 }
@@ -79,9 +82,10 @@ background-color: black;
 color:white;
 
 margin-bottom: 10px;
-width: 30vw;
-height: 4vw;
+width: 250px;
+height: 40px;
 margin-left: 30vw;
+text-transform: uppercase
 
 }
 
@@ -91,17 +95,16 @@ background-color: black;
 color:white;
 
 margin-bottom: 10px;
-width: 30vw;
-height: 4vw;
+width: 250px;
+height: 40px;
 margin-left: 30vw;
 }
 
 
 .entrar-login{
-margin-left: 20vw;
+
 text-align: center;
-margin-top: 60px;
-margin-right: 30vw
+
 }
 
 .reg-enlogin{
@@ -110,6 +113,19 @@ margin-right: 30vw
 }
 
 @media(min-width: 1200px){
+
+    .iconos-footer{
+        text-align: center;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        margin-top: 1200px;
+        margin-left: 100px
+    }
+
+
 .login-todo{
     margin-top: 20px;
     margin-left: 30px
@@ -180,8 +196,12 @@ margin-right: 30vw
             margin-bottom: 10px;
             width: 20vw;
             height: 3vw;
-            margin-left: 2vw
+            margin-left: 2vw;
+            text-transform: uppercase
             
+        }
+        .boton-login:hover {
+            font-weight: bold;
         }
         
 
@@ -193,7 +213,12 @@ margin-right: 30vw
             width: 20vw;
             height: 3vw;
             margin-left: 23vw;
-            margin-right: 12vw
+            margin-right: 12vw;
+            text-transform: uppercase
+        }
+
+        .boton-registrarse:hover {
+            font-weight: bold;
         }
 
         .cliente-nuevo{
