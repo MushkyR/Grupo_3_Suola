@@ -159,20 +159,7 @@ font-size: 14px
 }
 
 
-@media (min-width: 769px){
-.todo-registro{
-    margin-left: 40px;
-    margin-top: 10px;
-    float:left;
-    
-    
-}
 
-.foto{
-    padding-left: 150px;
-    padding-top: 50px
-}
-}
 
 
 @media (min-width: 1200px){

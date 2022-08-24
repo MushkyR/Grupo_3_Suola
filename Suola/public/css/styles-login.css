@@ -21,8 +21,8 @@ body{
 
 .login-cuerpo{
     flex-direction: row;
-    margin-left: 30px;
-    text-align: center
+    text-align: center;
+    margin-left: 5%
 }
 .login{
 
@@ -49,12 +49,7 @@ width: 80%
 
 }
 
-.login-body{
 
-margin-left: 80px;
-margin-top: 10px;
-
-}
 
 .reg-enlogin{
 
@@ -111,6 +106,8 @@ margin-left: 30vw;
 .entrar-login{
 
 text-align: center;
+padding-right: 10%;
+padding-bottom: 5%;
 
 }
 
@@ -119,24 +116,21 @@ text-align: center;
  
 }
 
-@media(min-width: 1200px){
-
-    .iconos-footer{
-        text-align: center;
-        justify-content: center;
-        justify-content: space-between;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 30px;
-        margin-top: 1200px;
-        margin-left: 100px
-    }
-
-
-.login-todo{
-    margin-top: 20px;
-    margin-left: 30px
+.cliente-nuevo{
+    text-align: center;
+    flex-direction: row
 }
+@media(min-width: 1200px){
+    
+ 
+     .cliente-nuevo{
+         text-align: left
+     }
+    
+     .login-entero{
+         display: flex
+     }
+
 
 
 .registrado-login{
@@ -152,12 +146,6 @@ text-align: center;
 }
 
 
-.login-todo{
-    margin-top: 20px;
-    margin-left: 30px;
-    flex-wrap: wrap;
-    display: flex
-}
  
 .login{
 
@@ -196,7 +184,7 @@ text-align: center;
         }
 
         .boton-login{
-            margin-top: 12vw;
+       
             background-color: black;
             color: white;
         
@@ -214,13 +202,12 @@ text-align: center;
 
         .boton-registrarse{
             
+           
             background-color: black;
-            color:white;
-            margin-bottom: 10px;
+            color: white;
             width: 20vw;
             height: 3vw;
-            margin-left: 23vw;
-            margin-right: 12vw;
+          
             text-transform: uppercase
         }
 
@@ -228,9 +215,7 @@ text-align: center;
             font-weight: bold;
         }
 
-        .cliente-nuevo{
-            float: right
-        }
+     
        
 }
 
