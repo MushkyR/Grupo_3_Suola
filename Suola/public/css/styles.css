@@ -476,8 +476,12 @@ footer{
        .texto-crearCuenta{
         margin-top: 20px;
         text-align:center;
-        margin-right: 0vw
-    }
+        margin-right: 0vw;
+        padding-top: 50px;
+   
+    padding-bottom: 80px;
+}
+    
 }
       
 
