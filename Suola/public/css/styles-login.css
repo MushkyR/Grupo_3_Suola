@@ -1,0 +1,231 @@
+body{
+    font-family: 'Poppins', sans-serif;
+ }
+
+
+  .link-ahome{
+      margin-left:30px
+  }
+ .texto-crearCuenta{
+     margin-top: 20px;
+     text-align:center;
+    
+ }
+
+.login-cuerpo{
+    flex-direction: row;
+    margin-left: 30px;
+    text-align: center
+}
+.login{
+
+
+font-weight: 500;
+letter-spacing: .1em;
+text-transform: none;
+margin-bottom: 30px;
+margin-top: 30px;
+
+margin-left: 40px;
+flex-wrap: wrap;
+}
+
+.email-login{
+
+width: 80%
+}
+
+.password-login{
+
+
+width: 80%
+
+}
+
+.login-body{
+
+margin-left: 80px;
+margin-top: 10px;
+
+}
+
+.reg-enlogin{
+
+margin-left: 20vw;
+text-align: center;
+margin-top: 60px;
+margin-right: 30vw
+}
+
+.control-login{
+border-radius: 5px;
+width: 80%;
+
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+border: 1px solid #f3f3f3;
+color: #212121;
+border: 1px solid #f3f3f3;
+padding: 10px 14px;
+line-height: normal;
+letter-spacing: inherit;
+border-radius: 0;
+-webkit-box-shadow: none;
+box-shadow: none;
+background-color: #f3f3f3;
+
+}
+.boton-registrarse{
+margin-top:100px;
+background-color: black;
+color:white;
+
+margin-bottom: 10px;
+width: 250px;
+height: 40px;
+margin-left: 30vw;
+text-transform: uppercase
+
+}
+
+.boton-login{
+margin-top:100px;
+background-color: black;
+color:white;
+
+margin-bottom: 10px;
+width: 250px;
+height: 40px;
+margin-left: 30vw;
+}
+
+
+.entrar-login{
+
+text-align: center;
+
+}
+
+.reg-enlogin{
+    flex-direction: row;
+ 
+}
+
+@media(min-width: 1200px){
+
+    .iconos-footer{
+        text-align: center;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        margin-top: 1200px;
+        margin-left: 100px
+    }
+
+
+.login-todo{
+    margin-top: 20px;
+    margin-left: 30px
+}
+
+
+.registrado-login{
+    text-align: center
+}
+.reg-enlogin{
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: 0vw
+}
+
+
+.login-todo{
+    margin-top: 20px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+    display: flex
+}
+ 
+.login{
+
+    
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: none;
+   
+    
+    display: flex;
+    flex-wrap: nowrap
+    }
+
+   
+    
+
+
+    .control-login{
+        border-radius: 5px;
+        width: 40vw;
+    
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #f3f3f3;
+        color: #212121;
+        border: 1px solid #f3f3f3;
+        padding: 10px 14px;
+        line-height: normal;
+        letter-spacing: inherit;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: #f3f3f3;
+        
+        }
+
+        .boton-login{
+            margin-top: 12vw;
+            background-color: black;
+            color: white;
+        
+            margin-bottom: 10px;
+            width: 20vw;
+            height: 3vw;
+            margin-left: 2vw;
+            text-transform: uppercase
+            
+        }
+        .boton-login:hover {
+            font-weight: bold;
+        }
+        
+
+        .boton-registrarse{
+            margin-top:21vw;
+            background-color: black;
+            color:white;
+            margin-bottom: 10px;
+            width: 20vw;
+            height: 3vw;
+            margin-left: 23vw;
+            margin-right: 12vw;
+            text-transform: uppercase
+        }
+
+        .boton-registrarse:hover {
+            font-weight: bold;
+        }
+
+        .cliente-nuevo{
+            float: right
+        }
+       
+}
+
+
+
