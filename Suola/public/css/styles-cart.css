@@ -10,6 +10,10 @@ body {
     margin: 0px;
 }
 
+main {
+    margin-top: 30px;
+}
+
 .cabezal-cart {
     margin: 15px;
     margin-bottom: 40px;
@@ -330,5 +334,3 @@ align-items: center;
     }
 }
 
-
-/*listooooo*/

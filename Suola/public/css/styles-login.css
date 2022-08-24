@@ -4,7 +4,14 @@ body{
 
 
   .link-ahome{
-      margin-left:30px
+      margin-left:30px;
+      color: black;
+      font-size: 12px
+  }
+
+  .link-alogin{
+      color: black;
+      font-size: 12px
   }
  .texto-crearCuenta{
      margin-top: 20px;

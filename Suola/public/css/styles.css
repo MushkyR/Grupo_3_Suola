@@ -13,7 +13,7 @@ body{
 
 header {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .principal-header {
@@ -58,7 +58,7 @@ header {
     width: 30%;
     display: flex;
     justify-content: flex-end;
-
+    max-width: 30%;
 }
 
 .der-nav-header {
@@ -70,7 +70,7 @@ header {
 }
 
 .der-nav-header li {
-    margin: 10px;
+    margin: 3%;
 }
 
 .der-nav-header i{
@@ -78,6 +78,15 @@ header {
     color: black;
     font-size: 2vw;
     margin: 10px;
+}
+
+.login {
+    display: none;
+}
+
+.favorits
+{
+    display: none;
 }
 
 .abajo-nav-header {
@@ -93,6 +102,15 @@ header {
     text-transform: uppercase;
 }
 
+@media (min-width: 769px) {
+    .favorits {
+        display: block;
+    }
+
+    .login {
+        display: block;
+    }
+}
 
 /*main*/
 .main_home{
@@ -204,7 +222,8 @@ footer{
         width: 100%;
         display: block;
         padding: 10px 0 10px;
-        margin-left: 5vw
+        margin-left: 5vw;
+        
     }
 
   .derecha-footer{
@@ -332,6 +351,14 @@ footer{
         width: 250px;
     }
 
+    .nav-header {
+        max-width: 100%;
+    }
+
+    .der-nav-header li {
+        margin: 10px;
+    }
+
     .abajo-nav-header {
     display: flex;
     justify-content: space-around;
@@ -419,7 +446,8 @@ footer{
         text-align: center;
         width: 100%;
         display:flex;
-        padding: 30px 0 10px
+        padding: 30px 0 10px;
+        margin-left: 250px
     }
     
     
