@@ -204,7 +204,8 @@ footer{
         width: 100%;
         display: block;
         padding: 10px 0 10px;
-        margin-left: 5vw
+        margin-left: 5vw;
+        margin-left: 250px
     }
 
   .derecha-footer{
