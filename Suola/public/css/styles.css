@@ -84,8 +84,7 @@ header {
     display: none;
 }
 
-.favorits
-{
+.favorits {
     display: none;
 }
 
@@ -100,16 +99,6 @@ header {
     color: black;
     font-size: 1vw;
     text-transform: uppercase;
-}
-
-@media (min-width: 769px) {
-    .favorits {
-        display: block;
-    }
-
-    .login {
-        display: block;
-    }
 }
 
 /*main*/
@@ -174,9 +163,12 @@ header {
 }
 
 .fa-whatsapp{
-    font-size: 80px;
+    font-size: 50px;
     color: greenyellow;
-    margin-left: 80vw;
+    position: fixed;
+    right: 1%;
+    top: 80%;
+    margin: 20px;
 }
 
 /*footer*/
@@ -203,7 +195,9 @@ footer{
 }
 
 .suscribite-footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-columna1 ul {
@@ -226,7 +220,7 @@ footer{
 }
 
 .form-email-footer {
-    width: 400px;
+    width: 50%;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -236,9 +230,9 @@ footer{
     background-color: white;
 }
 
-  .boton-suscribite{
+.boton-suscribite{
     border: none;
-    width: 400px;
+    width: 50%;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -246,28 +240,38 @@ footer{
     padding: 10px 14px;
     background-color:black;
     text-transform: uppercase;
-  }
+}
 
-  .boton-suscribite:hover{
+.boton-suscribite:hover{
     font-weight: bold;
-  }
+}
 
-  .submit-reg-suscribite{
-      margin-left: 0
-  }
-
+.submit-reg-suscribite{
+    margin-left: 0
+}
 
 @media (min-width: 769px){
-    .galeria_home{
+    .galeria_home {
         flex-direction: row;
         justify-content: space-evenly;
         margin: 5% 0%;
-        
     }
 
     .art_galeria_home{
         width: 25%;
         padding:0px;
+    }
+
+    .favorits {
+        display: block;
+    }
+
+    .login {
+        display: block;
+    }
+
+    .botones-footer {
+        width: 50%;
     }
 }
 
@@ -335,20 +339,13 @@ footer{
     }
 
     /*footer*/
-    
-    .fa-whatsapp{
-        font-size: 80px;
-        color: greenyellow;
-        margin-left: 80vw;
-       
-    }
 
     .footer-columna1 a {
         text-decoration: none;
         padding: 5px;
         font-size: 13px;
         color: black;
-      }
+    }
 
     .footer-columna1{
         text-align: center;
