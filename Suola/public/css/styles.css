@@ -9,239 +9,6 @@ body{
         font-family: 'Poppins', sans-serif;
 }
 
-.footer-columna1 ul {
-    list-style: none;
-    padding: 0;
-    
-    
-  }
-  
-  .footer-columna1 a {
-    text-decoration: #222222;
-    padding: 5px 0;
-    font-size: 13px;
-    color: black
-   
-  }
-
-  .iconos-footer{
-      text-align: center;
-      justify-content: center;
-      justify-content: space-between;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 30px;
-      margin-top: 10vw
-  }
-  
-  .fa-whatsapp{
-      font-size: 80px;
-      color: greenyellow;
-      margin-left: 80vw;
-     
-  }
-
-  
-  
-
-    .footer-columna1{
-        
-        text-align: center;
-        width: 100%;
-        display: block;
-        padding: 10px 0 10px;
-        margin-left: 5vw
-    }
-
-  .derecha-footer{
-     
-      margin-left: 10vw;
-      margin-top: 50px;
-      margin-right: 20vw;
-      word-wrap: break-word;
-      letter-spacing: .3px;
-    font-size: 10px;
-    
-    font-family: 'Poppins', sans-serif;
-    color: black
-  
-    
-  }
-
-  .izquierda-footer{
-     
-    margin-left: 10vw;
-    margin-top: 50px;
-    margin-right: 20vw;
-    word-wrap: break-word;
-    letter-spacing: .3px;
-    font-size: 10px;
-    font-family: 'Poppins', sans-serif;
-    color: black
-      
-  }
-
-   .email-footer{
-   
-    font-size: 14px
-   }
-
-   .control-footer{
-    border-radius: 5px;
-    margin-left: 0;
-    width: 400px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #f3f3f3;
-    color: #212121;
-    border: 1px solid #f3f3f3;
-    padding: 10px 14px;
-    line-height: normal;
-    letter-spacing: inherit;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #f3f3f3;
-    font-family: 'Poppins', sans-serif;
-    
-   
-   }
-
-
-  .suscribite-footer{
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-  }
-
-  .boton-suscribite{
-    border-radius: 5px;
-    margin-left: 0;
-    width: 400px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #f3f3f3;
-    color: white;
-    border: 1px solid #f3f3f3;
-    padding: 10px 14px;
-    line-height: normal;
-    letter-spacing: inherit;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color:black;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase
-  }
-
-  .boton-suscribite:hover{
-    font-weight: bold;
-  }
-
-  .submit-reg-suscribite{
-      margin-left: 0
-  }
-
-  
-
-
-
-
-   
-
-
-@media (min-width: 1200px){
-  
-
-    .fa-whatsapp{
-        font-size: 80px;
-        color: greenyellow;
-        margin-left: 80vw;
-       
-    }
-    .iconos-footer{
-        text-align: center;
-        justify-content: center;
-        justify-content: space-between;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 30px;
-        margin-top: 1200px;
-        margin-left: 100px
-    }
-
-    .suscribite-footer{
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        margin-left: 80px;
-       
-    }
-
-
- 
-    .footer-columna1 a {
-        text-decoration: #222222;
-        padding: 5px 0;
-        font-size: 13px;
-        color: black
-       
-      }
-    .derecha-footer{
-        
-        margin-right: 40vw;
-        margin-top: 5vw;
-        margin-left: 0;
-        
-    }
-    
-    .izquierda-footer{
-      
-        margin-left: 250px;
-        margin-top: 5vw;
-        
-    }
-    .footer-columna1{
-            
-        text-align: center;
-        width: 100%;
-        display:flex;
-        padding: 30px 0 10px
-    }
-    
-    
-    .control-footer{
-        border-radius: 5px;
-        margin-left: 0;
-        width: 400px;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #f3f3f3;
-        color: #212121;
-        border: 1px solid #f3f3f3;
-        padding: 10px 14px;
-        line-height: normal;
-        letter-spacing: inherit;
-        border-radius: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        background-color: #f3f3f3;
-        font-family: 'Poppins', sans-serif;
-        
-       
-       }
-    
-       .texto-crearCuenta{
-        margin-top: 20px;
-        text-align:center;
-        margin-right: 0vw
-    }
-}
-      
-    
-
-
 /*header*/
 
 header {
@@ -407,6 +174,147 @@ header {
     position:relative;
 }
 
+/*footer*/
+
+footer{
+    background-color: #f3f3f3;
+    padding-top: 20px;
+}
+
+.footer-columna1 ul {
+    list-style: none;
+    padding: 0;
+    
+    
+  }
+  
+  .footer-columna1 a {
+    text-decoration: #222222;
+    padding: 5px 0;
+    font-size: 13px;
+    color: black
+   
+  }
+
+  .iconos-footer{
+      text-align: center;
+      justify-content: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 30px;
+      margin-top: 10vw
+  }
+  
+  .fa-whatsapp{
+      font-size: 80px;
+      color: greenyellow;
+      margin-left: 80vw;
+     
+  }
+
+  
+  
+
+    .footer-columna1{
+        
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 10px 0 10px;
+        margin-left: 5vw
+    }
+
+  .derecha-footer{
+     
+      margin-left: 10vw;
+      margin-top: 50px;
+      margin-right: 20vw;
+      word-wrap: break-word;
+      letter-spacing: .3px;
+    font-size: 10px;
+    
+    font-family: 'Poppins', sans-serif;
+    color: black
+  
+    
+  }
+
+  .izquierda-footer{
+     
+    margin-left: 10vw;
+    margin-top: 50px;
+    margin-right: 20vw;
+    word-wrap: break-word;
+    letter-spacing: .3px;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: black
+      
+  }
+
+   .email-footer{
+   
+    font-size: 14px
+   }
+
+   .control-footer{
+    border-radius: 5px;
+    margin-left: 0;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    
+   
+   }
+
+
+  .suscribite-footer{
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .boton-suscribite{
+    border-radius: 5px;
+    margin-left: 0;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: white;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    line-height: normal;
+    letter-spacing: inherit;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color:black;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase
+  }
+
+  .boton-suscribite:hover{
+    font-weight: bold;
+  }
+
+  .submit-reg-suscribite{
+      margin-left: 0
+  }
+
+
 @media (min-width: 769px){
     .galeria_home{
         flex-direction: row;
@@ -484,8 +392,92 @@ header {
         font-weight: bold;
     }
 
+    /*footer*/
+    
+    .fa-whatsapp{
+        font-size: 80px;
+        color: greenyellow;
+        margin-left: 80vw;
+       
+    }
+    .iconos-footer{
+        text-align: center;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        margin-left: 100px
+    }
 
+    .suscribite-footer{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 80px;
+       
+    }
+
+
+ 
+    .footer-columna1 a {
+        text-decoration: #222222;
+        padding: 5px 0;
+        font-size: 13px;
+        color: black
+       
+      }
+    .derecha-footer{
+        
+        margin-right: 40vw;
+        margin-top: 5vw;
+        margin-left: 0;
+        
+    }
+    
+    .izquierda-footer{
+      
+        margin-left: 250px;
+        margin-top: 5vw;
+        
+    }
+    .footer-columna1{
+            
+        text-align: center;
+        width: 100%;
+        display:flex;
+        padding: 30px 0 10px
+    }
+    
+    
+    .control-footer{
+        border-radius: 5px;
+        margin-left: 0;
+        width: 400px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #f3f3f3;
+        color: #212121;
+        border: 1px solid #f3f3f3;
+        padding: 10px 14px;
+        line-height: normal;
+        letter-spacing: inherit;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: #f3f3f3;
+        font-family: 'Poppins', sans-serif;
+        
+       
+       }
+    
+       .texto-crearCuenta{
+        margin-top: 20px;
+        text-align:center;
+        margin-right: 0vw
+    }
 }
+      
 
 
 
