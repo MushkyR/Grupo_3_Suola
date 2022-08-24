@@ -116,7 +116,6 @@ header {
 .art_galeria_home{
     padding: 60px 60px 0px 60px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -157,6 +156,19 @@ header {
     position:relative;
 }
 
+@media (min-width: 769px){
+    .galeria_home{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5% 0%;
+        
+    }
+
+    .art_galeria_home{
+        width: 25%;
+        padding:0px;
+    }
+}
 
 @media (min-width: 1200px) {
     /*header media 1200*/
@@ -203,6 +215,16 @@ header {
         justify-content: flex-end;
         float: right;
     }
+
+    /*main*/
+    .boton_galeria_home, .boton_ppl_home{
+        transition-duration: 0.2s;
+    }
+
+    .boton_galeria_home:hover, .boton_ppl_home:hover{
+        font-weight: bold;
+    }
+
 
 }
 
