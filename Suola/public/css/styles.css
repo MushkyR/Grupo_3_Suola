@@ -223,7 +223,7 @@ footer{
         display: block;
         padding: 10px 0 10px;
         margin-left: 5vw;
-        margin-left: 250px
+        
     }
 
   .derecha-footer{
@@ -446,7 +446,8 @@ footer{
         text-align: center;
         width: 100%;
         display:flex;
-        padding: 30px 0 10px
+        padding: 30px 0 10px;
+        margin-left: 250px
     }
     
     
