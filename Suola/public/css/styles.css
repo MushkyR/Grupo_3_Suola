@@ -480,8 +480,62 @@ footer{
     }
 }
       
+/*intereses*/
+.intereses_home{
+    background-color: #FFEEEE;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;  
+    width:100%; 
+}
 
 
+.titulo_intereses_home{
+    font-size: 20px;
+
+}
+
+.art_intereses_home{
+    padding: 60px 60px 0px 60px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.imagen_intereses_home{
+    width:100%;
+    margin-bottom: 60px;
+}
+
+.boton_intereses_home{
+    background-color: #6B6E7A;
+    border:none;
+    color: #FFFFF9;
+    text-decoration: none;
+    font-family:  'Poppins', sans-serif;
+    padding: 10px 15px;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+}
+
+
+.galeria_home{
+
+
+.art_galeria_home{
+
+}
+
+.imagen_galeria_home{
+
+}
+
+.boton_galeria_home{
+
+
+}
 
 
 
