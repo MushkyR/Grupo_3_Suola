@@ -350,7 +350,7 @@ footer{
 
     .footer-columna1 a {
         text-decoration: none;
-        padding: 5px;
+        padding: 20px;
         font-size: 13px;
         color: black;
     }
@@ -359,12 +359,19 @@ footer{
         text-align: center;
         width: 100%;
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+    }
+
+    .footer-columna1 a:hover {
+        text-decoration: underline;
     }
 
     .footer-columna1 ul {
         padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     
     .form-email-footer {
