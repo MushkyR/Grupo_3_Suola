@@ -197,7 +197,7 @@ footer{
 }
 
 .iconos-footer i {
-    color: black;
+    color: #BB1D4C;
     padding: 10px;
     font-size: 30px;
 }
@@ -367,7 +367,13 @@ footer{
         padding: 20px;
     }
     
- 
+    .form-email-footer {
+        width: 30%;
+    }
+    
+    .boton-suscribite{
+        width: 30%;
+    }
     
 }
       

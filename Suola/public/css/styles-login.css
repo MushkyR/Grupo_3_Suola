@@ -55,6 +55,7 @@ input:focus, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 .titulo-sec-login {
@@ -93,7 +94,7 @@ input:focus, textarea {
     width: 100%;
     padding: 15px;
     text-transform: uppercase;
-    margin: 30px 0px;
+    margin-top: 30px;
     border: none;
 }
 
@@ -106,7 +107,7 @@ input:focus, textarea {
 .boton-register {
     color: white;
     background-color: black;
-    padding: 15px;
+    padding: 10px;
     text-transform: uppercase;
     text-decoration: none;
     width:100%;
@@ -118,7 +119,7 @@ input:focus, textarea {
         display: flex;
         flex-direction: row;
         justify-content:  space-around;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     .login-formulario {
@@ -136,10 +137,12 @@ input:focus, textarea {
     
     .cliente-nuevo {
         width: 40%;
+        justify-content: space-between;
+        margin-top: 0px;
     }
 
     .texto-crearCuenta {
-        font-size: 1vw;
+        font-size: 1.1vw;
     }
 
     .boton-login:hover {
