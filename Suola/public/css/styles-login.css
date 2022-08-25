@@ -1,238 +1,150 @@
-body{
+* {
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
- }
+}
 
+main {
+    padding-bottom: 60px;
+}
 
-  .link-ahome{
-      margin-left:30px;
-      color: black;
-      font-size: 12px
-  }
+input:focus, textarea {
+    outline: none !important;
+}
 
-  .link-alogin{
-      color: black;
-      font-size: 12px
-  }
- .texto-crearCuenta{
-     margin-top: 20px;
-     text-align:center;
-    
- }
-
-.login-cuerpo{
-    flex-direction: row;
+.links-login {
     margin-left: 30px;
-    text-align: center
-}
-.login{
-
-
-font-weight: 500;
-letter-spacing: .1em;
-text-transform: none;
-margin-bottom: 30px;
-margin-top: 30px;
-
-margin-left: 40px;
-flex-wrap: wrap;
+    color: black;
+    text-transform: uppercase;
 }
 
-.email-login{
-
-width: 80%
+.link-login, .link-register {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.password-login{
-
-
-width: 80%
-
+.titulo-login {
+    text-align: left;
+    font-size: 50px;
+    margin: 30px;
 }
 
-.login-body{
-
-margin-left: 80px;
-margin-top: 10px;
-
-}
-
-.reg-enlogin{
-
-margin-left: 20vw;
-text-align: center;
-margin-top: 60px;
-margin-right: 30vw
-}
-
-.control-login{
-border-radius: 5px;
-width: 80%;
-
-text-align: center;
-margin-top: 10px;
-margin-bottom: 10px;
-border: 1px solid #f3f3f3;
-color: #212121;
-border: 1px solid #f3f3f3;
-padding: 10px 14px;
-line-height: normal;
-letter-spacing: inherit;
-border-radius: 0;
--webkit-box-shadow: none;
-box-shadow: none;
-background-color: #f3f3f3;
-
-}
-.boton-registrarse{
-margin-top:100px;
-background-color: black;
-color:white;
-
-margin-bottom: 10px;
-width: 250px;
-height: 40px;
-margin-left: 30vw;
-text-transform: uppercase
-
-}
-
-.boton-login{
-margin-top:100px;
-background-color: black;
-color:white;
-
-margin-bottom: 10px;
-width: 250px;
-height: 40px;
-margin-left: 30vw;
-}
-
-
-.entrar-login{
-
-text-align: center;
-
-}
-
-.reg-enlogin{
-    flex-direction: row;
- 
-}
-
-@media(min-width: 1200px){
-
-    .iconos-footer{
-        text-align: center;
-        justify-content: center;
-        justify-content: space-between;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 30px;
-        margin-top: 1200px;
-        margin-left: 100px
-    }
-
-
-.login-todo{
-    margin-top: 20px;
-    margin-left: 30px
-}
-
-
-.registrado-login{
-    text-align: center
-}
-.reg-enlogin{
-    flex-direction: row;
-    margin-top: 5px;
-    margin-left: 30px;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-right: 0vw
-}
-
-
-.login-todo{
-    margin-top: 20px;
-    margin-left: 30px;
-    flex-wrap: wrap;
-    display: flex
-}
- 
-.login{
-
-    
-    font-weight: 500;
-    letter-spacing: .1em;
-    text-transform: none;
-   
-    
+.login-form-entero {
     display: flex;
-    flex-wrap: nowrap
-    }
-
-   
-    
-
-
-    .control-login{
-        border-radius: 5px;
-        width: 40vw;
-    
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #f3f3f3;
-        color: #212121;
-        border: 1px solid #f3f3f3;
-        padding: 10px 14px;
-        line-height: normal;
-        letter-spacing: inherit;
-        border-radius: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        background-color: #f3f3f3;
-        
-        }
-
-        .boton-login{
-            margin-top: 12vw;
-            background-color: black;
-            color: white;
-        
-            margin-bottom: 10px;
-            width: 20vw;
-            height: 3vw;
-            margin-left: 2vw;
-            text-transform: uppercase
-            
-        }
-        .boton-login:hover {
-            font-weight: bold;
-        }
-        
-
-        .boton-registrarse{
-            margin-top:21vw;
-            background-color: black;
-            color:white;
-            margin-bottom: 10px;
-            width: 20vw;
-            height: 3vw;
-            margin-left: 23vw;
-            margin-right: 12vw;
-            text-transform: uppercase
-        }
-
-        .boton-registrarse:hover {
-            font-weight: bold;
-        }
-
-        .cliente-nuevo{
-            float: right
-        }
-       
+    flex-direction: column;
+    justify-content:  space-around;
+    align-items: center;
 }
 
+.login-formulario {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cliente-nuevo {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-sec-login {
+    font-size: 4vw;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.seccion-login {
+    width: 100%;
+    text-align: start;
+    margin: 20px;
+}
+
+.titulares-login {
+    font-size: 15px;
+}
+
+.control-login {
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+}
+
+.recuperar-login {
+    color: black;
+    position: absolute;
+    right: 4%;
+    font-size: 10px;
+}
+
+.boton-login {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 15px;
+    text-transform: uppercase;
+    margin: 30px 0px;
+    border: none;
+}
+
+.texto-crearCuenta {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3vw;
+}
+
+.boton-register {
+    color: white;
+    background-color: black;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width:100%;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    .login-form-entero {
+        display: flex;
+        flex-direction: row;
+        justify-content:  space-around;
+        align-items: flex-start;
+    }
+
+    .login-formulario {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .titulo-sec-login {
+        font-size: 25px;
+    }
+    
+    .cliente-nuevo {
+        width: 40%;
+    }
+
+    .texto-crearCuenta {
+        font-size: 1vw;
+    }
+
+    .boton-login:hover {
+        cursor: pointer;
+    }
+}
 
 
