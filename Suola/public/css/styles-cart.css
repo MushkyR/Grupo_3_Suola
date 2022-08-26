@@ -182,10 +182,13 @@ align-items: center;
     /*cart media 1200*/
 
     .titulo-cart{
-       text-align: center; 
+       text-align: left; 
+       font-size: 50px;
        border: none;
-       margin: 10px;
+       margin-left: 0px;
+       margin-bottom: 50px;
     }
+
     .barra-cart {
         display: flex;
         flex-wrap: wrap;

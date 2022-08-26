@@ -4,6 +4,10 @@
     margin:0px;
 }
 
+input:focus, textarea {
+    outline: none !important;
+}
+
 /* product_detail:*/
 body{
     font-family: 'Poppins', sans-serif;
