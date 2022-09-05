@@ -33,13 +33,9 @@
 }
 
 .todo-registro{
-    margin-left: 40px;
-    margin-top: 20px;
-    background-color: white
-  
-    
-    
+    width: 80%;
 }
+
 
 .foto{
     padding-left: 150px;
@@ -72,81 +68,17 @@
 
 .control-formulario{
    margin-left: 100px;
-    width: 50vw;
-    
-}
-    
-.titulo-reg{
-    font-family: "poppins";
-    font-size: 14px;
+    font-size: 14px;  
 }
 
-.nombre-reg{
-    
-    font-family: "poppins";
-    font-size: 14px;
-}
-
-.apellido-reg{
-   font-family:"poppins";
-   font-size: 14px
-}
-
-.nacimiento-reg{
-font-family: "poppins";
-font-size: 14px
-}
-
-.localidad-reg{
-    font-family:"poppins";
-    font-size: 14px
-
-}
-
-.nacimiento-reg{
-    font-family:"poppins";
-    font-size: 14px
-
-}
-
-.email-reg{
-
-font-family: "poppins";
-font-size: 14px
-}
-
-.password-reg{
- font-family: "poppins";
- font-size: 14px
-}
-
-.confpass-reg{
-
-font-family: "poppins";
-font-size: 14px
-}
-
-.telefono-reg{
-font-family: "poppins";
-font-size: 14px
-}
-
-.submit-reg{
- font-family: "poppins";
- font-size: 14px;
- margin-left: 10vw
-}
 
 .boton{
+    padding:15px;
+    margin: 20px 0px 40px 0px;
     background-color: black;
-    color:white;
-    font-family: "poppins";
-    width: 230px;
-    height: 40px;
-
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-transform: uppercase
+    color: white;
+    border: none;
+    width: 100%;
 }
 
 .boton:hover{
@@ -160,31 +92,25 @@ font-size: 14px
 }
 
 
-
-
-
 @media (min-width: 1200px){
-     .todo-registro{
+     .main-register{
         display:flex; 
-        width: 50%
-        
-    }
-    .foto{
-        margin-right: 100px;
+        flex-direction: row;
         width: 100%
         
     }
-    .boton{
-        margin-top: 3vw;
-        background-color: black;
-        color: white;
-    
-        margin-bottom: 10px;
-        width: 20vw;
-        height: 3vw;
-        margin-left: 2vw
+    .todo-registro{
+        width:50%
     }
-    
+    .img-registro{
+        width:50%
+    }
+
+    .foto{
+        padding: 50px;
+        width: 100%;
+    }
+
     .texto-crearCuenta{
         margin-top: 11vw; 
         margin-left: 15vw
