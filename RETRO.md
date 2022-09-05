@@ -9,3 +9,17 @@
 **Hacer menos:** No desaprovechar los minutos preciados de las reuniones. 
 
 **Dejar de hacer:** Hasta el momento estamos conformes con el trabajo del equipo. 
+
+
+**Retrospectiva sobre sprint 2:** 
+
+**Comenzar a hacer:** Lista de objetivos para las reuniones.
+
+**Hacer más:** Tomar en cuenta tiempos de revisión del sprint luego de haber completado las tareas de forma individual.
+
+**Continuar haciendo:** Cumplir con los tiempos, consultar cuando hay dudas, reunirnos semanalmente y siempre que surja la necesidad, apoyarnos unas a las otras contribuyendo cada una según sus fortalezas.
+
+**Hacer menos:** Esperar para actualizar el trello.
+
+**Dejar de hacer:**  Hablar de temas del curso pero que no son los pautados para la reunión.
+
