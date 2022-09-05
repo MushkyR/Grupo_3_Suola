@@ -105,10 +105,11 @@ header {
     text-transform: uppercase;
 }
 
+
+
 /*main*/
 .main_home{
     background-color: #FFFFF9;
-    padding-bottom: 60px;
 }
 
 .imagen_ppl_home{
@@ -127,6 +128,7 @@ header {
     padding: 60px 60px 0px 60px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px
 }
 
 .imagen_galeria_home{
@@ -164,6 +166,59 @@ header {
 
 .seccion_principial{
     position:relative;
+}
+
+.intereses_home{
+    background-color: #FFEEEE;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;  
+    width:100%; 
+    margin-top: 60px;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+
+.titulo_intereses_home{
+    font-size: 20px;
+    padding: 30px;
+    align-self: flex-start;
+
+}
+
+.galeria_intereses_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.art_intereses_home{
+    display: flex;
+    position: relative;
+    padding: 40px 80px 0px;
+
+}
+
+.imagen_intereses_home{
+    width:100%;
+    margin-bottom: 60px;
+}
+
+.boton_intereses_home{
+    background-color: #6B6E7A;
+    border:none;
+    color: #FFFFF9;
+    text-decoration: none;
+    font-family:  'Poppins', sans-serif;
+    padding: 10px 15px;
+    width: 30%;
+    align-self: center;
+    text-align: center;
+    position: absolute;
+    bottom: 30%;
+    left: 35%;
 }
 
 .fa-whatsapp{
@@ -265,11 +320,33 @@ footer{
         margin: 5% 0%;
     }
 
+
     .art_galeria_home{
+        width: 25%;
+        padding:20px;
+    }
+
+    .intereses_home{
+        justify-content: space-evenly;
+        
+    }
+
+    .galeria_intereses_home{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .art_intereses_home{
         width: 25%;
         padding:0px;
     }
 
+    .boton_intereses_home{
+    width: 50%;
+    left: 25%;
+
+    }
+    
     .favorits {
         display: block;
     }
@@ -284,7 +361,7 @@ footer{
 }
 
 @media (min-width: 1200px) {
-    /*header media 1200*/
+    /*header*/
 
     .arriba-header {
         margin-bottom: 35px;
@@ -346,11 +423,19 @@ footer{
         font-weight: bold;
     }
 
+    .boton_intereses_home, .boton_ppl_home{
+        transition-duration: 0.2s;
+    }
+
+    .boton_intereses_home:hover, .boton_ppl_home:hover{
+        font-weight: bold;
+    }
+
     /*footer*/
 
     .footer-columna1 a {
         text-decoration: none;
-        padding: 5px;
+        padding: 20px;
         font-size: 13px;
         color: black;
     }
@@ -359,12 +444,19 @@ footer{
         text-align: center;
         width: 100%;
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+    }
+
+    .footer-columna1 a:hover {
+        text-decoration: underline;
     }
 
     .footer-columna1 ul {
         padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     
     .form-email-footer {
