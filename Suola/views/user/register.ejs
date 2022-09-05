@@ -2,57 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;40
-0&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
-    <title>Registrarse</title>
-    <link rel='stylesheet' href="/css/styles.css">
-    <link rel='stylesheet' href="/css/styles-register.css">
+    <%- include('../partials/head') %>
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/styles-register.css">
 
 </head>
-
 <body>
 
-    <header>
-        <p class="anuncio">anuncio</p>
+    <%- include("../partials/header") %>
 
-        <div class="principal-header">
-            <div class="arriba-header">
-
-                <div class="menu-hamburguesa">
-                    <i class="fas fa-bars"></i>
-                </div>
-
-                <div class="espacio-logo-header">
-                    <a href="/"><img class="logo" src="images/logo.png" alt="logo suola"></a>
-                </div>    
-                
-                    <nav class="nav-header">
-                        <ul class="der-nav-header">
-                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                            <li><a href="/login" class="login"><i class="fa-solid fa-user"></i></a></li>
-                            <li><a href="/favorits" class="favorits"><i class="fa-solid fa-heart"></i></a></li>
-                            <li><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                        </ul>
-                    </nav>
-                
-            </div>
-
-            <nav>
-                <ul class="abajo-nav-header">
-                    <li><a href="#">zapatos</a></li>
-                    <li><a href="#">mocasines</a></li>
-                    <li><a href="#">botas</a></li>
-                    <li><a href="#">sandalias</a></li>
-                    <li><a href="#">zapatillas</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <a href="/" class="link-ahome"><strong>HOME /</strong></a>
     <a href class="link-alogin"><strong>REGISTRARSE</strong> </a>
     <h1 class="registrarse"><strong> Registrarse</strong></h1>
@@ -169,36 +127,8 @@
     </div>
 
     <footer> 
-        <div class="arriba-footer">  
-            <div class="iconos-footer">
-                <a href="https://www.instagram.com/" > <i class="fa-brands fa-instagram"></i><a>
-                <a href="https://www.facebook.com/" >  <i class="fa-brands fa-facebook"></i></a>
-                <a href= "https://www.facebook.com/"> <i class="fa-brands fa-twitter"></i></a>
-            </div>
-            <div class="suscribite-footer">
-                <form action="/form" method="GET"></form>
-                    <label> Suscribite a nuestro Newsletter</label><br>
-                    <input type="email" name="Email" placeholder="Por favor ingrese su e-mail" class="form-email-footer">
-                    <button type="submit" class="boton-suscribite"> SUSCRIBITE </button>
-                </form>
-            </div>
-        </div>
-
-        <nav class="footer-columna1">
-            <ul class="izquierda-footer">
-                <li> <a href="#">Cómo comprar</a></li>
-                <li><a href="#"> Cambios y/o devoluciones</a></li>
-                <li><a href="#"> Términos y condiciones</a></li>
-                <li> <a href="#"> Método de envío</a></li>
-            </ul>
-
-            <ul class="derecha-footer">
-                <li> <a href="/images/talles.jpg"> Guía de talles</a></li>
-                <li><a href="#">Guía de cuidados</a></li>
-                <li><a href="#"> Contacto</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <%- include('../partials/footer') %>
+       
 
 </body>
 

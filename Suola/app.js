@@ -1,32 +1,28 @@
 const express = require("express");
 const path = require("path")
+const userRoutes = require('./routes/userRoutes')
+const cartRoutes = require('./routes/cartRoutes')
+const productRoutes = require('./routes/productRoutes')
 
 const app = express()
 
-const publicPath = path.resolve(__dirname, './public')
+app.set('view engine', 'ejs')
+
 app.use(express.static("public"))
 
-app.listen(3400, () => {
-    console.log ("Servidor corriendo en el puerto 3400")
+app.listen(3500, () => {
+    console.log ("Servidor corriendo en el puerto 3500")
 });
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/home.html'))
-});
+app.set("views", [
+    path.join(__dirname, './views/cart' ), 
+    path.join(__dirname, './views/product'),
+    path.join(__dirname, './views/user')
+])
 
-app.get("/cart", (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/cart.html'))
-})
+app.use('/', cartRoutes)
+app.use('/', productRoutes)
+app.use('/', userRoutes)
 
-app.get("/register", (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'))
-})
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'))
-})
-
-app.get("/producto", (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/product_detail.html'))
-})
 
