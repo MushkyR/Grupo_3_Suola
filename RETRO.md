@@ -10,6 +10,7 @@
 
 **Dejar de hacer:** Hasta el momento estamos conformes con el trabajo del equipo. 
 
+*** *** *** *** *** *** *** ***
 
 **Retrospectiva sobre sprint 2:** 
 
