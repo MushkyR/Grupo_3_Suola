@@ -4,8 +4,10 @@ const router = express.Router()
 
 const productController = require('../controllers/productController')
 
-router.get("/",  productController.home)
+router.get("/", productController.detail)
 
-router.get("/producto", productController.detail)
+router.get("/add", productController.add)
+
+router.get("/edit", productController.edit)
 
 module.exports =router;

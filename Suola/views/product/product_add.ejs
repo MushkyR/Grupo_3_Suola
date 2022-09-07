@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="/css/styles-add.css">
+
+</head>
+
+
+
+<body>
+    <%- include("../partials/header") %>
+    <main class="main-add">
+        <section class="header-sec-add">
+            <a href="/" class="link-ahome-add">HOME /</a>
+            <p>  AGREGAR PRODUCTO</p>
+        </section>
+
+        <p class="titulo-add">Nuevo Producto</p>
+
+        <section class="formulario-add">
+        
+            <form action="/" method="GET" class="control-formulario-add">
+                
+                        <div class='seccion-add'>
+                            <label>Categoría</label><br>
+                            <select name="titulo" placeholder="Categoría" class="control">
+                                <option disabled="true" selected="true" value="">Categoría</option>
+                                <option value="botas">Botas</option>
+                                <option value="sandalias">Sandalias</option>
+                                <option value="zapatillas">Zapatillas</option>
+                                <option value="mocasines">Mocasines</option>
+                                <option value="zapatos">Zapatos</option>
+                            </select>
+                        </div>
+        
+                        <div class='seccion-add'>
+                            <label>Nombre de artículo</label><br>
+                            <input type="text" name="nombre-articulo" required class="control">
+                        </div>
+
+                        <div class='seccion-add'><label>Número de Artículo</label><br>
+                            <input type="number" name="numero-articulo" required class="control">
+                        </div>
+
+                        <div class='seccion-add'><label>Descripción</label><br>
+                            <input type="textarea" name="descripcion" required class="control">
+                        </div>
+
+                        <div class='seccion-add'>
+                            <label>Precio</label><br>
+                            <input type="number" name="precio-articulo" required class="control">
+                        </div>
+
+                        <div class='seccion-add'><label>Colores</label><br>
+                            <input type="text" name="colores" required class="control">
+                        </div>
+
+                        <div class='seccion-add'><label>Talles Disponibles</label><br>
+                            <div class="control">
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='35' id="35" class="selecc-talles-add">
+                                    <label for='35' class=''>35</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='36' id="36" class="selecc-talles-add">
+                                    <label for='36' class=''>36</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='37' id="37" class="selecc-talles-add">
+                                    <label for='37' class=''>37</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='38' id="38" class="selecc-talles-add">
+                                    <label for='38' class=''>38</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='39' id="39" class="selecc-talles-add">
+                                    <label for='39' class=''>39</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='40' id="40" class="selecc-talles-add">
+                                    <label for='40' class=''>40</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='41' id="41" class="selecc-talles-add">
+                                    <label for='41' class=''>41</label>
+                                </div>
+
+                                <div class='opc-talles-add'>
+                                    <input type='checkbox' name='talle' value='42' id="42" class="selecc-talles-add">
+                                    <label for='42' class=''>42</label>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class='seccion-add'><label>Imágenes</label><br>
+                            <input type="file" name="imagen" accept=”.jpg” multiple required class="control">
+                        </div>
+                       
+                        <div class="botones-add">
+                            <div class='boton-add'>
+                                <button type="submit" class="submit-add" color=white background-color=black>CREAR PRODUCTO</button>
+                            </div>
+
+                            <div class='boton-add'>
+                                <button type="reset" class="reset-add" color=white background-color=black>BORRAR FORMULARIO</button>
+                            </div>
+                        </div>
+            </form>
+        </section>
+       
+        <%- include("../partials/whatsappIcon") %>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>
