@@ -24,5 +24,8 @@ app.use('/', cartRoutes)
 app.use('/', productRoutes)
 app.use('/', userRoutes)
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 
