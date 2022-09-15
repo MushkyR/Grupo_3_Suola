@@ -22,7 +22,7 @@
 
         <section class="formulario-add">
         
-            <form action="/product/add" method="POST"  class="control-formulario-add">
+            <form action="/product/add" method="POST" enctype="multipart/form-data" class="control-formulario-add">
                 
                         <div class='seccion-add'>
                             <label>Categoría</label><br>
@@ -103,7 +103,7 @@
                         </div>
                             
                         <div class='seccion-add'><label>Imágenes</label><br>
-                            <input type="file" name="imagen" accept=”.jpg” multiple required class="control">
+                            <input type="file" name="productPhoto" accept=”.jpg” multiple required class="control">
                         </div>
                        
                         <div class="botones-add">

@@ -14,18 +14,22 @@ const userController = {
 
         // @POST /user/register
         registerUser: function (req, res) {
-            console.log(req.file)
+            //console.log(req.file)
             // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
             // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
-            //const nuevoUsuario = {
-                //id: Date.now(),
-               // nombre: req.body.name,
-               // email: req.body.email,
-               // contraseña: req.body.password,
-              //  img: './profilePhotos/' + req.file.filename
-          //  };
+            const nuevoUsuario = {
+                id: Date.now(),
+                name: req.body.name,
+                lastName: req.body.lasName,
+                dateBirth: req.body.dateBirth,
+                provincia: req.body.provincia,
+                email: req.body.email,
+                password: req.body.password,
+                passwordConfirm: req.body.passwordConfirm,
+                phone: req.body.phone
+               };
     
             usuarios.push(nuevoUsuario);
     
@@ -33,8 +37,8 @@ const userController = {
     
             // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), usuariosActualizadosJSON, 'utf8');
-    
-            res.redirect('/user/detail/' + nuevoUsuario.id);
+            res.send("Usuario registrado con exito")
+            res.redirect('/' + nuevoUsuario.id);
         },
     
         // @GET /user/detail
