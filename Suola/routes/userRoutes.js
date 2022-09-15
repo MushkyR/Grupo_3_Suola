@@ -28,6 +28,6 @@ router.get("/login", userController.login)
 
 router.get('/detail/:id', userController.getUserDetail);
 
-router.post('/register', upload.single('profilePhoto'), userController.registerUser);
+router.post('/register', userController.registerUser);
 
 module.exports =router;

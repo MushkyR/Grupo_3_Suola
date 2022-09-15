@@ -14,15 +14,16 @@ const userController = {
 
         // @POST /user/register
         registerUser: function (req, res) {
-            //console.log(req.file)
+            console.log(req.body)
             // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
             // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
             const nuevoUsuario = {
                 id: Date.now(),
+                titulo: req.body.titulo,
                 name: req.body.name,
-                lastName: req.body.lasName,
+                lastName: req.body.lastName,
                 dateBirth: req.body.dateBirth,
                 provincia: req.body.provincia,
                 email: req.body.email,
