@@ -1,4 +1,7 @@
 
+const fs = require('fs');
+const path = require('path');
+
 const userController = {
 
    register: function(req, res) {
@@ -16,13 +19,13 @@ const userController = {
             const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
             const usuarios = JSON.parse(usuariosJson);
             // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
-            const nuevoUsuario = {
-                id: Date.now(),
-                nombre: req.body.name,
-                email: req.body.email,
-                contraseña: req.body.password,
-                img: './profilePhotos/' + req.file.filename
-            };
+            //const nuevoUsuario = {
+                //id: Date.now(),
+               // nombre: req.body.name,
+               // email: req.body.email,
+               // contraseña: req.body.password,
+              //  img: './profilePhotos/' + req.file.filename
+          //  };
     
             usuarios.push(nuevoUsuario);
     

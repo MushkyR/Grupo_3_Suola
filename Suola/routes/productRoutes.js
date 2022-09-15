@@ -13,18 +13,22 @@ const storage = multer.diskStorage({
 
     filename: function(req, file, cb){
         
-        cb(null, Date.now() + '-' + file.originalname);
+        cb(null, Date.now() + '-' + path.extname(file.originalname));
     }
 });
 
 const upload = multer({storage: storage});
 
-router.get(productController);
-
-router.get("/product", productController.detail)
-
 router.get('/detail/:id', productController.getProductDetail);
 
-router.post('/add', upload.single('profilePhoto'), productControllers.addProduct);
+router.get("/add", productController.add);
+
+router.post('/add', upload.single('profilePhoto'), productController.addProduct);
+
+router.get("/edit", productController.edit)
+
+router.put('/edit', upload.single('profilePhoto'), productController.editProduct);
+
+
 
 module.exports =router;

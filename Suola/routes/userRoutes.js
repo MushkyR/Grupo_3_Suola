@@ -5,6 +5,7 @@ const router = express.Router()
 const multer = require('multer');
 const path = require('path')
 
+
 const userController = require('../controllers/userController')
 
 const storage = multer.diskStorage({
@@ -14,7 +15,8 @@ const storage = multer.diskStorage({
 
     filename: function(req, file, cb){
        
-        cb(null, Date.now() + '-' + file.originalname);
+        cb(null, Date.now() + '-' + path.extname(file.originalname)
+        );
     }
 });
 
