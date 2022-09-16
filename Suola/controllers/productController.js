@@ -56,12 +56,17 @@ const productController = {
         
         // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
         product = {
-            //id: Date.now(),
-            //nombre: req.body.name,
-            //email: req.body.email,
-            //contraseña: req.body.password,
-            //img: './profilePhotos/' + req.file.filename
+            id: Date.now(),
+            categoria: req.body.categoria,
+            nombreArticulo: req.body.nombreArticulo,
+            numeroArticulo: req.body.numeroArticulo,
+            descripcion: req.body.descripcion,
+            precioArticulo: req.body.precioArticulo,
+            talle: req.body.talle,
+            colores: req.body.colores,
+            img: './profilePhotos/' + req.file.filename
         };
+        ;
      };
 })
 
