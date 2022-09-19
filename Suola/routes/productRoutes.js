@@ -19,16 +19,42 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage});
 
+//listado de productos
+router.get('/', productController.getProducts);
+
+//formulario para agregar un producto
+router.get('/add', productController.add);
+
+//detalle de un producto en particuar
 router.get('/detail/:id', productController.getProductDetail);
 
-router.get("/add", productController.add);
-
+//acción de agregar producto
 router.post('/add', upload.single('productPhoto'), productController.addProduct);
 
-router.get("/edit", productController.edit)
+//formulario de edición de producto
+router.get('/:id/edit', productController.edit)
 
-router.put('/edit', upload.single('productPhoto'), productController.editProduct);
+//accion de edicion de producto
+router.put('/:id/edit', upload.single('productPhoto'), productController.editProduct);
 
-
+//formulario de edición de producto
+router.delete('/:id', productController.deleteProduct)
 
 module.exports =router;
+
+/*
+1. /products (GET)
+Listado de productos
+2. /products/create (GET)
+Formulario de creación de productos
+3. /products/:id (GET)
+Detalle de un producto particular
+4. /products (POST)
+Acción de creación (a donde se envía el formulario)
+5. /products/:id/edit (GET)
+Formulario de edición de productos
+6. /products/:id (PUT)
+Acción de edición (a donde se envía el formulario):
+7. /products/:id (DELETE)
+Acción de borrado
+*/
