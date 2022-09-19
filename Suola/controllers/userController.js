@@ -39,8 +39,8 @@ const userController = {
             // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), usuariosActualizadosJSON, 'utf8');
            
-            res.redirect('/');
-            //res.send("Usuario registrado con exito")
+                res.redirect('/');
+             
         },
     
         // @GET /user/detail
