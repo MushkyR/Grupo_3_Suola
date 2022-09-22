@@ -2,16 +2,19 @@
 const path = require('path');
 const fs = require('fs');
 
-
-
 const productController = {
 
     getProducts: (req, res) => {
-        res.render('products')
+
+        const productosJSON = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf8');
+
+        const productos = JSON.parse(productosJSON);
+
+        res.render('products', {productos})
 },
 
     getProductDetail: (req, res) => {
-
+      
         const id = req.params.id;
 
         const productosJSON = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf8');
@@ -19,8 +22,8 @@ const productController = {
         const productos = JSON.parse(productosJSON);
 
         const productoPedido = productos.find(productoActual => productoActual.id == id);
-
-        res.redirect('products/:id');
+           
+        res.redirect('products/detail');
     },
 
     add: (req, res) => {
@@ -122,4 +125,3 @@ const productController = {
 
 
 module.exports = productController
-

@@ -26,19 +26,19 @@ router.get('/products', productController.getProducts);
 router.get('/add', productController.add);
 
 //detalle de un producto en particuar
-router.get('/detail/:id', productController.getProductDetail);
+router.get('/detail', productController.getProductDetail);
 
 //acción de agregar producto
 router.post('/add', upload.single('productPhoto'), productController.addProduct);
 
 //formulario de edición de producto
-router.get('/:id/edit', productController.edit)
+router.get('/edit', productController.edit)
 
 //accion de edicion de producto
 router.put('/:id/edit', upload.single('productPhoto'), productController.editProduct);
 
 //formulario de edición de producto
-router.delete('/:id', productController.deleteProduct)
+router.post('/delete/:id', productController.deleteProduct)
 
 module.exports =router;
 

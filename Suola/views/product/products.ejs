@@ -17,8 +17,24 @@
                 <img class="imagen_galeria_home" src="images/sandalias1.jpg" alt="">
                 <a href='products.ejs' class="boton_galeria_home">FRESCURA</a>
             </article>
-    
-            <article class="art_galeria_home">
+          <% productos.forEach(function(item)
+          {%> 
+           <div class = "listado"><%-item.nombreArticulo%><br>
+            <%-item.numeroArticulo%><br>
+            <%-item.descripcion%><br>
+            <%-item.precioArticulo%><br>
+            <%-item.colores%><br>
+            <%-item.talle%><br>
+            <img src= <%= "../../" + item.img %>/>
+           <form action="/product/delete/"  + item.id method="POST" class="control-formulario-add">
+           <input type="submit">Eliminar</input></form>  </div>
+            <%}) %> 
+
+
+
+            
+          
+           <article class="art_galeria_home">
                 <img class="imagen_galeria_home" src="images/chatitas1.jpg" alt="">
                 <a href=# class="boton_galeria_home">CONFORT</a>
             </article>
