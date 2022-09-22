@@ -26,7 +26,7 @@
             <%-item.colores%><br>
             <%-item.talle%><br>
             <img src= <%= "../../" + item.img %>/>
-           <form action="/product/delete/"  + item.id method="POST" class="control-formulario-add">
+           <form action = "<%= `/product/delete/${item.id}` %>"  method="POST" class="control-formulario-add">
            <input type="submit">Eliminar</input></form>  </div>
             <%}) %> 
 

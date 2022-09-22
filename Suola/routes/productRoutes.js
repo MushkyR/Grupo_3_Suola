@@ -38,7 +38,7 @@ router.get('/edit', productController.edit)
 router.put('/:id/edit', upload.single('productPhoto'), productController.editProduct);
 
 //formulario de edición de producto
-router.post('/delete/:id', productController.deleteProduct)
+router.delete('/delete/:id', productController.deleteProduct)
 
 module.exports =router;
 
