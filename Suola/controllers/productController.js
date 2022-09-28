@@ -3,12 +3,20 @@ const path = require('path');
 const fs = require('fs');
 
 
-
 const productController = {
 
     getProducts: (req, res) => {
-        res.render('products')
+
+        const productosJSON = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf8');
+
+        const productos = JSON.parse(productosJSON);
+
+        res.render('products', {productos})
 },
+
+    add: (req, res) => {
+        res.render('product_add')
+    },
 
     getProductDetail: (req, res) => {
 
@@ -20,16 +28,8 @@ const productController = {
 
         const productoPedido = productos.find(productoActual => productoActual.id == id);
 
-        res.redirect('products/:id');
+        res.render('product_detail', { product: productoPedido});
     },
-
-    add: (req, res) => {
-    res.render('product_add')
-},
-
-    edit: (req, res) => {
-    res.render('product_edit')
-},
 
     addProduct: function (req, res) {
         console.log(req.file)
@@ -63,6 +63,10 @@ const productController = {
         res.redirect('/products/detail/' + nuevoProducto.id);
     },
 
+    edit: (req, res) => {
+    res.render('product_edit')
+    },
+
     editProduct: function (req, res) {
 
          console.log(req.file)
@@ -71,8 +75,7 @@ const productController = {
 
         productos.forEach(function(product){
             if (product.id == idProducto)      {
-     
-        
+      
         // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
         product = {
             id: Date.now(),
@@ -84,12 +87,11 @@ const productController = {
             talle: req.body.talle,
             colores: req.body.colores,
             img: './profilePhotos/' + req.file.filename
-            };
+                };
             
-        };
+            };
 
-
-    })
+        })
 
         const productosActualizadosJSON = JSON.stringify(productos);
 
@@ -98,8 +100,6 @@ const productController = {
 
         res.redirect('/products/detail/' + nuevoProducto.id);
     },
-
-
 
     deleteProduct: (req, res) => {
             const { id } = req.params;

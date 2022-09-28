@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+}
+
+input:focus, textarea {
+    outline: none !important;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.galeria-producto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;  
+    width:100%; 
+}
+
+.art-galeria-producto{
+    padding: 60px 60px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px
+}
+
+.img-galeria-producto{
+    width:100%; 
+    margin-bottom: 60px;
+}
+
+.detalles-producto{
+    
+}
+
+.boton-ver-producto{
+    background-color: #FFEEEE;
+    border:none;
+    color: #6B6E7A;
+    text-decoration: none;
+    font-family:  'Poppins', sans-serif;
+    padding: 10px 15px;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+
+}
