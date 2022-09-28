@@ -23,7 +23,18 @@ const productController = {
 
         const productoPedido = productos.find(productoActual => productoActual.id == id);
            
-        res.redirect('products/detail');
+        res.render('product_detail', {
+          nombreArticulo: productoPedido.nombreArticulo,
+          id: productoPedido.id,
+          categoria: productoPedido.categoria,
+          numeroArticulo: productoPedido.numeroArticulo,
+          descripcion: productoPedido.descripcion,
+         precioArticulo: productoPedido.precioArticulo,
+         talle: productoPedido.talle,
+         colores: productoPedido.colores,
+         img:  productoPedido.img
+
+        });
     },
 
     add: (req, res) => {
@@ -53,7 +64,7 @@ const productController = {
             precioArticulo: req.body.precioArticulo,
             talle: req.body.talle,
             colores: req.body.colores,
-            img: './profilePhotos/' + req.file.filename
+            img: '/profilePhotos/' + req.file.filename
         };
 
         productos.push(nuevoProducto);
@@ -77,7 +88,7 @@ const productController = {
      
         
         // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
-        product = {
+        /*product = {
             id: Date.now(),
             categoria: req.body.categoria,
             nombreArticulo: req.body.nombreArticulo,
@@ -87,7 +98,22 @@ const productController = {
             talle: req.body.talle,
             colores: req.body.colores,
             img: './profilePhotos/' + req.file.filename
-            };
+            };*/
+
+           
+
+// Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
+    const productos = {
+      id: Date.now(),
+      categoria: req.body.categoria,
+      nombreArticulo: req.body.nombreArticulo,
+      numeroArticulo: req.body.numeroArticulo,
+      descripcion: req.body.descripcion,
+      precioArticulo: req.body.precioArticulo,
+      talle: req.body.talle,
+      colores: req.body.colores,
+      img: req.file.filename,
+    };
             
         };
 
