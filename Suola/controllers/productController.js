@@ -9,8 +9,10 @@ const productController = {
 
         const productos = JSON.parse(productosJSON);
 
+
         res.render('products', { productos })
     },
+
 
     getProductDetail: (req, res) => {
 
@@ -37,7 +39,7 @@ const productController = {
     },
 
     add: (req, res) => {
-        
+
         res.render('product_add')
     },
 
