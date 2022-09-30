@@ -14,9 +14,9 @@
 
             <ul class="linea_de_rutas_pd">
                 <li class="ruta_pd"><a href='/'>HOME    /</a></li>
-                <li class="ruta_pd"><a href=#>CATEGORÍA    /</a></li>
+                <li class="ruta_pd"><a href=#><%= categoria %>    /</a></li>
                 <li class="ruta_pd"><a href=#>VER TODOS    /</a></li>
-                <li class="ruta_pd">MODELO</li>
+                <li class="ruta_pd"><%= nombreArticulo %></li>
             </ul>
 
         <div class="secciones_verticales_pd">
@@ -31,17 +31,17 @@
             </ul>
 
             <section class="contenedor_imagen_ppl_pd">
-                <img class='imagen_ppl_pd' src='/images/zapato1.1.webp'>
+                <img class='imagen_ppl_pd' src= <%= img %>>
             </section>
             </div>
 
             <section class="detalles_pd">
 
             <div class="contenedor_detalles_pd">
-                <h1 class="nombre_producto_pd">SANDALIAS GIORNO</h1>
-                <h6 class="art_pd">Art. 12345</h6>
+                <h1 class="nombre_producto_pd"><%= nombreArticulo %></h1>
+                <h6 class="art_pd">Art. <%= numeroArticulo %></h6>
 
-                <h3 class="precio_pd">$15.000</h3>
+                <h3 class="precio_pd">$<%= precioArticulo %></h3>
 
                 <label class="seleccion_color_pd">Color<br>
                     <div class="colores_pd">
@@ -83,7 +83,14 @@
             <div class="botones_pd">
                 <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
 
-                <button type="submit" class="boton_comprar_pd"><a href='/'>COMPRAR</a></button><br>
+                <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+            </div>
+
+
+            <div class="botones_pd">
+                <a href="/products/<%= id %>/edit" class="boton_envio_pd">Editar Producto</a><br>
+
+                <button type="reset" class="boton_comprar_pd"><a href='/'>Eliminar Producto</a></button><br>
             </div>
 
             <div class="contenedor_detalles2_pd">
@@ -93,13 +100,13 @@
                 </div>
                 
                 <div class="acordeon_pd">
-                <!--guia para hacer el acordeon: https://www.youtube.com/watch?v=XGyTnLoGOX0&ab_channel=EduardoFierro-->
+                    <!--guia para hacer el acordeon: https://www.youtube.com/watch?v=XGyTnLoGOX0&ab_channel=EduardoFierro-->
                     <div class="bloque_pd">
-                        <h2 class="h2_acordeon_pd">TITULAR</h2>
-                        <p class="contenido_pd">Soy el contenido del bloque 1</p>
+                        <h2 class="h2_acordeon_pd">DESCRIPCIÓN</h2>
+                        <p class="contenido_pd"><%= descripcion %></p>
                     </div>
 
-                    <div class="bloque_pd">
+                   <!-- <div class="bloque_pd">
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
                         <p class="contenido_pd">Soy el contenido del bloque 2</p>
                     </div>
@@ -108,6 +115,7 @@
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
                         <p class="contenido_pd">Soy el contenido del bloque 3</p>
                     </div>
+                    -->
             
                 </div>
                     

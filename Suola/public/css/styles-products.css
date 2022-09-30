@@ -24,7 +24,8 @@ body{
     padding: 60px 60px 0px 60px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    width:30%;
 }
 
 .img-galeria-producto{
