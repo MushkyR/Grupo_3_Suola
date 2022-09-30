@@ -32,6 +32,7 @@ body{
 
 .ruta_pd{
     display: none;
+    text-transform: uppercase;
 }
 
 .ruta_pd a{
@@ -233,15 +234,11 @@ a.boton_envio_pd{
 
 .h2_acordeon_pd{
     padding: .5em;
-    border-top: #293041 solid 2px;
     font-size: 18px;
 }
 
 .acordeon_pd .contenido_pd{
     margin-left: .5em;
-    height: 0px;
-    /*overflow: hidden;*/
-    transition: all .5s ease;
 }
 
 .acordeon_pd .bloque_pd.activo .contenido_pd{

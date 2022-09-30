@@ -13,10 +13,21 @@
 <body>
     <%- include("../partials/header") %>
     <main class="main-add">
+        <!--
         <section class="header-sec-add">
             <a href="/" class="link-ahome-add">HOME /</a>
             <p>  EDITAR PRODUCTO</p>
         </section>
+
+    -->
+
+        <ul class="header-sec-add">
+            <li class="link-ahome-add"><a href='/'>HOME    /</a></li>
+            <li class="link-ahome-add"><a href=#><%= categoria %>    /</a></li>
+            <li class="ruta_pd"><a href=#>VER TODOS    /</a></li>
+            <li class="ruta_pd"><%= nombreArticulo %></li>
+            <li class="ruta_pd">EDITAR</li>
+        </ul>
 
         <p class="titulo-add">Editar Producto</p>
 
@@ -38,7 +49,7 @@
         
                         <div class='seccion-add'>
                             <label>Nombre de artículo</label><br>
-                            <input type="text" name="nombreArticulo" required class="control">
+                            <input type="text" name="nombreArticulo" value='' required class="control">
                         </div>
 
                         <div class='seccion-add'><label>Número de Artículo</label><br>

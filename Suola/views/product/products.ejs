@@ -3,36 +3,40 @@
 
 <head>
     <%- include('../partials/head') %>
-    <title>TODOS LOS PRODUCTOS</title>
-    <link rel="stylesheet" href="/css/styles.css">
+        <title>TODOS LOS PRODUCTOS</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/styles-products.css">
 
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
-    <main>
-        <section class="galeria_home">
+        <main>
+            <section class="galeria-producto">
          
-          
-          <% productos.forEach(function(item)
-          {%> 
-            <img src="../../<%- item.img %>"/><br>
-            <%-item.nombreArticulo%><br>
-          
-           <p>$<%-item.precioArticulo%><br></p>
-         
-            
-            <%}) %> 
+                <div>
+                <% productos.forEach(function(item)
+                {%>
+                <div class="art-galeria-producto">
+                <img class="img-galeria-producto" src="../../<%- item.img %>"/><br>
+                <div class="detalles-producto">
+                <%-item.nombreArticulo%><br>
+                
+                <p>$<%-item.precioArticulo%><br></p>
+                </div>
+                
+                <a href="/products/<%- item.id%>" class="boton-ver-producto">VER</a>
+                </div>
+                </div>  
+                <%}) %>
+                  
+              </section>
+        </main>
 
-            
-        </section>
 
-    </main>
+        <%- include("../partials/footer") %>
 
-
-    <%- include("../partials/footer") %>
-    
 </body>
-</html>
 
+</html>

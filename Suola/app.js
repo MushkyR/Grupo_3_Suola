@@ -16,7 +16,7 @@ app.use(express.json());
 
 
 app.use('/cart', cartRoutes)
-app.use('/product', productRoutes)
+app.use('/products', productRoutes)
 app.use('/user', userRoutes)
 app.use('/', homeRoutes)
 
