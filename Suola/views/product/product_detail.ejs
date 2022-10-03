@@ -14,7 +14,7 @@
 
             <ul class="linea_de_rutas_pd">
                 <li class="ruta_pd"><a href='/'>HOME    /</a></li>
-                <li class="ruta_pd"><a href=#><%= categoria %>    /</a></li>
+                <!--<li class="ruta_pd"><a href=#><%= categoria %>    /</a></li> -->
                 <li class="ruta_pd"><a href=#>VER TODOS    /</a></li>
                 <li class="ruta_pd"><%= nombreArticulo %></li>
             </ul>
@@ -24,10 +24,10 @@
             <div class="imagenes_pd">
 
             <ul class="contenedor_galeria_pd">
-                <li><img class='imagen_galeria_pd' src='/images/zapato1.1.webp'></li>
-                <li><img class='imagen_galeria_pd' src='/images/zapato1.2.webp'></li>
-                <li><img class='imagen_galeria_pd' src='/images/zapato1.3.webp'></li>
-                <li><img class='imagen_galeria_pd' src='/images/zapato1.4.webp'></li>   
+                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
+                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
+                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
+                <li><img class='imagen_galeria_pd' src=<%= img %>></li>   
             </ul>
 
             <section class="contenedor_imagen_ppl_pd">
@@ -91,9 +91,8 @@
 
 
             <div class="botones_pd">
-                <a href="/products/<%= id %>/edit" class="boton_envio_pd">Editar Producto</a><br>
+                <a href="/products/edit/<%= id %>" class="boton_envio_pd">Editar Producto</a><br>
 
-                <button type="reset" class="boton_comprar_pd"><a href='/'>Eliminar Producto</a></button><br>
             </div>
 
             <div class="contenedor_detalles2_pd">

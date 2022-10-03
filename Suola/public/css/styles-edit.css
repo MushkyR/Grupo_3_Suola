@@ -13,9 +13,23 @@ main{
     padding: 30px;
 }
 
-.header-sec-add{
+.header-sec-edit{
     display: flex;
     flex-direction: row;
+}
+
+.ruta_edit{
+    color:black;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.ruta_edit a{
+    color:black;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
 }
 
 .titulo-add{
@@ -52,10 +66,6 @@ label{
 }
 
 
-.link-ahome-add{
-    color:black;
-    text-decoration: none;
-}
 
 .control{
     border-radius: 5px;
@@ -73,6 +83,18 @@ label{
     padding: 15px;
     text-transform: uppercase;
     border: none;
+    margin: 10px;
+    width: 300px;
+}
+
+.delete-add{
+    color: white;
+    background-color: gray;
+    padding: 15px;
+    text-transform: uppercase;
+    border: none;
+    margin: 10px;
+    width: 300px;
 }
 
 .reset-add{
@@ -91,9 +113,6 @@ label{
     justify-content: space-around;
 }
 
-.boton-add {
-
-}
 
 .boton{
     background-color: black;

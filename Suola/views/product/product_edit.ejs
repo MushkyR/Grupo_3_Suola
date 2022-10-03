@@ -4,6 +4,7 @@
 <head>
     <%- include('../partials/head') %>
     <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/styles-edit.css">
 
 </head>
@@ -12,28 +13,22 @@
 
 <body>
     <%- include("../partials/header") %>
+    
     <main class="main-add">
-        <!--
-        <section class="header-sec-add">
-            <a href="/" class="link-ahome-add">HOME /</a>
-            <p>  EDITAR PRODUCTO</p>
-        </section>
 
-    -->
-
-        <ul class="header-sec-add">
-            <li class="link-ahome-add"><a href='/'>HOME    /</a></li>
-            <li class="link-ahome-add"><a href=#><%= categoria %>    /</a></li>
-            <li class="ruta_pd"><a href=#>VER TODOS    /</a></li>
-            <li class="ruta_pd"><%= nombreArticulo %></li>
-            <li class="ruta_pd">EDITAR</li>
+        <ul class="header-sec-edit">
+            <li class="ruta_edit"><a href='/'>HOME    /</a></li>
+            <!--<li class="ruta_edit"><a href=#> <%= categoria %>    /</a></li> -->
+            <li class="ruta_edit"><a href="/products"> VER TODOS    /</a></li>
+            <li class="ruta_edit"> <%= nombreArticulo %>   /</li>
+            <li class="ruta_edit"> EDITAR</li>
         </ul>
 
         <p class="titulo-add">Editar Producto</p>
 
         <section class="formulario-add">
         
-            <form action="/product/edit" method="POST" enctype="multipart/form-data" class="control-formulario-add">
+            <form action="/products/edit/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="control-formulario-add">
                 
                         <div class='seccion-add'>
                             <label>Categoría</label><br>
@@ -114,7 +109,7 @@
                         </div>
                             
                         <div class='seccion-add'><label>Imágenes</label><br>
-                            <input type="file" name="productPhoto" accept=”.jpg” multiple required class="control">
+                            <input type="file" name="productPhoto" accept=”.jpg” multiple required value='<%= img%>' class="control">
                         </div>
                        
                         <div class="botones-add">
@@ -122,11 +117,13 @@
                                 <button type="submit" class="submit-add" value='update' color=white background-color=black>GUARDAR CAMBIOS</button>
                             </div>
 
-                            <div class='boton-add'>
-                                <button type="reset" class="reset-add" color=white background-color=black>BORRAR FORMULARIO</button>
-                            </div>
                         </div>
             </form>
+
+  
+                        <form action='/products/edit/<%= id %>?_method=DELETE' method='post' enctype="multipart/form-data">
+                                    <button type="submit" class="delete-add">ELIMINAR PRODUCTO</button>
+                        </form>
         </section>
        
         <%- include('../partials/whatsappIcon') %>

@@ -9,6 +9,8 @@ const productController = {
 
         const productos = JSON.parse(productosJSON);
 
+        
+
 
         res.render('products', { productos })
     },
@@ -23,6 +25,8 @@ const productController = {
         const productos = JSON.parse(productosJSON);
 
         const productoPedido = productos.find(productoActual => productoActual.id == id);
+
+        console.log(productoPedido)
 
         res.render('product_detail', {
             nombreArticulo: productoPedido.nombreArticulo,
@@ -66,9 +70,6 @@ const productController = {
 
     addProduct: function (req, res) {
         console.log(req.file)
-
-        // productosJson();
-
         // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
@@ -93,62 +94,58 @@ const productController = {
         // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), productosActualizadosJSON, 'utf8');
 
-        res.redirect('/products/detail/' + nuevoProducto.id);
+        res.redirect('/products/' + nuevoProducto.id);
     },
 
     editProduct: function (req, res) {
-
-        const id = req.params.id;
+        
         // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
 
-        productos.forEach(function (productoActualizar) {
-            if (productoActualizar.id == id) {
-
-                // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
-                const productoActualizado = {
-                    id: Date.now(),
-                    categoria: req.body.categoria,
-                    nombreArticulo: req.body.nombreArticulo,
-                    numeroArticulo: req.body.numeroArticulo,
-                    descripcion: req.body.descripcion,
-                    precioArticulo: req.body.precioArticulo,
-                    talle: req.body.talle,
-                    colores: req.body.colores,
-                    img: '/profilePhotos/' +  req.file.filename,
+        // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
+        const id = req.params.id;
+        const editProduct = {
+        id: id,
+        categoria: req.body.categoria,
+        nombreArticulo: req.body.nombreArticulo,
+        numeroArticulo: req.body.numeroArticulo,
+        descripcion: req.body.descripcion,
+        precioArticulo: req.body.precioArticulo,
+        talle: req.body.talle,
+        colores: req.body.colores,
+        img: '/profilePhotos/' +  req.file.filename,
                 };
 
-                productos.push(productoActualizado);
+        const listaActualizada = productos.map((productoActual) => {
+            if (productoActual.id == editProduct.id) {
+                productoActual = editProduct
+            } return productoActual
+        });
 
-            };
+        console.log(listaActualizada)
 
-
-        })
-
-        const productosActualizadosJSON = JSON.stringify(productos);
+        const productosActualizadosJSON = JSON.stringify(listaActualizada);
 
         // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), productosActualizadosJSON, 'utf8');
 
-        res.redirect('/products/:id');
+        res.redirect('/products/'+ id);
     },
-
 
 
     deleteProduct: (req, res) => {
         const { id } = req.params;
 
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8');
-        const productos = JSON.parse(productosJson);
+        let productos = JSON.parse(productosJson);
 
-        const productIndex = productos.findIndex((product) => product.id == id);
-        productos.splice(productIndex, 1);
+        productos = productos.filter(productoActual => productoActual.id != id);
 
-        const productosActualizadosDelJSON = JSON.stringify(productos);
+        const productosActualizados = JSON.stringify(productos);
 
         // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
-        fs.writeFileSync(path.join(__dirname, '../data/productData.json'), productosActualizadosDelJSON, 'utf8');
+        fs.writeFileSync(path.join(__dirname, '../data/productData.json'), productosActualizados, 'utf8');
 
         res.redirect("/products");
     }

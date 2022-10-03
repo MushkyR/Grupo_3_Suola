@@ -23,13 +23,10 @@ body{
     padding: 60px 60px 0px 60px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
-    width:30%;
 }
 
 .img-galeria-producto{
     width:100%; 
-    margin-bottom: 60px;
 }
 
 .detalles-producto{
@@ -46,5 +43,18 @@ body{
     width: 50%;
     align-self: center;
     text-align: center;
+    margin: 15px;
 
+}
+
+
+@media (min-width: 769px){
+    .art-galeria-producto{
+    width:30%;
+    }
+
+    .galeria-producto{
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
