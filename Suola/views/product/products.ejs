@@ -11,36 +11,24 @@
 
         <main>
             <section class="galeria-producto">
+            
+                <% productos.forEach(function(item) {%> 
 
-                <div>
-                <% productos.forEach(function(item)
-                {%>
-                <div class="art-galeria-producto">
-                <img class="img-galeria-producto" src="../../<%- item.img %>"/><br>
+                    <div class="art-galeria-producto">
+                  <img class="img-galeria-producto" src="../../<%- item.img %>"/><br>
                 <div class="detalles-producto">
                 <%-item.nombreArticulo%><br>
 
 
                 <p>$<%-item.precioArticulo%><br></p>
 
-                    <% productos.forEach(function(item) {%>
-                        <div class="art-galeria-producto">
-                            <img  class="img-galeria-producto" src="../../<%- item.img %>" /><br>
-                            <div class="detalles-producto">
-                                <%-item.nombreArticulo%><br>
-                                    <p>$<%-item.precioArticulo%><br></p>
-                </div>
+                    
                             </div>
                             <a href="/products/<%- item.id%>" class="boton-ver-producto">VER</a>
                         </div>
-                
-                <a href="/products/<%- item.id%>" class="boton-ver-producto">VER</a>
-                </div>
-                </div>  
+                  
                 <%}) %>
-
-              </section>
-                    <%}) %>
+                
 
 
 
