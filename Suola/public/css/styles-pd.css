@@ -11,7 +11,7 @@ input:focus, textarea {
 /* product_detail:*/
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFF9;
+
 }
 
 .main_pd{
@@ -152,6 +152,7 @@ a.boton_envio_pd{
 }
 
 .boton_comprar_pd{
+    color: white;
     background-color:#293041;
     padding:10px 30px;
     width: 70%;

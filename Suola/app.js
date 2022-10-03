@@ -4,6 +4,7 @@ const userRoutes = require('./routes/userRoutes')
 const cartRoutes = require('./routes/cartRoutes')
 const productRoutes = require('./routes/productRoutes')
 const homeRoutes = require('./routes/homeRoutes')
+const methodOverride = require('method-override');
 
 const app = express()
 
@@ -13,12 +14,14 @@ app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(methodOverride('_method'));
 
 app.use('/cart', cartRoutes)
 app.use('/products', productRoutes)
 app.use('/user', userRoutes)
 app.use('/', homeRoutes)
+
+
 
 app.set("views", [
     path.join(__dirname, './views'),
