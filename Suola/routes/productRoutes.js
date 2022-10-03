@@ -26,13 +26,15 @@ router.get('/', productController.getProducts);
 router.get('/add', productController.add);
 
 //detalle de un producto en particuar
-router.get('/detail', productController.getProductDetail);
+
+router.get('/:id', productController.getProductDetail);
+
 
 //acción de agregar producto
 router.post('/add', upload.single('productPhoto'), productController.addProduct);
 
 //formulario de edición de producto
-router.get('/edit', productController.edit)
+router.get('/:id/edit', productController.edit)
 
 //accion de edicion de producto
 router.put('/:id/edit', upload.single('productPhoto'), productController.editProduct);

@@ -49,24 +49,24 @@
         
                         <div class='seccion-add'>
                             <label>Nombre de artículo</label><br>
-                            <input type="text" name="nombreArticulo" value='' required class="control">
+                            <input type="text" name="nombreArticulo" value='<%= nombreArticulo %>' required class="control">
                         </div>
 
                         <div class='seccion-add'><label>Número de Artículo</label><br>
-                            <input type="number" name="numeroArticulo" required class="control">
+                            <input type="number" name="numeroArticulo" value='<%= numeroArticulo %>' required class="control">
                         </div>
 
                         <div class='seccion-add'><label>Descripción</label><br>
-                            <input type="textarea" name="descripcion" required class="control">
+                            <input type="textarea" name="descripcion" value='<%= descripcion %>'required class="control">
                         </div>
 
                         <div class='seccion-add'>
                             <label>Precio</label><br>
-                            <input type="number" name="precioArticulo" required class="control">
+                            <input type="number" name="precioArticulo" value='<%= precioArticulo %>' required class="control">
                         </div>
 
                         <div class='seccion-add'><label>Colores</label><br>
-                            <input type="text" name="colores" required class="control">
+                            <input type="text" name="colores" value='<%= colores %>'required class="control">
                         </div>
 
                         <div class='seccion-add'><label>Talles Disponibles</label><br>
@@ -119,11 +119,11 @@
                        
                         <div class="botones-add">
                             <div class='boton-add'>
-                                <button type="submit" class="submit-add" color=white background-color=black>GUARDAR CAMBIOS</button>
+                                <button type="submit" class="submit-add" value='update' color=white background-color=black>GUARDAR CAMBIOS</button>
                             </div>
 
                             <div class='boton-add'>
-                                <button type="reset" class="reset-add" color=white background-color=black>BORRAR CAMBIOS</button>
+                                <button type="reset" class="reset-add" color=white background-color=black>BORRAR FORMULARIO</button>
                             </div>
                         </div>
             </form>
