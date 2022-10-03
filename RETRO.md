@@ -24,3 +24,47 @@
 
 **Dejar de hacer:**  Hablar de temas del curso pero que no son los pautados para la reunión.
 
+*** *** *** *** *** *** *** ***
+
+**Retrospectiva sobre sprint 3:** 
+
+**Comenzar a hacer:** Anotarnos las dudas para consultar en clase. 
+
+**Hacer más:** Mantener el trello actualizado.
+
+**Continuar haciendo:** Trabajando en equipo, con respeto, y cumpliendo los objetivos y tiempos pautados para la entrega.
+
+**Hacer menos:** Estresarnos mientras está todo bajo control.
+
+**Dejar de hacer:** 
+
+*** *** *** *** *** *** *** ***
+
+**Retrospectiva sobre sprint 4:** 
+
+**Comenzar a hacer:**
+
+**Hacer más:** 
+
+**Continuar haciendo:** 
+
+**Hacer menos:** 
+
+**Dejar de hacer:**
+
+*** *** *** *** *** *** *** ***
+
+**Retrospectiva sobre sprint 5:** 
+
+**Comenzar a hacer:**
+
+**Hacer más:** 
+
+**Continuar haciendo:** 
+
+**Hacer menos:** 
+
+**Dejar de hacer:**
+
+
+
