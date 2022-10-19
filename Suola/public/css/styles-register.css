@@ -77,6 +77,21 @@
     margin-top: 30px
 }
 
+.registrado{
+    margin-left: 30%;
+    margin-top: 100px
+}
+
+
+.volverRegistrado{
+    margin-left: 30%;
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 300px;
+
+}
+
 @media (min-width: 1200px){
      .main-register{
         display:flex; 
@@ -101,6 +116,14 @@
     .texto-crearCuenta{
         margin-top: 11vw; 
         margin-left: 15vw
+    }
+    
+    .registrado{
+        margin-left:40%
+    }
+
+    .volverRegistrado{
+        margin-left: 45%;
     }
 }
  

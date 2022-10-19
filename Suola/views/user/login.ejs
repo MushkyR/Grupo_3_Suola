@@ -14,24 +14,24 @@
     <main>
         <div class="links-login">
             <a href="/" class="link-login">home /</a>
-            <a href="/login" class="link-register">login</a>
+            <a href="/user/login" class="link-register">login</a>
         </div>
 
         <p class="titulo-login">Login</p>
 
         <div class="login-form-entero">
 
-            <form class="login-formulario" action="/login" method="GET">
+            <form class="login-formulario" action="/user/login" method="post">
                 <p class="titulo-sec-login">ingresar a mi cuenta</p>
 
                 <div class="seccion-login">
                 <label class="titular-login">E-mail</label><br>
-                <input type="email" name="Email" placeholder="Por favor ingresá tu e-mail" required class="control-login">
+                <input type="email" name="emailLogin" placeholder="Por favor ingresá tu e-mail" required class="control-login">
                 </div>
 
                 <div class="seccion-login">
                 <label class="titular-login">Contraseña</label><br>
-                <input type="password" placeholder="Por favor ingresá tu contraseña" required name="clave" class="control-login">
+                <input type="password" placeholder="Por favor ingresá tu contraseña"  name="clave" required class="control-login">
                 </div>
 
                 <div>
