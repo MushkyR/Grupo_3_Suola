@@ -46,9 +46,7 @@ const userController = {
     
             // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), usuariosActualizadosJSONLogin, 'utf8');
-           
-            
-          
+                
                 
     },
 
