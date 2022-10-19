@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const { runInNewContext } = require('vm');
+
 
 
 const userController = {
@@ -17,16 +17,16 @@ const userController = {
     
    loginUser: function (req, res) {
 
-    const usuariosJsonLogin = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
-    let userLogin;
-    if(usuariosJsonLogin == ""){
-        userLogin = [];
+    const archivoUsuario = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
+    let usuarios;
+    if(archivoUsuario == ""){
+        usuarios = [];
     } else {
-         userLogin = JSON.parse(usuariosJsonLogin);
+         usuarios = JSON.parse(archivoUsuario);
     }
 
-    for(let i = 0; i < userLogin.length; i++){
-        if(userLogin[i].emailLogin == req.body.emailLogin && bcryptjs.compareSync(req.body.clave, userLogin[i].clave));
+    for(let i = 0; i < usuarios.length; i++){
+        if(usuarios[i].emailLogin == req.body.emailLogin && bcryptjs.compareSync(req.body.clave, usuarios[i].clave));
 
     } 
     res.send("Bienvenido")
@@ -70,8 +70,10 @@ const userController = {
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 passwordConfirm:  bcryptjs.hashSync(req.body.passwordConfirm, 10),
-                phone: req.body.phone
+                phone: req.body.phone,
+                userPhoto: '/userPhotos/' + req.file.filename
                };
+
  
             usuarios.push(nuevoUsuario);
     

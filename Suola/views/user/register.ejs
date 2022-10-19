@@ -22,7 +22,7 @@
         
 
         <section class="todo-registro">
-            <form action="/user/register" id = "register-form" method="POST"  class="control-formulario">
+            <form action="/user/register" id = "register-form" method="POST" enctype="multipart/form-data" class="control-formulario">
                 
                         <div class="titulo-reg">
 
@@ -45,7 +45,9 @@
                                 class="control">
                         </div>
 
-            
+                        <div class='seccion-add'><label><strong>Imágen de perfil</strong></label><br>
+                            <input type="file" name="userPhotos" accept=”.jpg” required class="control">
+                        </div>
 
                         
                         <div class="nacimiento-reg"><label><strong>Fecha de Nacimiento</strong></label><br>
