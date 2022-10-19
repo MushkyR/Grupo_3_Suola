@@ -6,21 +6,18 @@ const productRoutes = require('./routes/productRoutes')
 const homeRoutes = require('./routes/homeRoutes')
 const methodOverride = require('method-override');
 const session = require("express-session");
-
-
-
-
 const app = express()
 
 app.set('view engine', 'ejs')
 
-app.use(session({secret: "frase secreta"}));
+
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
+app.use(session({secret: "frase secreta"}));
 app.use('/cart', cartRoutes)
 app.use('/products', productRoutes)
 app.use('/user', userRoutes)

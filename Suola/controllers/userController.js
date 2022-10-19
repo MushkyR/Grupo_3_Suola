@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
+const {check, validationResult, body } = require('express-validator');
 
 
 
@@ -17,38 +18,57 @@ const userController = {
     
    loginUser: function (req, res) {
 
-    const archivoUsuario = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
-    let usuarios;
-    if(archivoUsuario == ""){
-        usuarios = [];
-    } else {
-         usuarios = JSON.parse(archivoUsuario);
-    }
-
-    for(let i = 0; i < usuarios.length; i++){
-        if(usuarios[i].emailLogin == req.body.emailLogin && bcryptjs.compareSync(req.body.clave, usuarios[i].clave));
-
-    } 
-    res.send("Bienvenido")
-
     
-            // Paso 2: creamos el objeto del nuevo usuario, lo agregamos al array y lo traducimos a JSON
-            const nuevoUsuarioLogin = {
+    
+            const usersJSON = fs.readFileSync(path.join(__dirname, "../data/userData.json"), "utf-8");
+            const users = JSON.parse(usersJSON);
+        
+            const newUser = {
                 id: Date.now(),
                 emailLogin: req.body.emailLogin,
                 clave: bcryptjs.hashSync(req.body.clave, 10),
-              
-               };
- 
-            userLogin.push(nuevoUsuarioLogin);
-    
-            const usuariosActualizadosJSONLogin = JSON.stringify(userLogin);
-    
-            // Paso 3: cargamos el nuevo array al json con el fs.writeFileSync()
-            fs.writeFileSync(path.join(__dirname, '../data/userData.json'), usuariosActualizadosJSONLogin, 'utf8');
-                
-                
+            };
+        
+            users.push(newUser);
+        
+            const newListUsers = JSON.stringify(users);
+        
+            fs.writeFileSync(path.join(__dirname, "../data/userData.json"), newListUsers, "utf-8");
+        
+            res.redirect('/')
+
+       
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()){
+            let usersJson = fs.writeFileSync(path.join(__dirname, "../data/userData.json"), newListUsers, "utf-8");
+            let users;
+            if(usersJson == ""){
+                users = [];
+            } else {
+                users = JSON.parse(usersJson)
+            }
+            for(let i = 0; i < users.length; i ++){
+                if (users[i].emailLogin == req.body.emailLogin){
+                            if(bcryptjs.compareSync(req.body.clave, users[i].clave)) 
+                     usuarioALoguearse = users[i];
+                    break;
+                }
+            }
+
+        if(usuarioALoguearse == undefined) {
+           return res.render('./login', {errors: [{msg: "Credenciales invalidas"}
+        ]});
+        }
+        
+        req.session.usuarioLogueado == usuarioALoguearse,
+        res.render('Success');
+
+        }
     },
+
+    
+    
 
     registrado: function(req, res)
 {

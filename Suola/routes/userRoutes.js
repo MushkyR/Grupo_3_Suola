@@ -5,6 +5,8 @@ const router = express.Router()
 const multer = require('multer');
 const path = require('path')
 
+const {check, validationResult, body } = require('express-validator');
+
 
 const userController = require('../controllers/userController')
 
@@ -28,7 +30,9 @@ router.get("/registrado", userController.registrado)
 
 router.get("/login", userController.login)
 
-router.post('/login', userController.loginUser);
+router.post('/login', [check('emailLogin').isEmail().withMessage("Email invalido"), 
+check('clave').isLength({min:8}).withMessage("la contrasena debe tener minimo 8 caracteres")],
+userController.loginUser);
 
 router.get('/detail/:id', userController.getUserDetail);
 
