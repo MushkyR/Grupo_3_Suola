@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel='stylesheet' href="/css/styles-profile.css">
+    <title>Login</title>
+</head>
+
+<body>
+    
+    <%- include("../partials/header") %>
+
+<main>
+
+    <h2 class="usuario"> Hola, <%= user.name %>!</h2>
+
+    <img class="foto" crs='<%= user.userPhoto %>' >  
+
+    <p class="email"> <%= user.email %></p>
+
+    <a href ='/' class="home">Comenzar a comprar >>> </a>
+
+</main>
+
+<%- include("../partials/footer") %>
+
+</body>
+
+</html>

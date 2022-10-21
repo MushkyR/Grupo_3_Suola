@@ -17,7 +17,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.use(session({secret: "frase secreta"}));
+app.use(session({
+    secret: "frase secreta",
+    resave: false,
+    saveUninitialized: false,
+}));
+
 app.use('/cart', cartRoutes)
 app.use('/products', productRoutes)
 app.use('/user', userRoutes)
