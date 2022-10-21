@@ -16,64 +16,46 @@ const userController = {
         res.render('login')
     },
     
-   loginUser: function (req, res) {
+    loginUser: function (req, res) {
 
-    
-    
             const usersJSON = fs.readFileSync(path.join(__dirname, "../data/userData.json"), "utf-8");
             const users = JSON.parse(usersJSON);
-        
-            const newUser = {
-                id: Date.now(),
-                emailLogin: req.body.emailLogin,
-                clave: bcryptjs.hashSync(req.body.clave, 10),
-            };
-        
-            users.push(newUser);
-        
-            const newListUsers = JSON.stringify(users);
-        
-            fs.writeFileSync(path.join(__dirname, "../data/userData.json"), newListUsers, "utf-8");
-        
-            res.redirect('/')
 
-       
-        let errors = validationResult(req);
+            let userFound = users.find(oneUser => oneUser['email'] === req.body.emailLogin);
 
-        if (errors.isEmpty()){
-            let usersJson = fs.writeFileSync(path.join(__dirname, "../data/userData.json"), newListUsers, "utf-8");
-            let users;
-            if(usersJson == ""){
-                users = [];
-            } else {
-                users = JSON.parse(usersJson)
-            }
-            for(let i = 0; i < users.length; i ++){
-                if (users[i].emailLogin == req.body.emailLogin){
-                            if(bcryptjs.compareSync(req.body.clave, users[i].clave)) 
-                     usuarioALoguearse = users[i];
-                    break;
+            if (userFound){
+                let correctPassword = bcryptjs.compareSync(req.body.clave, userFound.password);
+                if (correctPassword){
+                    res.send('Ya estas loggeado!');
                 }
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'El email o Password son incorrectos'
+                        }
+                    }
+                });
             }
 
-        if(usuarioALoguearse == undefined) {
-           return res.render('./login', {errors: [{msg: "Credenciales invalidas"}
-        ]});
-        }
-        
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Este email no esta registrado'
+                    }
+                }
+            });      
+            
+   },
+
+        /*
         req.session.usuarioLogueado == usuarioALoguearse,
         res.render('Success');
 
-        }
+        }*/
+
+        registrado: function(req, res) {
+        res.render('registrado')
     },
-
-    
-    
-
-    registrado: function(req, res)
-{
-    res.render('registrado')
-},
         // @POST /user/register
         registerUser: function (req, res) {
             // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS

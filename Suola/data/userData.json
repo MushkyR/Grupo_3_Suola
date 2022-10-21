@@ -1,1 +1,15 @@
-[{"id":1666196858698,"emailLogin":"jaime@gmail.com","clave":"$2a$10$tUqNP9txQuwK0GWVboBQw.XENI5L3jU/DQEwNDsTGP3iXxSUULcba"},{"id":1666198581976,"emailLogin":"jaime@gmail.com","clave":"$2a$10$9EBrsqYl.DKSKIqJJVrXEOpzC4PCvuUk5NWelHSNoMuHhYa4f20Qu"},{"id":1666202724035,"emailLogin":"ricardo@gmail.com","clave":"$2a$10$3ObxSRXCy/d.2F2FKwet9uOh.vi0cohHlU1O3fy1ks4/zxS8Bof9i"}]
+[
+    {
+        "id": 1666321505762,
+        "titulo": "Sra",
+        "name": "Mushky",
+        "lastName": "Raichik",
+        "dateBirth": "2007-02-22",
+        "provincia": "12",
+        "email": "moussiag@gmail.com",
+        "password": "$2a$10$fbJbbLrmF2h7YiRrqk.t6.MeuYvw6CDYQmGwydESyfRIdUJ1ff/hG",
+        "passwordConfirm": "$2a$10$yhhHHbT63M54w.ZpOkAG8eJ6j.hETe2V8c4a1tYLfDs5ELYLzqsKC",
+        "phone": "12345678",
+        "userPhoto": "/userPhotos/1666321505756-.jpg"
+    }
+]

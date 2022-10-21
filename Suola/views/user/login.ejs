@@ -27,6 +27,12 @@
                 <div class="seccion-login">
                 <label class="titular-login">E-mail</label><br>
                 <input type="email" name="emailLogin" placeholder="Por favor ingresá tu e-mail" required class="control-login">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errors">
+                        <%= errors.email.msg %>
+                    </div>
+
+                <% } %>
                 </div>
 
                 <div class="seccion-login">

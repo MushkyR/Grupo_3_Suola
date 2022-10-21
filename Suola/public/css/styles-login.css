@@ -114,6 +114,10 @@ input:focus, textarea {
     text-align: center;
 }
 
+.errors{
+    color: red;
+}
+
 @media (min-width: 769px) {
     .login-form-entero {
         display: flex;

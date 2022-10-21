@@ -5,8 +5,14 @@ const router = express.Router()
 const multer = require('multer');
 const path = require('path')
 
-const {check, validationResult, body } = require('express-validator');
+const { body } = require('express-validator');
 
+const registerValidations = [
+    body('email').isEmail().withMessage("Email invalido"), 
+    body('password').isLength({min:8}).withMessage("la contrasena debe tener minimo 8 caracteres")
+];
+
+//const loginValidations = ;
 
 const userController = require('../controllers/userController')
 
@@ -24,15 +30,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage});
 
-router.get("/register",  userController.register)
+router.get("/register", registerValidations,  userController.register)
 
 router.get("/registrado", userController.registrado)
 
 router.get("/login", userController.login)
 
-router.post('/login', [check('emailLogin').isEmail().withMessage("Email invalido"), 
-check('clave').isLength({min:8}).withMessage("la contrasena debe tener minimo 8 caracteres")],
-userController.loginUser);
+router.post('/login', userController.loginUser);
 
 router.get('/detail/:id', userController.getUserDetail);
 
