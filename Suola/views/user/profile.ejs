@@ -13,13 +13,15 @@
 
 <main>
 
-    <h2 class="usuario"> Hola, <%= user.name %>!</h2>
+    <h2 class="usuario"> ¡Hola, <%= user.name %>!</h2>
 
-    <img class="foto" crs='<%= user.userPhoto %>' >  
+    <img class="foto" width= 100px  src='<%= user.userPhoto %>' >  
 
     <p class="email"> <%= user.email %></p>
 
-    <a href ='/' class="home">Comenzar a comprar >>> </a>
+    <a href ='/' class="home">Comenzar a comprar</a>
+
+    <a href ='./login' class="home">Cerrar sesión</a>
 
 </main>
 

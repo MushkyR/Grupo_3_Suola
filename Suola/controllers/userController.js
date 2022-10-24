@@ -67,6 +67,14 @@ const userController = {
 
     // @POST /user/register
     registerUser: function (req, res) {
+
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0){
+            res.render('register', {
+                errors: resultValidation.mapped()
+            })
+        }
         // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
         const usuariosJson = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8');
         const usuarios = JSON.parse(usuariosJson);

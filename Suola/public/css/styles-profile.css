@@ -5,16 +5,19 @@
 }
 
 .foto{
+    margin-left: 45%;
 
 }
 
 .email{
+    margin-bottom: 40px;
 
 }
 
 .home{
-    color: black;
+    color:  #BB1D4C;
     text-decoration: none;
-    margin-left: 38%;
+    margin-left: 40%;
+    font-size: 20px;
     
 }

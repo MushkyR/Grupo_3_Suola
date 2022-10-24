@@ -22,6 +22,7 @@
         
 
         <section class="todo-registro">
+        
             <form action="/user/register" id = "register-form" method="POST" enctype="multipart/form-data" class="control-formulario">
                 
                         <div class="titulo-reg">
@@ -37,12 +38,24 @@
                         <div class="nombre-reg">
                             <label><strong>Nombre</strong></label><br>
                             <input type="text" name="name" placeholder="Por favor ingrese su nombre" required
-                                class="control">
+                                class="control <%= locals.errors && locals.name ? is-invalid : null  %> ">
+                                <% if (locals.errors && errors.name) { %>
+                                 <div class = "textDanger">
+                                     <%= errors.name.msg %> 
+
+                                 </div>
+                                <% } %>
                         </div>
 
                         <div class="apellido-reg"><label><strong>Apellido</strong></label><br>
                             <input type="text" name="lastName" placeholder="Por favor ingrese su apellido" required
                                 class="control">
+                                <% if (locals.errors && errors.lastName) { %>
+                                    <div class = "textDanger">
+                                        <%= errors.lastName.msg %> 
+   
+                                    </div>
+                                   <% } %>
                         </div>
 
                         <div class='seccion-add'><label><strong>Imágen de perfil</strong></label><br>
@@ -53,6 +66,12 @@
                         <div class="nacimiento-reg"><label><strong>Fecha de Nacimiento</strong></label><br>
                             <input type="date" placeholder="fecha de nacimiento" name="dateBirth"
                                     class="control">
+                                    <% if (locals.errors && errors.date) { %>
+                                        <div class = "textDanger">
+                                            <%= errors.date.msg %> 
+       
+                                        </div>
+                                       <% } %>
                         </div><br>
 
                             
@@ -82,6 +101,12 @@
                                         <option value="22">TIERRA DEL FUEGO</option>
                                         <option disabled="true" selected="true" value="">Seleccionar una Provincia
                                         </option>
+                                        <% if (locals.errors && errors.provincia) { %>
+                                            <div class = "textDanger">
+                                                <%= errors.provincia.msg %> 
+           
+                                            </div>
+                                           <% } %>
                             </select><br>
 
                                   
@@ -89,6 +114,12 @@
                             <label><strong>E-mail</strong></label><br>
                             <input type="email" name="email" placeholder="Por favor ingrese su e-mail" required
                                         class="control">
+                                        <% if (locals.errors && errors.email) { %>
+                                            <div class = "textDanger">
+                                                <%= errors.email.msg %> 
+           
+                                            </div>
+                                           <% } %>
 
                         </div><br>
 
@@ -98,16 +129,36 @@
                             <label><strong>Contraseña</strong></label><br>
                             <input type="password" placeholder="Por favor ingrese su Contraseña" required
                                     name="password" class="control">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class = "textDanger">
+                                            <%= errors.passsword.msg %> 
+       
+                                        </div>
+                                       <% } %>
                         </div><br>
 
 
                 
                         <div class="confpass-reg"><label><strong>Confirmar contraseña</strong></label><br>
                             <input type="password" placeholder="Por favor confirme su Contraseña" name="passwordConfirm" class="control"><br>
+                        
+                            <% if (locals.errors && errors.passwordConfirm) { %>
+                                <div class = "textDanger">
+                                    <%= errors.passwordConfirm.msg %> 
+
+                                </div>
+                               <% } %>
                         </div>
           
                         <div class="telefono-reg"><label><strong>Teléfono</strong></label><br>
                             <input type="text" placeholder="Por favor ingrese su número de teléfono" name="phone" class="control">
+                        
+                            <% if (locals.errors && errors.phone) { %>
+                                <div class = "textDanger">
+                                    <%= errors.phone.msg %> 
+
+                                </div>
+                               <% } %>
                         </div><br>
 
                         <div class="submit-reg">
