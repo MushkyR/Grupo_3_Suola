@@ -12,6 +12,12 @@ const userController = {
         res.render('register')
     },
 
+    logout: function (req, res) {
+        req.session.destroy((err) => {
+            res.redirect('/') 
+          })
+    },
+
     login: function (req, res) {
         res.render('login')
     },
@@ -130,13 +136,8 @@ const userController = {
             email: usuarioPedido.email,
             img: usuarioPedido.img
         });
-    },
-
-    logout: (req, res) => {
-        req.session.destroy();
-        console.log(req.session)
-        return res.redirect('/');
     }
+
 }
 
 
