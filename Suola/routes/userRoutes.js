@@ -7,8 +7,6 @@ const path = require('path')
 
 const { body } = require('express-validator');
 
-//const loginValidations = ;
-
 const userController = require('../controllers/userController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware')
@@ -71,6 +69,8 @@ router.get("/profile", authMiddleware, userController.profile)
 router.get("/login", guestMiddleware, userController.login)
 
 router.post('/login', userController.loginUser);
+
+router.get('/logout', userController.logout);
 
 router.get('/detail/:id', userController.getUserDetail);
 

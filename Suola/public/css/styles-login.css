@@ -118,6 +118,11 @@ input:focus, textarea {
     color: red;
 }
 
+.remember-user{
+    font-size: 12px;
+    padding: 10px;
+}
+
 @media (min-width: 769px) {
     .login-form-entero {
         display: flex;

@@ -28,8 +28,14 @@ const userController = {
             if (correctPassword) {
                 delete userFound.password;
                 req.session.userLogged = userFound;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', 'req.body.email', { maxAge: 86400 * 1000 })
+                }
+
                 res.redirect('profile');
             }
+
             return res.render('login', {
                 errors: {
                     email: {
@@ -60,6 +66,9 @@ const userController = {
     },
 
     profile: function (req, res) {
+
+        console.log(req.cookies.email);
+
         return res.render('profile', {
             user: req.session.userLogged
         });
@@ -122,6 +131,12 @@ const userController = {
             img: usuarioPedido.img
         });
     },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session)
+        return res.redirect('/');
+    }
 }
 
 
