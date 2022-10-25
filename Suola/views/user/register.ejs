@@ -37,8 +37,12 @@
         
                         <div class="nombre-reg">
                             <label><strong>Nombre</strong></label><br>
-                            <input type="text" name="name" placeholder="Por favor ingrese su nombre" required
-                                class="control <%= locals.errors && locals.name ? is-invalid : null  %> ">
+                            <input type="text" 
+                            name="name" 
+                            placeholder="Por favor ingrese su nombre" 
+                                class="control <%= locals.errors && locals.name ? is-invalid : null  %>"
+                                value ="<%= locals.oldData ? oldData.name : null %>"
+                                >
                                 <% if (locals.errors && errors.name) { %>
                                  <div class = "textDanger">
                                      <%= errors.name.msg %> 
@@ -48,78 +52,91 @@
                         </div>
 
                         <div class="apellido-reg"><label><strong>Apellido</strong></label><br>
-                            <input type="text" name="lastName" placeholder="Por favor ingrese su apellido" required
-                                class="control">
+                            <input type="text" name="lastName" placeholder="Por favor ingrese su apellido" 
+                                class="control <%= locals.errors && locals.lastName ? is-invalid : null  %> "
+                                value ="<%= locals.oldData ? oldData.lasName : null %>"
+                                >
                                 <% if (locals.errors && errors.lastName) { %>
-                                    <div class = "textDanger">
-                                        <%= errors.lastName.msg %> 
-   
-                                    </div>
-                                   <% } %>
+                                 <div class = "textDanger">
+                                     <%= errors.lastName.msg %> 
+
+                                 </div>
+                                <% } %>
+                            
                         </div>
 
                         <div class='seccion-add'><label><strong>Imágen de perfil</strong></label><br>
-                            <input type="file" name="userPhotos" accept=”.jpg” required class="control">
+                            <input type="file" name="userPhotos" accept=”.jpg”     class="control"
+                        
+                        >
+                            <% if (locals.errors && errors.userPhotos) { %>
+                             <div class = "textDanger">
+                                 <%= errors.userPhotos.msg %> 
+
+                             </div>
+                            <% } %>
                         </div>
 
                         
                         <div class="nacimiento-reg"><label><strong>Fecha de Nacimiento</strong></label><br>
                             <input type="date" placeholder="fecha de nacimiento" name="dateBirth"
-                                    class="control">
+                                    class="control <%= locals.errors && locals.dateBirth ? is-invalid : null  %> "
+                                    value ="<%= locals.oldData ? oldData.dateBirth : null %>"
+                                >
                                     <% if (locals.errors && errors.date) { %>
-                                        <div class = "textDanger">
-                                            <%= errors.date.msg %> 
-       
-                                        </div>
-                                       <% } %>
+                                     <div class = "textDanger">
+                                         <%= errors.dateBirth.msg %> 
+    
+                                     </div>
+                                    <% } %>
                         </div><br>
 
                             
-                        <div class="localidad-reg"><label><strong> Provincia</strong></label><br>
-                            <select id="provincia"  name = "provincia" class="control">
-                                        <option value="1">BUENOS AIRES</option>
-                                        <option value="2">CATAMARCA</option>
-                                        <option value="5">CHACO</option>
-                                        <option value="6">CHUBUT</option>
-                                        <option value="50">CIUDAD AUTONOMA DE Bs As</option>
-                                        <option value="3">CORDOBA</option>
-                                        <option value="4">CORRIENTES</option>
-                                        <option value="7">ENTRE RIOS</option>
-                                        <option value="8">FORMOSA</option>
-                                        <option value="9">JUJUY</option>
-                                        <option value="10">LA PAMPA</option>
-                                        <option value="11">LA RIOJA</option>
-                                        <option value="12">MENDOZA</option>
-                                        <option value="13">MISIONES</option>
-                                        <option value="14">NEUQUEN</option>
-                                        <option value="15">RIO NEGRO</option>
-                                        <option value="16">SALTA</option>
-                                        <option value="17">SAN LUIS</option>
-                                        <option value="19">SANTA CRUZ</option>
-                                        <option value="20">SANTA FE</option>
-                                        <option value="21">SANTIAGO DEL ESTERO</option>
-                                        <option value="22">TIERRA DEL FUEGO</option>
-                                        <option disabled="true" selected="true" value="">Seleccionar una Provincia
-                                        </option>
-                                        <% if (locals.errors && errors.provincia) { %>
-                                            <div class = "textDanger">
-                                                <%= errors.provincia.msg %> 
-           
-                                            </div>
-                                           <% } %>
+                        <div class="localidad-reg"> <label><strong>Provincia</strong></label>
+                            <select name = "provincia" 
+                            class= "control <%= locals.errors && locals.provincia ? is-invalid : null  %>"
+                                >
+                           <option value=""><strong> Provincia</strong></option><br>
+                            
+                            <%  
+                            let provincias = ["Buenos Aires", "Catamarca", "Chaco", "Chubut", "CABA", "Cordoba", 
+                            "Corrientes", "Entre Rios", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones",
+                            "Neuquen", "Rio Negro", "Salta", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", 
+                            "Tierra del Fuego"]
+                            %>
+                            <% for(const unaProv of provincias) { %>
+                                <option 
+                                value ="<%=unaProv %>" 
+                                <%= locals.oldData && (unaProv === oldData.provincia)? 'selected' : null %>
+                                > <% unaProv %> </option>
+                           <% } %>
+                            </select>
+                                    
+                                <% if (locals.errors && errors.provincia) { %>
+                                 <div class = "textDanger">
+                                     <%= errors.provincia.msg %> 
+
+                                 </div>
+                                <% } %>"
+                    
+                                     
                             </select><br>
 
                                   
                         <div class="email-reg">  
                             <label><strong>E-mail</strong></label><br>
-                            <input type="email" name="email" placeholder="Por favor ingrese su e-mail" required
-                                        class="control">
+                            <input type="email" 
+                            name="email"
+                             placeholder="Por favor ingrese su e-mail" 
+                                        class="control    <%= locals.errors && locals.email ? is-invalid : null  %> "
+                                        value ="<%= locals.oldData ? oldData.email : null %>"
+                                >
                                         <% if (locals.errors && errors.email) { %>
-                                            <div class = "textDanger">
-                                                <%= errors.email.msg %> 
-           
-                                            </div>
-                                           <% } %>
+                                         <div class = "textDanger">
+                                             <%= errors.email.msg %> 
+        
+                                         </div>
+                                        <% } %>
 
                         </div><br>
 
@@ -127,38 +144,47 @@
                               
                         <div class="password-reg">  
                             <label><strong>Contraseña</strong></label><br>
-                            <input type="password" placeholder="Por favor ingrese su Contraseña" required
-                                    name="password" class="control">
+                            <input type="password" placeholder="Por favor ingrese su Contraseña" 
+                                    name="password" 
+                                    class="control    <%= locals.errors && locals.password ? is-invalid : null  %> "
+                                    value ="<%= locals.oldData ? oldData.password : null %>"
+                                >
                                     <% if (locals.errors && errors.password) { %>
-                                        <div class = "textDanger">
-                                            <%= errors.passsword.msg %> 
-       
-                                        </div>
-                                       <% } %>
+                                     <div class = "textDanger">
+                                         <%= errors.password.msg %> 
+    
+                                     </div>
+                                    <% } %>
                         </div><br>
 
 
                 
                         <div class="confpass-reg"><label><strong>Confirmar contraseña</strong></label><br>
-                            <input type="password" placeholder="Por favor confirme su Contraseña" name="passwordConfirm" class="control"><br>
-                        
+                            <input type="password" placeholder="Por favor confirme su Contraseña" 
+                            name="passwordConfirm" class="control    <%= locals.errors && locals.date ? is-invalid : null  %> "
+                            value ="<%= locals.oldData ? oldData.passswordConfirm : null %>"
+                                >
                             <% if (locals.errors && errors.passwordConfirm) { %>
-                                <div class = "textDanger">
-                                    <%= errors.passwordConfirm.msg %> 
+                             <div class = "textDanger">
+                                 <%= errors.passwordConfirm.msg %> 
 
-                                </div>
-                               <% } %>
-                        </div>
+                             </div>
+                            <% } %>
+
+                        </div><br>
           
                         <div class="telefono-reg"><label><strong>Teléfono</strong></label><br>
-                            <input type="text" placeholder="Por favor ingrese su número de teléfono" name="phone" class="control">
-                        
+                            <input type="text" placeholder="Por favor ingrese su número de teléfono" name="phone" 
+                            class="control 
+                            <%= locals.errors && locals.phone ? is-invalid : null  %> "
+                            value ="<%= locals.oldData ? oldData.phone : null %>"
+                                >
                             <% if (locals.errors && errors.phone) { %>
-                                <div class = "textDanger">
-                                    <%= errors.phone.msg %> 
+                             <div class = "textDanger">
+                                 <%= errors.phone.msg %> 
 
-                                </div>
-                               <% } %>
+                             </div>
+                            <% } %>
                         </div><br>
 
                         <div class="submit-reg">

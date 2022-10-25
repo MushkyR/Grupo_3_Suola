@@ -72,7 +72,8 @@ const userController = {
 
         if (resultValidation.errors.length > 0){
             res.render('register', {
-                errors: resultValidation.mapped()
+                errors: resultValidation.mapped(),
+                oldData: req.body
             })
         }
         // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS

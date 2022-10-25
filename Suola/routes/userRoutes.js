@@ -28,12 +28,35 @@ const storage = multer.diskStorage({
 const validations = [
     body('name').notEmpty().withMessage('Este campo es obligatorio'),
     body('lastName').notEmpty().withMessage('Este campo es obligatorio'),
-    body('email').notEmpty().withMessage('Tienes que escribir un email válido'),
-    body('date').notEmpty().withMessage('Este campo es obligatorio'),
+    body('email').notEmpty().withMessage('Tienes que escribir un email').bail()
+    .isEmail().withMessage("Debes escribir un formato de email válido"),
+    body('dateBirth').notEmpty().withMessage('Este campo es obligatorio'),
     body('provincia').notEmpty().withMessage('Tienes que elegir una provincia'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña válida'),
-    body('passwordConfirm').notEmpty().withMessage('Las contraseñas deben coincidir'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña válida')
+   .trim().notEmpty().isLength({ min: 6}).withMessage("La contraseña debe tener minimo 6 caracteres"), 
+    body('passwordConfirm').notEmpty().withMessage('Tienes que escribir una contraseña válida')
+    .trim().custom((value, {req}) => {
+        if (value !== req.body.password) {
+            throw new Error('Las contraseñas deben coincidir')
+        }
+        return true; 
+    }),
     body('phone').notEmpty().withMessage('Este campo es obligatorio'),
+    body('userPhotos').custom((value, {req}) =>{
+        let acceptedExtensions = [".jpg", ".png", ".gif"]
+        let file = req.file 
+            if (!file){
+                throw new Error("Tienes que subir una imagen")
+            } else {
+                let fileExtension = path.extname(file.originalname)
+            
+            if(!acceptedExtensions.includes(fileExtension)){
+                throw new Error( `Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`)
+            }
+        }
+            
+            return true
+    })
 
 ]
 
