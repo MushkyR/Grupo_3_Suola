@@ -54,7 +54,7 @@
                         <div class="apellido-reg"><label><strong>Apellido</strong></label><br>
                             <input type="text" name="lastName" placeholder="Por favor ingrese su apellido" 
                                 class="control <%= locals.errors && locals.lastName ? is-invalid : null  %> "
-                                value ="<%= locals.oldData ? oldData.lasName : null %>"
+                                value ="<%= locals.oldData ? oldData.lastName : null %>"
                                 >
                                 <% if (locals.errors && errors.lastName) { %>
                                  <div class = "textDanger">
@@ -162,7 +162,7 @@
                         <div class="confpass-reg"><label><strong>Confirmar contraseña</strong></label><br>
                             <input type="password" placeholder="Por favor confirme su Contraseña" 
                             name="passwordConfirm" class="control    <%= locals.errors && locals.date ? is-invalid : null  %> "
-                            value ="<%= locals.oldData ? oldData.passswordConfirm : null %>"
+                            value ="<%= locals.oldData ? oldData.passwordConfirm : null %>"
                                 >
                             <% if (locals.errors && errors.passwordConfirm) { %>
                              <div class = "textDanger">
