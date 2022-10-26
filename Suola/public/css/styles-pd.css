@@ -4,6 +4,37 @@
     margin:0px;
 }
 
+.mycheck35, .mycheck36, .mycheck37, .mycheck38, .mycheck39, .mycheck40, .mycheck41, .mycheck42 {
+    appearance: none;
+    cursor:pointer;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #888;
+    
+  }
+
+  .mycheck35:checked, .mycheck36:checked, .mycheck37:checked, .mycheck38:checked, .mycheck39:checked, .mycheck40:checked, 
+  .mycheck41:checked, .mycheck42:checked {
+    background-color: grey;
+  }
+
+
+
+  .talle35_pd + .mycheck35 + .mycheck35:checked,
+  .talle36_pd,
+  .talle37_pd,
+  .talle38_pd,
+  .talle39_pd,
+  .talle40_pd,
+  .talle41_pd, 
+  .talle42_pd{
+    color: black; /* Color ON-OFF */
+    font-size: 11px; /* Tamaño de letra */
+    font-family: Verdana, sans-serif; /* Fuente de letra */
+  }
+  
+
 input:focus, textarea {
     outline: none !important;
 }
@@ -217,9 +248,7 @@ a.boton_envio_pd{
 }
 
 .talle35_pd, .talle36_pd, .talle37_pd, .talle38_pd, .talle39_pd, .talle40_pd, .talle41_pd, .talle42_pd{
-    border: solid 1px #293041;
-    padding:5px;
-    margin: 5px;
+    padding: 4px;
     font-size: 12px;
 }
 
@@ -325,8 +354,9 @@ h1, h3, h6, .seleccion_color_pd, .seleccion_talle_pd {
 }
 
 .talle35_pd, .talle36_pd, .talle37_pd, .talle38_pd, .talle39_pd, .talle40_pd, .talle41_pd, .talle42_pd{
-    margin:10px;
+   
     text-align: center;
+    position:absolute
 }
 .contenedor_talle_pd{
     width:25%;
