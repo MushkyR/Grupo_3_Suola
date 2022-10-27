@@ -7,10 +7,10 @@ const homeRoutes = require('./routes/homeRoutes')
 const methodOverride = require('method-override');
 const session = require("express-session");
 const cookies = require("cookie-parser");
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const app = express();
 
 app.set('view engine', 'ejs')
-
 
 app.use(express.static("public"));
 app.use(cookies());
@@ -24,6 +24,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+app.use(userLoggedMiddleware);
+
 
 app.use('/cart', cartRoutes)
 app.use('/products', productRoutes)

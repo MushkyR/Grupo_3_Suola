@@ -37,7 +37,8 @@ const productController = {
             precioArticulo: productoPedido.precioArticulo,
             talle: productoPedido.talle,
             colores: productoPedido.colores,
-            img: productoPedido.img
+            img: productoPedido.img,
+            user: req.session.userLogged,
 
         });
     },
