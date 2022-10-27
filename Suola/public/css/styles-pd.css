@@ -244,7 +244,8 @@ a.boton_envio_pd{
     justify-content: space-around;
     margin: 15px;
     width: 100%;
-    max-width: 275px;;
+    max-width: 275px
+
 }
 
 .talle35_pd, .talle36_pd, .talle37_pd, .talle38_pd, .talle39_pd, .talle40_pd, .talle41_pd, .talle42_pd{

@@ -57,26 +57,24 @@
               <label class="seleccion_talle_pd"> </label>
              Talle <br>
                     <div class="talles_pd">
-                        
-                        
-                     <div class="contenedor_talle_pd">  
-                        <span class="talle35_pd">35</span></div> 
+                            <select name = "talles" 
+                            class= "control <%= locals.errors && locals.talles? is-invalid : null  %>"
+                                >
+                    
 
-                        
                      <div class="contenedor_talle_pd"> 
-                            <span class="talle36_pd">36</span></div>
-                        <div class="contenedor_talle_pd">  
-                            <span class="talle37_pd">37</span></div>
-                        <div class="contenedor_talle_pd">  
-                            <span class="talle38_pd">38</span></div>
-                        <div class="contenedor_talle_pd">  
-                            <span class="talle39_pd">39</span></div>
-                        <div class="contenedor_talle_pd"> 
-                            <span class="talle40_pd">40</span></div>
-                        <div class="contenedor_talle_pd"> 
-                            <span class="talle41_pd">41</span></div>
-                        <div class="contenedor_talle_pd"> 
-                            <span class="talle42_pd">42</span></div>
+                        <option value=""><strong> Talles</strong></option><br>
+                            
+                            <%  
+                            let talles = ["35", "36", "37", "38", "39", "40", "41", "42"]
+                            %>
+                            <% for(const unTalle of talles) { %>
+                                <option 
+                                value ="<%=unTalle %>" 
+                                <%= locals.oldData && (unTalle === oldData.talles)? 'selected' : null %>
+                                > <%= unTalle %> </option>
+                           <% } %>
+                            </select>
 
                      
                     </div>
