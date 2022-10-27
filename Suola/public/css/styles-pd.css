@@ -175,6 +175,20 @@ a.boton_envio_pd{
     font-weight: 500;
 }
 
+.control{
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f3f3f3;
+    color: #212121;
+    border: 1px solid #f3f3f3;
+    padding: 10px 14px;
+    background-color: #f3f3f3;
+    font-family: "Poppins";
+    margin-right: 65%;
+}
 
 .boton_envio_pd{
     background-color: #FFEEEE;

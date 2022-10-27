@@ -46,32 +46,34 @@
 
                 <h3 class="precio_pd">$<%= precioArticulo %></h3>
 
-                <label class="seleccion_color_pd">Color<br>
+            
+
+                    <form action="" method="POST">
+                         <label class="seleccion_color_pd">Color<br>
+                            
                     <div class="colores_pd">
-                        <p class="seleccion_color1_pd"></p>
-                        <p class="seleccion_color2_pd"></p>
-                        <p class="seleccion_color3_pd"></p>
-                    </div>
-                </label><br>
+                        <div class="seleccion_color1_pd"> </div> 
+                        <div class="seleccion_color2_pd"> </div>
+                        <div class="seleccion_color3_pd"> </div>
+                    </div><br>
 
               <label class="seleccion_talle_pd"> </label>
              Talle <br>
                     <div class="talles_pd">
                             <select name = "talles" 
                             class= "control <%= locals.errors && locals.talles? is-invalid : null  %>"
+                          
                                 >
                     
 
                      <div class="contenedor_talle_pd"> 
                         <option value=""><strong> Talles</strong></option><br>
                             
-                            <%  
-                            let talles = ["35", "36", "37", "38", "39", "40", "41", "42"]
-                            %>
-                            <% for(const unTalle of talles) { %>
+                            <%= talle %>
+                            <% for(const unTalle of talle) { %>
                                 <option 
                                 value ="<%=unTalle %>" 
-                                <%= locals.oldData && (unTalle === oldData.talles)? 'selected' : null %>
+                                <%= locals.oldData && (unTalle === oldData.talle)? 'selected' : null %>
                                 > <%= unTalle %> </option>
                            <% } %>
                             </select>
@@ -116,6 +118,11 @@
            
               <div class="botones_pd">
                 <a href="/products/edit/<%= id %>" class="boton_envio_pd" >Editar Producto</a><br>
+
+            </div>
+
+            <div class="botones_pd">
+                <a href="/products/add" class="boton_envio_pd" >Agregar Producto</a><br>
 
             </div>
 

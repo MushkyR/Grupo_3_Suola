@@ -92,6 +92,16 @@
 
 }
 
+
+.volverRegistradoLogin{
+    margin-left: 5%;
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 300px;
+
+}
+
 .textDanger{
     color: red
 }
