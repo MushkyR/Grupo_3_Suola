@@ -16,9 +16,14 @@
 
                 <nav class="nav-header">
                     <ul class="der-nav-header">
+                        <% if (locals.isLogged) { %>
+                        <li><a href="../user/profile" class="logged">Hola, <br> <%= locals.userLogged.name %>!</a></li>
+                        <li><a href="../user/logout" class="login"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </a></li>
+                        <% } else { %>
+                        <li><a href="../user/login" class="login"><i class="fa-solid fa-user"></i></a></li>
+                        <% } %>
                         <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href="../user/profile" class="login"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="../user/login" class="login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
                         <li><a href="/favorites" class="favorits"><i class="fa-solid fa-heart"></i></a></li>
                         <li><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
                     </ul>

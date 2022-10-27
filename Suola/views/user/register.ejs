@@ -65,6 +65,27 @@
                             
                         </div>
 
+                        <div class="titulo-reg">
+
+                            <label><strong> Categoria </strong></label><br>
+                            <select name="categoria" name="categoria" placeholder="Seleccione" class="control" 
+                            <%= locals.errors && locals.categoria ? is-invalid : null  %> "
+                                value ="<%= locals.oldData ? oldData.categoria : null %>" >
+                            
+                            <option disabled="true" selected="true" value="">Seleccionar</option>
+                            <option value="admin">Administrador</option>
+                            <option value="cliente">Cliente</option>
+                            </select>
+
+                                <% if (locals.errors && errors.date) { %>
+                                 <div class = "textDanger">
+                                     <%= errors.categoria.msg %> 
+
+                                 </div>
+                                <% } %>
+
+                        </div>
+
                         <div class='seccion-add'><label><strong>Imágen de perfil</strong></label><br>
                             <input type="file" name="userPhotos" accept=”.jpg”     class="control"
                         

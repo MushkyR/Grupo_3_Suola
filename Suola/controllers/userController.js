@@ -13,9 +13,9 @@ const userController = {
     },
 
     logout: function (req, res) {
-        req.session.destroy((err) => {
-            res.redirect('/') 
-          })
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/user/login') 
     },
 
     login: function (req, res) {
@@ -36,10 +36,10 @@ const userController = {
                 req.session.userLogged = userFound;
 
                 if(req.body.remember_user){
-                    res.cookie('userEmail', 'req.body.email', { maxAge: 86400 * 1000 })
+                    res.cookie('userEmail', req.body.emailLogin, { maxAge: 86400 * 1000 })
                 }
 
-                res.redirect('profile');
+                return res.redirect('profile');
             }
 
             return res.render('login', {
@@ -61,19 +61,13 @@ const userController = {
 
     },
 
-    /*
-    req.session.usuarioLogueado == usuarioALoguearse,
-    res.render('Success');
-
-    }*/
-
     registrado: function (req, res) {
         res.render('registrado')
     },
 
     profile: function (req, res) {
 
-        console.log(req.cookies.email);
+        console.log(req.cookies.userEmail);
 
         return res.render('profile', {
             user: req.session.userLogged
@@ -100,6 +94,7 @@ const userController = {
             titulo: req.body.titulo,
             name: req.body.name,
             lastName: req.body.lastName,
+            categoria: req.body.categoria,
             dateBirth: req.body.dateBirth,
             provincia: req.body.provincia,
             email: req.body.email,

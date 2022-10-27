@@ -25,6 +25,7 @@ const storage = multer.diskStorage({
 
 const validations = [
     body('name').notEmpty().withMessage('Este campo es obligatorio'),
+    body('categoria').notEmpty().withMessage('Debes seleccionar una categoria'),
     body('lastName').notEmpty().withMessage('Este campo es obligatorio'),
     body('email').notEmpty().withMessage('Tienes que escribir un email').bail()
     .isEmail().withMessage("Debes escribir un formato de email válido"),

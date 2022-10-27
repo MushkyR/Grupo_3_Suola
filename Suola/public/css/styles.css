@@ -89,6 +89,11 @@ header {
     display: none;
 }
 
+.logged{
+    text-decoration: none;
+    text-align: end;
+}
+
 .favorits {
     display: none;
 }
