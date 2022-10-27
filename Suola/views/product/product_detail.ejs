@@ -93,19 +93,36 @@
 
             </div>
 
+           
+
+            <% if (!locals.isLogged) { %>
+
+                <div class="botones_pd">
+                    <a href=# class="boton_envio_pd" >Envío express 2 días ></a><br>
+    
+                    <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+                </div>
             
-            <div class="botones_pd">
-                <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
 
-                <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+                <% } else if ( user.categoria !== 'admin') { %>
+
+                    <div class="botones_pd">
+                        <a href=# class="boton_envio_pd" >Envío express 2 días ></a><br>
+        
+                        <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+                    </div>
+
+              <% } else if (user.categoria = "admin") { %>
+           
+              <div class="botones_pd">
+                <a href="/products/edit/<%= id %>" class="boton_envio_pd" >Editar Producto</a><br>
+
             </div>
 
-            <% if (user.categoria == 'admin') { %>
-             <div class="botones_pd">
-                <a href="/products/edit/<%= id %>" class="boton_envio_pd">Editar Producto</a><br>
+                <% }  %>
 
-            </div>
-            <% } %>
+          
+            
 
             <div class="contenedor_detalles2_pd">
                 <div class="iconos">
