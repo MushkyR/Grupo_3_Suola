@@ -70,7 +70,6 @@ const productController = {
     },
 
     addProduct: function (req, res) {
-        console.log(req.file)
         // Paso 1: importamos el array de usuarios ya existente y lo traducimos a JS
         const productosJson = fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8');
         const productos = JSON.parse(productosJson);
@@ -124,7 +123,6 @@ const productController = {
             } return productoActual
         });
 
-        console.log(listaActualizada)
 
         const productosActualizadosJSON = JSON.stringify(listaActualizada);
 
