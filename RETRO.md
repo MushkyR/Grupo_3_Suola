@@ -42,29 +42,29 @@
 
 **Retrospectiva sobre sprint 4:** 
 
-**Comenzar a hacer:**
+**Comenzar a hacer:** Dividirnos mejor las tareas
 
-**Hacer más:** 
+**Hacer más:** Organizarnos para optimizar el tiempo. 
 
-**Continuar haciendo:** 
+**Continuar haciendo:** No dejar a ultimo momento, e ir avanzando a tiempo para lograr entregar el print en fecha.
 
 **Hacer menos:** 
 
-**Dejar de hacer:**
+**Dejar de hacer:** Estamos muy conformes con el trabajo del equipo.
 
 *** *** *** *** *** *** *** ***
 
 **Retrospectiva sobre sprint 5:** 
 
-**Comenzar a hacer:**
+**Comenzar a hacer:**Nos pudimos entender como grupo, respetando los tiempos de cada una, y apoyandonos para lograr los resultados esperados. 
 
-**Hacer más:** 
+**Hacer más:** Reuniones presenciales
 
-**Continuar haciendo:** 
+**Continuar haciendo:** Trabajar de forma coordinada y ordenada, dividiendonos las tareas. Ayudar a resolver los problemas de la otra.  
 
 **Hacer menos:** 
 
-**Dejar de hacer:**
+**Dejar de hacer:** 
 
 
 

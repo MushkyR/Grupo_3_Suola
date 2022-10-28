@@ -28,11 +28,15 @@
                         <div class="titulo-reg">
 
                             <label><strong> Título </strong></label><br>
-                            <select name="titulo" name="titulo" placeholder="Seleccione" class="control">
+                            <select name="titulo" name="titulo" placeholder="Seleccione" class="control
+                          <%= locals.errors && locals.titulo ? is-invalid : null  %>"
+                            value ="<%= locals.oldData ? oldData.titulo : null %>"
+                            >
                             <option disabled="true" selected="true" value="">Seleccionar</option>
                             <option value="Sr">Sr</option>
                             <option value="Sra">Sra</option>
                             </select>
+                           
                         </div>
         
                         <div class="nombre-reg">
@@ -104,7 +108,7 @@
                                     class="control <%= locals.errors && locals.dateBirth ? is-invalid : null  %> "
                                     value ="<%= locals.oldData ? oldData.dateBirth : null %>"
                                 >
-                                    <% if (locals.errors && errors.date) { %>
+                                    <% if (locals.errors && errors.dateBirth) { %>
                                      <div class = "textDanger">
                                          <%= errors.dateBirth.msg %> 
     
