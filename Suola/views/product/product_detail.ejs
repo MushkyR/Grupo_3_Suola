@@ -50,12 +50,31 @@
 
                     <form action="" method="POST">
                          <label class="seleccion_color_pd">Color<br>
+
+                            <div class="colores_pd">
+                                <select name = "colores" 
+                                class= "control <%= locals.errors && locals.colores? is-invalid : null  %>"
+                              
+                                    >
+                        
+    
+                         <div class="contenedor_colores_pd"> 
+                            <option value=""><strong> Colores</strong></option><br>
+                                
+                                <%= colores %>
+                                <% for(const unColor of colores) { %>
+                                    <option 
+                                    value ="<%=unColor %>" 
+                                    <%= locals.oldData && (unColor === oldData.colores)? 'selected' : null %>
+                                    > <%= unColor %> </option>
+                               <% } %>
+                                </select>
                             
-                    <div class="colores_pd">
+                    <!--<div class="colores_pd">
                         <div class="seleccion_color1_pd"> </div> 
                         <div class="seleccion_color2_pd"> </div>
                         <div class="seleccion_color3_pd"> </div>
-                    </div><br>
+                    </div><br> -->
 
               <label class="seleccion_talle_pd"> </label>
              Talle <br>
