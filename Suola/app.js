@@ -19,6 +19,7 @@ app.use(express.json());
 
 app.use(methodOverride('_method'));
 
+
 app.use(session({
     secret: "frase secreta",
     resave: false,
@@ -33,6 +34,10 @@ app.use('/products', productRoutes)
 app.use('/user', userRoutes)
 app.use('/', homeRoutes)
 
+app.use((req, res, next) => {
+    res.status(404).render('404')
+  })
+
 
 
 app.set("views", [
@@ -46,3 +51,4 @@ app.set("views", [
 app.listen(3500, () => {
     console.log ("Servidor corriendo en el puerto 3500")
 });
+

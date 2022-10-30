@@ -10,6 +10,10 @@ const homeController = {
     })
 },
 
+error:(req, res) => {
+    res.render('404')
+}
+
 }
 
 module.exports = homeController

@@ -9,9 +9,6 @@ const productController = {
 
         const productos = JSON.parse(productosJSON);
 
-        
-
-
         res.render('products', { productos })
     },
 

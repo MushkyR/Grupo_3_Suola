@@ -120,6 +120,7 @@ header {
 .menu-hamburguesa li{
     display: inline-block;
     position: relative;
+    width:100%
 }
 
 .menu-hamburguesa li a {
@@ -131,6 +132,7 @@ header {
     text-transform: uppercase;
     text-align: center;
     background-color: #FFEEEE;
+  
 }
 
 .menu-hamburguesa li ul.dropdown li{
@@ -147,6 +149,7 @@ header {
 
 .menu-hamburguesa li a:hover {
     background:#f3f3f3;
+    
 }
 
 .menu-hamburguesa li:hover ul.dropdown{
@@ -155,7 +158,10 @@ header {
 
 
 
+.cuatro{
+    text-align: center
 
+}
 
 /*main*/
 .main_home{
@@ -528,6 +534,10 @@ footer{
         width: 30%;
     }
     
+    .logged{
+    
+        font-size: 16px;
+    }
 }
       
 
