@@ -45,7 +45,6 @@ header {
     color: black;
     width: 30%;
     font-size: 3vw;
-    padding: 20px;
 }
 
 .logo {
@@ -69,7 +68,6 @@ header {
 .der-nav-header {
     list-style: none;
     margin-left: 15px;
-    margin-right: 15px;
     padding: 0px;
     display: flex;
 }
@@ -85,17 +83,19 @@ header {
     margin: 10px;
 }
 
-.login {
-    display: none;
-}
 
 .logged{
     text-decoration: none;
     text-align: end;
+    font-size: 9px;
 }
 
 .favorits {
     display: none;
+}
+
+.search{
+    display:none;
 }
 
 .abajo-nav-header {
@@ -110,6 +110,50 @@ header {
     font-size: 1vw;
     text-transform: uppercase;
 }
+
+.menu-hamburguesa {
+    list-style: none;
+    background: white;
+
+}
+
+.menu-hamburguesa li{
+    display: inline-block;
+    position: relative;
+}
+
+.menu-hamburguesa li a {
+    display: block;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FFEEEE;
+}
+
+.menu-hamburguesa li ul.dropdown li{
+    display: block;
+}
+
+.menu-hamburguesa li ul.dropdown {
+    width: 100%;
+    background: #FFFFF9;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.menu-hamburguesa li a:hover {
+    background:#f3f3f3;
+}
+
+.menu-hamburguesa li:hover ul.dropdown{
+    display: block;
+}
+
+
 
 
 
@@ -211,6 +255,8 @@ header {
     width:100%;
     margin-bottom: 60px;
 }
+
+
 
 .boton_intereses_home{
     background-color: #6B6E7A;
@@ -358,68 +404,76 @@ footer{
         display: block;
     }
 
-    .login {
+    .search {
         display: block;
     }
 
     .botones-footer {
         width: 50%;
     }
+
+    .abajo-nav-header {
+        display: flex;
+        justify-content: space-around;
+        }
+
+        .arriba-header {
+            margin-bottom: 35px;
+        }
+    
+        .espacio-logo-header {
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+    
+    
+        .nav-header-mobile{
+            display: none;
+        }
+    
+        .logo {
+            width: 250px;
+        }
+    
+        .nav-header {
+            max-width: 100%;
+        }
+    
+        .der-nav-header li {
+            margin: 10px;
+        }
+    
+    
+        .abajo-nav-header a:hover {
+            font-weight: bold;
+        }
+    
+        .der-nav-header i{
+            font-size: 20px;
+            margin-right: 15px
+        }
+    
+        .der-nav-header i:hover {
+            font-size: 25px;
+            transition-duration: 0.2s;
+        }
+    
+        .nav-header {
+            width: 95%;
+            position:absolute;
+            justify-content: flex-end;
+            float: right;
+        }
+        .menu-hamburguesa {
+            display: none;
+        }
 }
+
 
 @media (min-width: 1200px) {
     /*header*/
 
-    .arriba-header {
-        margin-bottom: 35px;
-    }
-
-    .espacio-logo-header {
-        text-align: center;
-        width: 100%;
-        position: relative;
-    }
-
-    .menu-hamburguesa {
-        display: none;
-    }
-
-    .logo {
-        width: 250px;
-    }
-
-    .nav-header {
-        max-width: 100%;
-    }
-
-    .der-nav-header li {
-        margin: 10px;
-    }
-
-    .abajo-nav-header {
-    display: flex;
-    justify-content: space-around;
-    }
-
-    .abajo-nav-header a:hover {
-        font-weight: bold;
-    }
-
-    .der-nav-header i{
-        font-size: 20px;
-    }
-
-    .der-nav-header i:hover {
-        font-size: 25px;
-        transition-duration: 0.2s;
-    }
-
-    .nav-header {
-        width: 95%;
-        position:absolute;
-        justify-content: flex-end;
-        float: right;
-    }
 
     /*main*/
     .boton_galeria_home, .boton_ppl_home{

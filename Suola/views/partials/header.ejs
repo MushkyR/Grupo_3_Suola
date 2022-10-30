@@ -5,9 +5,15 @@
     <div class="principal-header">
         <div class="arriba-header">
 
-            <div class="menu-hamburguesa">
-                <i class="fas fa-bars"></i>
-            </div>
+            <ul class="menu-hamburguesa">
+                <li><i class="fas fa-bars"></i>
+                    <ul class="dropdown">
+                        <li><a href="/#">Buscar</a></li>
+                        <li><a href="/products">Ver productos</a></li>
+                        <li><a href="/#">Favoritos</a></li>
+                    </ul>
+                </li>
+            </ul>
 
            <div class="espacio-logo-header">
              <a href= "/"><img class="logo" src="../images/logo.png" alt="logo suola"></a>
@@ -17,13 +23,13 @@
                 <nav class="nav-header">
                     <ul class="der-nav-header">
                         <% if (locals.isLogged) { %>
-                        <li><a href="../user/profile" class="logged">Hola, <br> <%= locals.userLogged.name %>!</a></li>
+                        <li><a href="../user/profile" class="logged">Hola, <%= locals.userLogged.name %></a></li>
                         <li><a href="../user/logout" class="login"><i class="fa-solid fa-arrow-right-from-bracket"></i>
                         </a></li>
                         <% } else { %>
                         <li><a href="../user/login" class="login"><i class="fa-solid fa-user"></i></a></li>
                         <% } %>
-                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                         <li><a href="/favorites" class="favorits"><i class="fa-solid fa-heart"></i></a></li>
                         <li><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
                     </ul>
@@ -41,6 +47,8 @@
                     <li><a href="/products">ver todos</a></li>
                 </ul>
             </nav>
+
+
         
      
     </div>
