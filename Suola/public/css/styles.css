@@ -474,12 +474,18 @@ footer{
         .menu-hamburguesa {
             display: none;
         }
+
+        .espacio-logo-header {
+            justify-content: left;
+        }
 }
 
 
 @media (min-width: 1200px) {
     /*header*/
-
+    .espacio-logo-header {
+        justify-content: center;
+    }
 
     /*main*/
     .boton_galeria_home, .boton_ppl_home{
