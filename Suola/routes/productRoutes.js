@@ -6,6 +6,8 @@ const path = require('path')
 
 const productController = require('../controllers/productController');
 
+const adminMiddleware = require('../middlewares/adminMiddleware')
+
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, path.join(__dirname, '../public/profilePhotos'));
@@ -25,7 +27,7 @@ const upload = multer({storage: storage});
 router.get('/', productController.getProducts);
 
 //formulario para agregar un producto
-router.get('/add', productController.add);
+router.get('/add', adminMiddleware, productController.add);
 
 //detalle de un producto en particuar
 
@@ -33,15 +35,15 @@ router.get('/:id', productController.getProductDetail);
 
 
 //acción de agregar producto
-router.post('/add', upload.single('productPhoto'), productController.addProduct);
+router.post('/add', upload.single('productPhoto'), adminMiddleware, productController.addProduct);
 
 //formulario de edición de producto
-router.get('/edit/:id', productController.edit)
+router.get('/edit/:id', adminMiddleware, productController.edit)
 
 //accion de edicion de producto
-router.put('/edit/:id', upload.single('productPhoto'), productController.editProduct);
+router.put('/edit/:id', upload.single('productPhoto'), adminMiddleware, productController.editProduct);
 
 //accion de eliminación de producto
-router.delete('/edit/:id', productController.deleteProduct)
+router.delete('/edit/:id', adminMiddleware, productController.deleteProduct)
 
 module.exports =router;

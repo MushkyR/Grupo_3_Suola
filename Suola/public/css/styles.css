@@ -164,6 +164,11 @@ header {
 }
 
 /*main*/
+
+.imagenerror{
+    margin-left: 40%
+}
+
 .main_home{
     background-color: #FFFFF9;
 }
