@@ -12,7 +12,26 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.botones_pd {
+    display: flex;
+    flex-direction: column;
+}
 
+a.boton_envio_pd{
+    color: seashell;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.boton_envio_pd {
+    background-color: #f09e06;
+    margin-top: 30px;
+    padding: 10px 30px;
+    width: 70%;
+    max-width: 300px;
+    align-self: center;
+}
 
 .galeria-producto{
     display: flex;

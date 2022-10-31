@@ -10,6 +10,12 @@
     <%- include("../partials/header") %>
 
         <main>
+            <% if ( locals.isLogged && user.categoria == 'admin' ) { %>
+                <div class="botones_pd">
+                    <a href="/products/add" class="boton_envio_pd" >Agregar Producto</a><br>
+                </div>
+            <% }  %>
+            
             <section class="galeria-producto">
 
             

@@ -9,7 +9,8 @@ const productController = {
 
         const productos = JSON.parse(productosJSON);
 
-        res.render('products', { productos })/*array de objetos literales*/
+        res.render('products', { productos,
+            user: req.session.userLogged })
     },
 
 
