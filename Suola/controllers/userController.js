@@ -67,8 +67,6 @@ const userController = {
 
     profile: function (req, res) {
 
-        console.log(req.cookies.userEmail);
-
         return res.render('profile', {
             user: req.session.userLogged
         });
