@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("../partials/head") %>
-    <title>Producto</title>
-    <link href='/css/styles-pd.css' rel ='stylesheet'>
+        <title>Producto</title>
+        <link href='/css/styles-pd.css' rel='stylesheet'>
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
-    <main class="main_pd">
-        <nav class="contenedor_ruta_pd"></nav>
+        <main class="main_pd">
+            <nav class="contenedor_ruta_pd"></nav>
 
             <ul class="linea_de_rutas_pd">
-                <li class="ruta_pd"><a href='/'>HOME    /</a></li>
+                <li class="ruta_pd"><a href='/'>HOME /</a></li>
                 <!--<li class="ruta_pd"><a href=#><%= categoria %>    /</a></li> -->
-                <li class="ruta_pd"><a href=#>VER TODOS    /</a></li>
-                <li class="ruta_pd"><%= nombreArticulo %></li>
+                <li class="ruta_pd"><a href=#>VER TODOS /</a></li>
+                <li class="ruta_pd">
+                    <%= nombreArticulo %>
+                </li>
             </ul>
 
-        <div class="secciones_verticales_pd">
-        
-            <div class="imagenes_pd">
+            <div class="secciones_verticales_pd">
 
-            <ul class="contenedor_galeria_pd">
-                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
-                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
-                <li><img class='imagen_galeria_pd' src=<%= img %>></li>
-                <li><img class='imagen_galeria_pd' src=<%= img %>></li>   
-            </ul>
+                <div class="imagenes_pd">
 
-            <section class="contenedor_imagen_ppl_pd">
-                <img class='imagen_ppl_pd' src= <%= img %>>
-            </section>
-            </div>
+                    <ul class="contenedor_galeria_pd">
+                        <li><img class='imagen_galeria_pd' src=<%=img %>></li>
+                        <li><img class='imagen_galeria_pd' src=<%=img %>></li>
+                        <li><img class='imagen_galeria_pd' src=<%=img %>></li>
+                        <li><img class='imagen_galeria_pd' src=<%=img %>></li>
+                    </ul>
 
-            <section class="detalles_pd">
+                    <section class="contenedor_imagen_ppl_pd">
+                        <img class='imagen_ppl_pd' src=<%=img %>>
+                    </section>
+                </div>
 
-            <div class="contenedor_detalles_pd">
-                <h1 class="nombre_producto_pd"><%= nombreArticulo %></h1>
+                <section class="detalles_pd">
 
-                <h6 class="art_pd">Art. <%= numeroArticulo %></h6>
+                    <div class="contenedor_detalles_pd">
+                        <h1 class="nombre_producto_pd">
+                            <%= nombreArticulo %>
+                        </h1>
+
+                        <h6 class="art_pd">Art. <%= numeroArticulo %>
+                        </h6>
 
 
 
-                <h3 class="precio_pd">$<%= precioArticulo %></h3>
+                        <h3 class="precio_pd">$<%= precioArticulo %>
+                        </h3>
 
-            
 
-                    <form action="" method="POST">
-                         <label class="seleccion_color_pd">Color<br>
 
-                            <div class="colores_pd">
-                                <select name = "colores" 
-                                class= "control <%= locals.errors && locals.colores? is-invalid : null  %>"
-                              
-                                    >
-                        
-    
-                         <div class="contenedor_colores_pd"> 
-                            <option value=""><strong> Colores</strong></option><br>
-                                
-                                <%= colores %>
-                                <% for(const unColor of colores) { %>
-                                    <option 
-                                    value ="<%=unColor %>" 
-                                    <%= locals.oldData && (unColor === oldData.colores)? 'selected' : null %>
-                                    > <%= unColor %> </option>
-                               <% } %>
-                                </select>
-                            
-                    <!--<div class="colores_pd">
+                        <form action="" method="POST">
+                            <label class="seleccion_color_pd">Color<br>
+
+                                <div class="colores_pd">
+                                    <select name="colores"
+                                        class="control <%= locals.errors && locals.colores? is-invalid : null  %>">
+
+
+                                        <div class="contenedor_colores_pd">
+                                            <option value=""><strong> Colores</strong></option><br>
+
+                                            <%= colores %>
+                                                <% for(const unColor of colores) { %>
+                                                    <option value="<%=unColor %>" <%=locals.oldData &&
+                                                        (unColor===oldData.colores)? 'selected' : null %>
+                                                        > <%= unColor %>
+                                                    </option>
+                                                    <% } %>
+                                    </select>
+
+                                    <!--<div class="colores_pd">
                         <div class="seleccion_color1_pd"> </div> 
                         <div class="seleccion_color2_pd"> </div>
                         <div class="seleccion_color3_pd"> </div>
                     </div><br> -->
 
-              <label class="seleccion_talle_pd"> </label>
-             Talle <br>
-                    <div class="talles_pd">
-                            <select name = "talles" 
-                            class= "control <%= locals.errors && locals.talles? is-invalid : null  %>"
-                          
-                                >
-                    
+                                    <label class="seleccion_talle_pd"> </label>
+                                    Talle <br>
+                                    <div class="talles_pd">
+                                        <select name="talles"
+                                            class="control <%= locals.errors && locals.talles? is-invalid : null  %>">
 
-                     <div class="contenedor_talle_pd"> 
-                        <option value=""><strong> Talles</strong></option><br>
-                            
-                            <%= talle %>
-                            <% for(const unTalle of talle) { %>
-                                <option 
-                                value ="<%=unTalle %>" 
-                                <%= locals.oldData && (unTalle === oldData.talle)? 'selected' : null %>
-                                > <%= unTalle %> </option>
-                           <% } %>
-                            </select>
 
-                     
-                    </div>
+                                            <div class="contenedor_talle_pd">
+                                                <option value=""><strong> Talles</strong></option><br>
 
-                    <!--
+                                                <%= talle %>
+                                                    <% for(const unTalle of talle) { %>
+                                                        <option value="<%=unTalle %>" <%=locals.oldData &&
+                                                            (unTalle===oldData.talle)? 'selected' : null %>
+                                                            > <%= unTalle %>
+                                                        </option>
+                                                        <% } %>
+                                        </select>
+
+
+                                    </div>
+
+                                    <!--
                     <input type="radio" name='talle' value=35 class="talle_35_pd">
                     <input type="radio" name='talle' value=36 class="talle_36_pd">
                     <input type="radio" name='talle' value=37 class="talle_37_pd">
@@ -110,55 +113,59 @@
                     <input type="radio" name='talle' value=41 class="talle_41_pd">
                     <input type="radio" name='talle' value=42 class="talle_42_pd">
                     -->
-                </label><br>
+                            </label><br>
 
-            </div>
-
-            <% if (!locals.isLogged) { %>
-                <div class="botones_pd">
-                    <a href=# class="boton_envio_pd" >Envío express 2 días ></a><br>
-    
-                    <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
-                </div>
-            
-                <% } else if ( user.categoria !== 'admin') { %>
-                    <div class="botones_pd">
-                        <a href=# class="boton_envio_pd" >Envío express 2 días ></a><br>
-        
-                        <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
                     </div>
-              <% } else if (user.categoria = "admin") { %>
-           
 
-            <div class="botones_pd">
-                <a href="/products/add" class="boton_envio_pd" >Agregar Producto</a><br>
-            </div>
-        </form>
-  
-        <form action='/products/edit/<%= id %>?_method=DELETE' method='post' enctype="multipart/form-data" class="botones_pd">
-                    <button type="submit" class="boton_envio_pd" style="border-color: transparent;
+                    <% if (!locals.isLogged) { %>
+                        <div class="botones_pd">
+                            <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
+
+                            <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+                        </div>
+
+                        <% } else if ( user.categoria !=='admin' ) { %>
+                            <div class="botones_pd">
+                                <a href=# class="boton_envio_pd">Envío express 2 días ></a><br>
+
+                                <button type="submit" class="boton_comprar_pd"><a href='/cart'>COMPRAR</a></button><br>
+                            </div>
+                            <% } else if (user.categoria="admin" ) { %>
+
+                                <div class="botones_pd">
+                                    <a href="/products/edit/<%= id %>" class="boton_envio_pd">Editar Producto</a><br>
+                                </div>
+
+
+                                </form>
+
+                                <form action='/products/edit/<%= id %>?_method=DELETE' method='post'
+                                    enctype="multipart/form-data" class="botones_pd">
+                                    <button type="submit" class="boton_envio_pd" style="border-color: transparent;
                     font-family: Poppins;
                     font-size: 16px; cursor:pointer ">Eliminar producto</button>
-        </form>
-                <% }  %>
+                                </form>
+                                <% } %>
 
-          
-            
 
-            <div class="contenedor_detalles2_pd">
-                <div class="iconos">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-share-nodes"></i>
-                </div>
-                
-                <div class="acordeon_pd">
-                    <!--guia para hacer el acordeon: https://www.youtube.com/watch?v=XGyTnLoGOX0&ab_channel=EduardoFierro-->
-                    <div class="bloque_pd">
-                        <h2 class="h2_acordeon_pd">DESCRIPCIÓN</h2>
-                        <p class="contenido_pd"><%= descripcion %></p>
-                    </div>
 
-                   <!-- <div class="bloque_pd">
+
+                                    <div class="contenedor_detalles2_pd">
+                                        <div class="iconos">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                        </div>
+
+                                        <div class="acordeon_pd">
+                                            <!--guia para hacer el acordeon: https://www.youtube.com/watch?v=XGyTnLoGOX0&ab_channel=EduardoFierro-->
+                                            <div class="bloque_pd">
+                                                <h2 class="h2_acordeon_pd">DESCRIPCIÓN</h2>
+                                                <p class="contenido_pd">
+                                                    <%= descripcion %>
+                                                </p>
+                                            </div>
+
+                                            <!-- <div class="bloque_pd">
                         <h2 class="h2_acordeon_pd">TITULAR</h2>
                         <p class="contenido_pd">Soy el contenido del bloque 2</p>
                     </div>
@@ -167,20 +174,21 @@
                         <p class="contenido_pd">Soy el contenido del bloque 3</p>
                     </div>
                     -->
-            
-                </div>
-                    
 
+                                        </div>
+
+
+                                    </div>
+                </section>
             </div>
-            </section>
-        </div> 
 
-        <%- include('../partials/intereses') %>
+            <%- include('../partials/intereses') %>
 
-        <%- include('../partials/whatsappIcon') %>
-    </main>
+                <%- include('../partials/whatsappIcon') %>
+        </main>
 
-    <%- include("../partials/footer") %>
-    
+        <%- include("../partials/footer") %>
+
 </body>
+
 </html>
