@@ -6,7 +6,7 @@ const homeController = require('../controllers/homeController')
 
 router.get("/", homeController.home)
 
-router.get("/", homeController.error)
+router.get("404", homeController.error)
 
 
 module.exports =router;

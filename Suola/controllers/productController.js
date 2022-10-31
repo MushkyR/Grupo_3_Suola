@@ -9,7 +9,7 @@ const productController = {
 
         const productos = JSON.parse(productosJSON);
 
-        res.render('products', { productos })
+        res.render('products', { productos })/*array de objetos literales*/
     },
 
 
@@ -22,8 +22,6 @@ const productController = {
         const productos = JSON.parse(productosJSON);
 
         const productoPedido = productos.find(productoActual => productoActual.id == id);
-
-        console.log(productoPedido)
 
         res.render('product_detail', {
             nombreArticulo: productoPedido.nombreArticulo,

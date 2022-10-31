@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const { check, validationResult, body } = require('express-validator');
+const {  validationResult } = require('express-validator');
 
 
 
@@ -67,8 +67,6 @@ const userController = {
 
     profile: function (req, res) {
 
-        console.log(req.cookies.userEmail);
-
         return res.render('profile', {
             user: req.session.userLogged
         });
@@ -117,7 +115,7 @@ const userController = {
     },
 
     // @GET /user/detail
-    getUserDetail: function (req, res) {
+    /*getUserDetail: function (req, res) {
         const id = req.params.id;
 
         const usuariosJSON = fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf8');
@@ -131,7 +129,7 @@ const userController = {
             email: usuarioPedido.email,
             img: usuarioPedido.img
         });
-    }
+    }*/
 
 }
 

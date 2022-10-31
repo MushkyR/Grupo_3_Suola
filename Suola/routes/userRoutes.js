@@ -73,7 +73,7 @@ router.post('/login', userController.loginUser);
 
 router.get('/logout', userController.logout);
 
-router.get('/detail/:id', userController.getUserDetail);
+//router.get('/detail/:id', userController.getUserDetail);
 
 router.post('/register',upload.single('userPhotos'), validations, userController.registerUser);
 
